@@ -15,12 +15,16 @@
 
 .coin-table {
 	margin-top: 30px;
-	p { margin-bottom: 8px; font-size: 1.5em; }
+	p {
+		margin-bottom: 8px;
+		font-size: 1.5em;
+		color: $violet;
+	}
 }
 
 .coin-input {
 	padding: 25px;
-	border: 1px solid $gray;
+	border: 1px solid $violet;
 	cursor: pointer;
 	@include rounded(6px);
 }
