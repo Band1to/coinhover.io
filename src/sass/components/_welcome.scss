@@ -8,33 +8,19 @@
 .welcome {
 	margin: 40px auto;
 	width: 320px;
-
-	header {
-		color: white;
-		// text-align: center;
-	}
-
-	h1 {
-		margin-bottom: 5px;
-		font-size: 2em;
-	}
-
-	h2 {
-		font-size: 1em;
-		color: #ccc;
-	}
+	header { color: white; }
+	h1 { margin-bottom: 5px; font-size: 4em; }
+	h2 { font-size: 1em; color: #ccc; }
 }
 
 .coin-table {
-	margin-top: 20px;
-	p {
-		margin-bottom: 5px;
-	}
+	margin-top: 30px;
+	p { margin-bottom: 8px; font-size: 1.5em; }
 }
 
 .coin-input {
-	padding: 20px;
+	padding: 25px;
 	border: 1px solid $gray;
 	cursor: pointer;
-	@include rounded(4px);
+	@include rounded(6px);
 }
