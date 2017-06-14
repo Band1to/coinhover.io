@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
-const build = path.resolve(__dirname, "build");
+const dist = path.resolve(__dirname, "dist");
 const src = path.resolve(__dirname, "src");
 // const environment = process.env.NODE_ENV;
 // https://gist.github.com/leongaban/dc92204454b3513e511645af98107775
@@ -15,7 +15,7 @@ module.exports = {
     "./index.js"
   ],
   output: {
-    path: build,
+    path: dist,
     filename: "coinhover.bundle.js",
     publicPath: '/static/',
   },
@@ -32,7 +32,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallbackLoader: "style-loader",
           loader: ["css-loader", "sass-loader"],
-          publicPath: build
+          publicPath: dist
         })
       }
     ]
@@ -41,7 +41,7 @@ module.exports = {
     hot: false,
     quiet: true,
     publicPath: "",
-    contentBase: path.join(__dirname, "build"),
+    contentBase: path.join(__dirname, "dist"),
     compress: true,
     stats: "errors-only",
     open: true,

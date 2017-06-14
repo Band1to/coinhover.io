@@ -27,7 +27,7 @@
       "node_modules"
     ]
   },
-	"dependencies": {
+  "dependencies": {
     "axios": "^0.16.1",
     "babel-runtime": "6.11.6",
     "jsonwebtoken": "^7.4.1",
