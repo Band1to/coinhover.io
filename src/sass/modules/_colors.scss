@@ -3,17 +3,23 @@
 ========================================================= */
 
 // Primary
-// $blue: 	#024562;
-// $green:  #249B7A;
-// $orange: #FC913A;
-// $red: 	#F25A43;
-// $gray:	#454545;
+$blue: 	 #024562;
+$green:  #249B7A;
+$orange: #EC7063;
+$red: 	 #F25A43;
+$gray:	 #454545;
+
+$purple: #040d40;
+$violet: #842b59;
 
 // Brands
-// $facebook: #438acb;
-// $twitter:  #5cbde9;
+$facebook: #438acb;
+$twitter:  #5cbde9;
 
 // Elements
-$body: #fff;
+$body: $violet;
 // $button: $blue;
 // $buttonHover: lighten($blue, 10%);
+
+.facebook { color: $facebook; }
+.twitter { color: $twitter; }

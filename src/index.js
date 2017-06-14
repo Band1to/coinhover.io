@@ -7,6 +7,5 @@ import css from './coinhover.scss'
 
 // const store = createCommonStore();
 const element = document.getElementById('coinhover');
-console.log('element', element);
 
 ReactDOM.render(<App />, element);

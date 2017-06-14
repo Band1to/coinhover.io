@@ -17,7 +17,7 @@ module.exports = {
   output: {
     path: dist,
     filename: "coinhover.bundle.js",
-    publicPath: '/static/',
+    publicPath: '',
   },
   devtool: 'source-map',
   module: {

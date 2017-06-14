@@ -1,0 +1,40 @@
+.app-bg {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+	@include linear-gradient($purple, $violet);
+}
+
+.welcome {
+	margin: 40px auto;
+	width: 320px;
+
+	header {
+		color: white;
+		// text-align: center;
+	}
+
+	h1 {
+		margin-bottom: 5px;
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1em;
+		color: #ccc;
+	}
+}
+
+.coin-table {
+	margin-top: 20px;
+	p {
+		margin-bottom: 5px;
+	}
+}
+
+.coin-input {
+	padding: 20px;
+	border: 1px solid $gray;
+	cursor: pointer;
+	@include rounded(4px);
+}
