@@ -18,6 +18,7 @@
     ]
   },
   "now": {
+    "name": "coinhover",
     "engines": {
       "node": "7.4.x"
     },

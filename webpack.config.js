@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
-const dist = path.resolve(__dirname, "dist");
+const coinhover = path.resolve(__dirname, "coinhover");
 const src = path.resolve(__dirname, "src");
 // const environment = process.env.NODE_ENV;
 // https://gist.github.com/leongaban/dc92204454b3513e511645af98107775
@@ -15,7 +15,7 @@ module.exports = {
     "./index.js"
   ],
   output: {
-    path: dist,
+    path: coinhover,
     filename: "coinhover.bundle.js",
     publicPath: '',
   },
@@ -32,7 +32,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallbackLoader: "style-loader",
           loader: ["css-loader", "sass-loader"],
-          publicPath: dist
+          publicPath: coinhover
         })
       }
     ]
