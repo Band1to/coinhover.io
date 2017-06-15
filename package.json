@@ -5,7 +5,7 @@
   "author": "@leongaban",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --history-api-fallback",
+    "start": "NODE_ENV=development webpack-dev-server --history-api-fallback",
     "build": "NODE_ENV=production webpack -p",
     "test": "jest"
   },
@@ -18,7 +18,6 @@
     ]
   },
   "now": {
-    "name": "coinhover",
     "engines": {
       "node": "7.4.x"
     },
