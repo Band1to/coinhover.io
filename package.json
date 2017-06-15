@@ -1,5 +1,5 @@
 {
-  "name": "coinhover.io",
+  "name": "coinhover",
   "version": "0.0.1",
   "main": "index.js",
   "author": "@leongaban",
@@ -16,6 +16,13 @@
       "react",
       "stage-0"
     ]
+  },
+  "now": {
+    "name": "coinhover",
+    "engines": {
+      "node": "7.4.x"
+    },
+    "alias": "coinhover"
   },
   "jest": {
     "moduleNameMapper": {},

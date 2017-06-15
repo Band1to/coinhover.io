@@ -1,3 +1,13 @@
-/*  SVG background images
-============================================================
-========================================================= */
+.ico-add,
+.ico-remove {
+	position: relative;
+	background-size: 320px 240px;
+	background-image: url(http://coinhover.now.sh/static/imgs/coinhover.svg), none;
+}
+
+.ico-add {
+	width: 16px;
+	height: 16px;
+	background-position: -2px -2px;
+    cursor: pointer;
+}

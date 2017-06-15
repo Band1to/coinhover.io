@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="320px" height="240px" viewBox="0 0 320 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>coinhover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="(+)" transform="translate(2.000000, 2.000000)">
+            <circle id="Oval" fill="#FFFFFF" cx="8" cy="8" r="8"></circle>
+            <polygon id="plus" fill="#842B59" points="8.802941 4 7.197059 4 7.197059 7.1970588 4 7.1970588 4 8.8029412 7.197059 8.8029412 7.197059 12 8.802941 12 8.802941 8.8029412 12 8.8029412 12 7.1970588 8.802941 7.1970588"></polygon>
+        </g>
+        <path d="M27,13.597 L30.349,10.299 L27,7 M33.349,13.597 L30,10.299 L33.349,7" id="Imported-Layers" stroke="#842B59" stroke-width="1.5" stroke-linejoin="round"></path>
+    </g>
+</svg>

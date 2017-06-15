@@ -10,6 +10,7 @@ export default function Welcome (props) {
 				</header>
 				<section className="coin-table">
 					<p>Add Coin</p>
+					<div className="ico-add"></div>
 					<div className="coin-input"></div>
 				</section>
 			</section>
