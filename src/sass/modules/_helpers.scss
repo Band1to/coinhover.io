@@ -1,0 +1,34 @@
+.abs       { position: absolute; }
+.rel       { position: relative; }
+.fl        { float: left; }
+.fr        { float: right; }
+.mt20      { margin-top: 20px; }
+.mt0       { margin-top: 0; }
+.mt5       { margin-top: 5px; }
+.mt10      { margin-top: 10px; }
+.mt20      { margin-top: 20px; }
+.mr5       { margin-right: 5px; }
+.mr10      { margin-right: 10px; }
+.mr20      { margin-right: 20px; }
+.mbot0     { margin-bottom: 0; }
+.mbot10    { margin-bottom: 10px; }
+.mbot20    { margin-bottom: 20px; }
+.ml5       { margin-left: 5px; }
+.ml10      { margin-left: 10px; }
+.ml15      { margin-left: 15px; }
+.pad0      { padding: 0; }
+.auto      { width: auto; }
+.w100      { width: 100%; }
+.h100      { height: 100%; }
+.hauto     { height: auto; }
+.tcenter   { text-align: center; }
+.tright    { text-align: right; }
+.hide      { display: none !important; }
+.show      { display: block !important; }
+.font12    { font-size: em(12); }
+.cur       { cursor: pointer; }
+
+// Special modifiers: SignUp
+.w140 { width: 140px; } // pass2
+.w160 { width: 160px; } // email
+.w270 { width: 270px; } // pass1

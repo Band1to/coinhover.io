@@ -1,21 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import CoinModal from './CoinModal'
 
-export default class Portfolio extends React.Component {
+class Portfolio extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-
-		}
+			coin_modal_open: false
+		};
 	}
 
 	render() {
+		let modalOpen = this.state.coin_modal_open;
+
 		const addCoin = () => {
 			console.log('addCoin...');
+			console.log(' modalOpen', !modalOpen);
+			this.setState({
+        		coin_modal_open: !modalOpen
+        	});
 		};
 
 		return (
 			<div className="app-bg">
+				{ modalOpen && <CoinModal/> }
 				<section className="welcome">
 					<header>					
 						<h1>CoinHover</h1>
@@ -31,3 +39,5 @@ export default class Portfolio extends React.Component {
 		)
 	}
 }
+
+export default Portfolio;
