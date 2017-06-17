@@ -8,9 +8,11 @@
 .welcome {
 	margin: 40px auto;
 	width: 320px;
+	text-align: center;
 	header { color: white; }
 	h1 { margin-bottom: 5px; font-size: 4em; }
-	h2 { font-size: 1em; color: #ccc; }
+	h2 { margin-bottom: 10px; font-size: 1em; color: #ccc; }
+	h2, p { color: #ccc; }
 }
 
 .coin-table {
