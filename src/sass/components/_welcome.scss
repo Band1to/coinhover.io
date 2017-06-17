@@ -7,32 +7,18 @@
 
 .welcome {
 	margin: 40px auto;
-	width: 320px;
+	width: 640px;
 	text-align: center;
 	header { color: white; }
-	h1 { margin-bottom: 5px; font-size: 4em; }
-	h2 { margin-bottom: 10px; font-size: 1em; color: #ccc; }
+	h1 { margin-bottom: 5px; font-weight: 900; font-size: 4em; }
+	h2 { margin-bottom: 10px; font-size: 1.5em; line-height: 32px; color: #ccc; }
 	h2, p { color: #ccc; }
-}
-
-.coin-table {
-	margin-top: 30px;
-	p { margin-bottom: 8px; font-size: 1.5em; color: $violet; }
-
-	.ico-add {
-		position: absolute;
-	    left: 50%;
-	    margin-left: -15px;
-	    margin-top: 7px;
+	footer {
+		margin: 20px auto;
+		width: 100px;
+		li {
+			float: left;
+			margin-right: 5px;
+		}
 	}
-
-	&:hover  { .ico-add { opacity: 0.8; } }
-	&:active { .ico-add { opacity: 1; } }
-}
-
-.coin-input {
-	padding: 25px;
-	border: 1px solid $violet;
-	cursor: pointer;
-	@include rounded(6px);
 }

@@ -11,9 +11,9 @@ class Portfolio extends React.Component {
 		return (
 			<div className="app-bg">
 				<section className="welcome">
-					<header>					
-						<h1>CoinHover</h1>
-						<h2>Watch all your cryptocurrency balances</h2>
+					<header>
+						<h1>COINHOVER</h1>
+						<h2>Watch all your cryptocurrency<br/> asset balances in once place.</h2>
 						<p>Currently in development...</p>
 					</header>
 					<footer>
@@ -29,7 +29,7 @@ class Portfolio extends React.Component {
 								</a>
 							</li>
 							<li>
-								<a href="https://www.facebook.com/CoinHoverio-1221266074668991/" target="_blank" title="Follow on Facebook">
+								<a href="https://www.facebook.com/coinhover/" target="_blank" title="Follow on Facebook">
 									<div className="icon-facebook-squared"></div>
 								</a>
 							</li>
