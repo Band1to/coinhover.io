@@ -22,12 +22,13 @@
 @media all and (max-width: 800px) {
 }
 
-/* 768 (Mobile Break)
-========================================================= */
-@media all and (max-width: 768px) {
-}
-
 /* 640
 ========================================================= */
 @media all and (max-width: 640px) {
+	.welcome {
+		margin: 40px auto;
+		width: 320px;
+		h1 { font-size: 54px; }
+		h2 { font-size: 1.25em; line-height: 24px; }
+	}
 }

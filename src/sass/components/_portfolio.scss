@@ -12,9 +12,7 @@
 	h2, p { margin-bottom: 10px; color: #ccc; }
 	a {
 		font-weight: 400; color: $green;
-		&:hover {
-			color: lighten($green, 10%);
-		}
+		&:hover { color: lighten($green, 10%); }
 	}
 	footer {
 		margin: 20px auto; width: 83px;

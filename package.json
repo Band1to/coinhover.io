@@ -22,7 +22,7 @@
     "engines": {
       "node": "7.4.x"
     },
-    "alias": "coinhover"
+    "alias": "coinhover.io"
   },
   "jest": {
     "moduleNameMapper": {},
