@@ -6,7 +6,9 @@ class AssetSideBar extends React.Component {
 			<section className="asset-sidebar">
 				<ul>
 					<li>
-						<div>+ Add Asset</div>
+						<div className="asset">
+							+ Add Asset
+						</div>
 					</li>
 					<li></li>
 				</ul>

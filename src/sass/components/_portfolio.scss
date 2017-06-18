@@ -6,15 +6,12 @@
 .portfolio {
 	position: relative;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 30px;
 
 	header {
 		position: relative;
 		top: 0;
 		border-bottom: 1px solid #666;
-		// margin: 20px;
-		// width: 100%;
-		// background: red;
 	}
 
 	h1 { font-weight: 900; font-size: 2em; }
@@ -31,8 +28,7 @@
 		bottom: 20px;
 		width: 100%;
 		margin: 0 auto;
-		padding: 20px 20px 0 20px;
-		// margin: 20px auto; width: 83px;
+		padding: 30px 30px 0 0;
 		em { margin-right: 8px; font-size: 14px; color: #ccc; opacity: .8; }
 		li { float: left; margin-right: 5px; }
 	}

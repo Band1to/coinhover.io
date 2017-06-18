@@ -1,0 +1,14 @@
+.asset-sidebar {
+	margin-top: 30px;
+	max-width: 320px;
+}
+
+.asset {
+	padding: 20px;
+	border: 1px solid #666;
+	cursor: pointer;
+	@include rounded(5px);
+	&:hover {
+		opacity: .7;
+	}
+}
