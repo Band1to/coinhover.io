@@ -3,7 +3,7 @@ import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json'
 import Portfolio from './Portfolio'
 import SocialMediaFooter from './SocialMediaFooter'
-import AssetSideBar from './AssetSideBar'
+import AssetsTable from './AssetsTable'
 
 const portfolio = enzyme.shallow(<Portfolio />);
 
@@ -13,8 +13,8 @@ describe('<Portfolio /> component', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	it('contains the AssetSideBar component', () => {
-		expect(portfolio.find(AssetSideBar).length).toBe(1);
+	it('contains the AssetsTable component', () => {
+		expect(portfolio.find(AssetsTable).length).toBe(1);
 	});
 
 	it('contains the SocialMediaFooter component', () => {

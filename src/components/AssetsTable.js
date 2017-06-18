@@ -1,9 +1,9 @@
 import React from 'react'
 
-class AssetSideBar extends React.Component {
+class AssetsTable extends React.Component {
 	render() {
 		return (
-			<section className="asset-sidebar">
+			<section className="asset-table">
 				<ul>
 					<li>
 						<div className="asset">
@@ -21,4 +21,4 @@ class AssetSideBar extends React.Component {
 	}
 }
 
-export default AssetSideBar
+export default AssetsTable

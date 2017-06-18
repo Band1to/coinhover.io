@@ -1,6 +1,6 @@
 import React from 'react'
 import SocialMediaFooter from './SocialMediaFooter'
-import AssetSideBar from './AssetSideBar'
+import AssetsTable from './AssetsTable'
 
 class Portfolio extends React.Component {
 	constructor(props) {
@@ -16,7 +16,7 @@ class Portfolio extends React.Component {
 						<h1>COINHOVER</h1>
 						<h2>Watch your cryptocurrency asset balances in once place.</h2>
 					</header>
-					<AssetSideBar />
+					<AssetsTable />
 					<SocialMediaFooter />
 				</section>
 			</div>

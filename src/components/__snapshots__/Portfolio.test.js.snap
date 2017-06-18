@@ -15,7 +15,7 @@ exports[`<Portfolio /> component should render 1`] = `
         Watch your cryptocurrency asset balances in once place.
       </h2>
     </header>
-    <AssetSideBar />
+    <AssetsTable />
     <SocialMediaFooter />
   </section>
 </div>
