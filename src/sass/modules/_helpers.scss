@@ -25,8 +25,11 @@
 .tright    { text-align: right; }
 .hide      { display: none !important; }
 .show      { display: block !important; }
-.font12    { font-size: em(12); }
+.f12       { font-size: em(12); }
+.f13       { font-size: em(13); }
+.f14       { font-size: em(14); }
 .cur       { cursor: pointer; }
+.ccc 	   { color: #ccc; }
 
 // Special modifiers: SignUp
 .w140 { width: 140px; } // pass2

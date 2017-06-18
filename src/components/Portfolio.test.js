@@ -12,11 +12,6 @@ describe('<Portfolio /> component', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	it('header contains the correct text', () => {
-		expect(portfolio.find(".welcome h1").text()).toEqual('COINHOVER');
-		expect(portfolio.find(".welcome h2").text()).toEqual('Watch all your cryptocurrency asset balances in once place.');
-	});
-
 	it('contains the SocialMediaFooter component', () => {
 		expect(portfolio.find(SocialMediaFooter).length).toBe(1);
 	});

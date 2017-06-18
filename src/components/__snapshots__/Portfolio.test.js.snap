@@ -5,7 +5,7 @@ exports[`<Portfolio /> component should render 1`] = `
   className="app-bg"
 >
   <section
-    className="welcome"
+    className="portfolio"
   >
     <header>
       <h1>

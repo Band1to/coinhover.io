@@ -10,7 +10,7 @@ class Portfolio extends React.Component {
 	render() {
 		return (
 			<div className="app-bg">
-				<section className="welcome">
+				<section className="portfolio">
 					<header>
 						<h1>COINHOVER</h1>
 						<h2>Watch all your cryptocurrency<br/> asset balances in once place.</h2>
