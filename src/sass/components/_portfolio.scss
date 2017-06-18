@@ -10,7 +10,12 @@
 	h1 { margin: 20% 0 5px 0; font-weight: 900; font-size: 4em; }
 	h2 { font-size: 1.5em; line-height: 32px; color: #ccc; }
 	h2, p { margin-bottom: 10px; color: #ccc; }
-	a { font-weight: 400; color: $green; }
+	a {
+		font-weight: 400; color: $green;
+		&:hover {
+			color: lighten($green, 10%);
+		}
+	}
 	footer {
 		margin: 20px auto; width: 100px;
 		li { float: left; margin-right: 5px; }
