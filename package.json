@@ -2,7 +2,7 @@
   "name": "coinhover",
   "version": "0.0.1",
   "main": "index.js",
-  "author": "@leongaban",
+  "author": "Leon Gaban",
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --history-api-fallback",
