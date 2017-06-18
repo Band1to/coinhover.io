@@ -7,10 +7,10 @@
 	margin: 40px auto;
 	width: 640px;
 	text-align: center;
-	header { color: white; }
 	h1 { margin: 20% 0 5px 0; font-weight: 900; font-size: 4em; }
-	h2 { margin-bottom: 10px; font-size: 1.5em; line-height: 32px; color: #ccc; }
-	h2, p { color: #ccc; }
+	h2 { font-size: 1.5em; line-height: 32px; color: #ccc; }
+	h2, p { margin-bottom: 10px; color: #ccc; }
+	a { font-weight: 400; color: $green; }
 	footer {
 		margin: 20px auto; width: 100px;
 		li { float: left; margin-right: 5px; }
