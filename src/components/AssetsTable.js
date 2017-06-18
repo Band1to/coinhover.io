@@ -4,18 +4,23 @@ class AssetsTable extends React.Component {
 	render() {
 		return (
 			<section className="asset-table">
-				<ul>
-					<li>
-						<div className="asset">
-							<div className="icon-bitcoin"></div> Bitcoin
+
+				<ul className="flex-container">
+					<li className="flex-item">
+						<div className="asset-btn">
+							<div className="icon-bitcoin"></div> Bitcoin (BTC)
 						</div>
 					</li>
-					<li>
-						<div className="asset add">
-							<div className="icon-plus-outline"></div> Add Asset
-						</div>
-					</li>
-				</ul>
+					<li className="flex-item">$2700</li>
+					<li className="flex-item positive"><em>+</em>0.1</li>
+					<li className="flex-item">40%</li>
+				</ul>	
+
+				<div className="add-asset-row">
+					<div className="add-btn">
+						<div className="icon-plus-outline"></div> Add Asset
+					</div>
+				</div>
 			</section>
 		)
 	}

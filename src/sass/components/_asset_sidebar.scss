@@ -1,30 +1,65 @@
-.asset-table {
-	margin-top: 30px;
-	max-width: 320px;
+.asset-table { margin-top: 30px; }
 
-	li {
-		margin-bottom: 5px;
+.flex-container {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+
+	.flex-item:first-child {
+		margin-left: -5px;
+		max-width: 260px;
+		min-width: 260px;
+		text-align: left;
 	}
 }
 
-.asset {
-	padding: 20px 18px;
+.flex-item {
+	flex: 1;
+	margin-right: 10px;
+	padding: 5px;
+	width: auto;
+	height: 50px;
+	font-size: 1.2em;
+	line-height: 50px;
+	text-align: center;
+
+	em {
+		position: relative;
+	    top: 4px;
+	    margin-right: 4px;
+		font-size: 1.5em;
+	}
+}
+
+.asset-btn,
+.add-btn {
 	border: 1px solid #666;
 	cursor: pointer;
 	@include rounded(5px);
 	&:hover { border: 1px solid $offwhite; }
 }
 
-.asset.add {
-	opacity: .7;
-	&:hover { background: none; opacity: 1; }
-}
-
 .icon-bitcoin {
 	float: left;
 	font-size: 2em;
-	margin: -7px 10px 0 -10px;
+	margin: 0 10px;
 	color: $bitcoin;
+}
+
+.add-asset-row {
+	margin-top: 10px;
+}
+
+.add-btn {
+	padding: 15px 10px;
+	width: 238px;
+	text-align: left;
+	opacity: .7;
+	&:hover { background: none; opacity: 1; }
 }
 
 .icon-plus-outline {
