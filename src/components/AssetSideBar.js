@@ -7,10 +7,14 @@ class AssetSideBar extends React.Component {
 				<ul>
 					<li>
 						<div className="asset">
-							+ Add Asset
+							<div className="icon-bitcoin"></div> Bitcoin
 						</div>
 					</li>
-					<li></li>
+					<li>
+						<div className="asset add">
+							<div className="icon-plus-outline"></div> Add Asset
+						</div>
+					</li>
 				</ul>
 			</section>
 		)
