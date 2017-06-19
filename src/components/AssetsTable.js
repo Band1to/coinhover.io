@@ -1,24 +1,21 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import AssetRow from './AssetRow'
 
 class AssetsTable extends React.Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			assets: props.assets
+		};
+	}
+
 	render() {
+		const assets = this.state.assets ? this.state.assets : [];	
+
 		return (
 			<section className="asset-table">
-
-				<ul className="flex-container">
-					<li className="flex-item">
-						<div className="asset-btn">
-							<div className="icon-bitcoin"></div> Bitcoin (BTC)
-						</div>
-					</li>
-					<li className="flex-item">
-						<input type="text" placeholder="Holdings"/>
-					</li>
-					<li className="flex-item">$2700</li>
-					<li className="flex-item positive"><em>+</em>0.1</li>
-					<li className="flex-item">40%</li>
-				</ul>	
-
+				{ assets.map(asset => <AssetRow key={asset.id} asset={asset}/>) }
 				<div className="add-asset-row">
 					<div className="add-btn">
 						<div className="icon-plus-outline"></div> Add Asset
@@ -30,3 +27,7 @@ class AssetsTable extends React.Component {
 }
 
 export default AssetsTable
+
+AssetsTable.propTypes = {
+	assets: PropTypes.array.isRequired
+}

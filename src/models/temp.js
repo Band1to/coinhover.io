@@ -1,4 +1,4 @@
-const temp_model = [
+export const assets = [
 	{
 		"id": "bitcoin", 
 		"name": "Bitcoin", 

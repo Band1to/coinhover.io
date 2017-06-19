@@ -1,7 +1,7 @@
 import React from 'react'
 import SocialMediaFooter from './SocialMediaFooter'
 import AssetsTable from './AssetsTable'
-import data from '../models/temp'
+import { assets } from '../models/temp'
 
 class Portfolio extends React.Component {
 	constructor(props) {
@@ -17,7 +17,7 @@ class Portfolio extends React.Component {
 						<h1><span className="plus">+</span>COINHOVER</h1>
 						<h2>Watch your cryptocurrency asset balances in once place.</h2>
 					</header>
-					<AssetsTable data={ data }/>
+					<AssetsTable assets={ assets }/>
 					<SocialMediaFooter />
 				</section>
 			</div>
