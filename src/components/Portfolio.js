@@ -12,8 +12,8 @@ class Portfolio extends React.Component {
 			<div className="app-bg">
 				<section className="welcome">
 					<header>
-						<h1>COINHOVER</h1>
-						<h2>A cryptocurrency asset balance calculator</h2>
+						<h1><span className="plus">+</span> COINHOVER</h1>
+						<h2>The cryptocurrency calculator</h2>
 						<p>Currently in development...</p>
 					</header>
 					<SocialMediaFooter />

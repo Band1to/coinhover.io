@@ -7,7 +7,13 @@
 	margin: 40px auto;
 	width: 640px;
 	text-align: center;
-	h1 { margin: 20% 0 5px 0; font-weight: 900; font-size: 4em; }
+	h1 {
+		position: relative;
+    	left: -20px;
+		margin: 20% 0 5px 0;
+		font-weight: 900;
+		font-size: 4em;
+	}
 	h2 { font-size: 1.5em; line-height: 32px; color: #ccc; }
 	h2, p { margin-bottom: 10px; color: #ccc; }
 	a {
@@ -17,5 +23,12 @@
 	footer {
 		margin: 20px auto; width: 83px;
 		li { float: left; margin-right: 5px; }
+	}
+	.plus {
+	    position: relative;
+	    top: 13px;
+	    left: 10px;
+		font-size: 1.5em;
+		font-weight: 100;
 	}
 }
