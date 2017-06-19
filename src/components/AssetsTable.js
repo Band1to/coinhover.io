@@ -11,6 +11,9 @@ class AssetsTable extends React.Component {
 							<div className="icon-bitcoin"></div> Bitcoin (BTC)
 						</div>
 					</li>
+					<li className="flex-item">
+						<input type="text" placeholder="Holdings"/>
+					</li>
 					<li className="flex-item">$2700</li>
 					<li className="flex-item positive"><em>+</em>0.1</li>
 					<li className="flex-item">40%</li>

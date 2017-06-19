@@ -9,13 +9,20 @@ exports[`<Portfolio /> component should render 1`] = `
   >
     <header>
       <h1>
+        <span
+          className="plus"
+        >
+          +
+        </span>
         COINHOVER
       </h1>
       <h2>
         Watch your cryptocurrency asset balances in once place.
       </h2>
     </header>
-    <AssetsTable />
+    <AssetsTable
+      data={Object {}}
+    />
     <SocialMediaFooter />
   </section>
 </div>

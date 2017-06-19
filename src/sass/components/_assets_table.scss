@@ -1,4 +1,13 @@
-.asset-table { margin-top: 30px; }
+.asset-table {
+	margin-top: 30px;
+	input {
+		padding: 14px;
+		// color: $gray;
+		border: 1px solid $gray;
+		background: $purple_dark;
+		@include rounded(4px);
+	}
+}
 
 .flex-container {
 	display: -webkit-box;

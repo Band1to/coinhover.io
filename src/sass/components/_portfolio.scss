@@ -3,10 +3,18 @@
 	@include linear-gradient($purple, $violet);
 }
 
+.plus {
+    position: relative;
+	top: 5px;
+    margin-right: 5px;
+	font-size: 1.5em;
+	font-weight: 100;
+}
+
 .portfolio {
 	position: relative;
 	margin: 0 auto;
-	padding: 30px;
+	padding: 15px 30px 30px 30px;
 
 	header {
 		position: relative;
