@@ -12,9 +12,7 @@ exports[`<Portfolio /> component should render 1`] = `
         COINHOVER
       </h1>
       <h2>
-        Watch all your cryptocurrency
-        <br />
-         asset balances in once place.
+        A cryptocurrency asset balance calculator
       </h2>
       <p>
         Currently in development...

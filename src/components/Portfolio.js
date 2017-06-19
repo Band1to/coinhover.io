@@ -13,7 +13,7 @@ class Portfolio extends React.Component {
 				<section className="welcome">
 					<header>
 						<h1>COINHOVER</h1>
-						<h2>Watch all your cryptocurrency<br/> asset balances in once place.</h2>
+						<h2>A cryptocurrency asset balance calculator</h2>
 						<p>Currently in development...</p>
 					</header>
 					<SocialMediaFooter />
