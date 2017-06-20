@@ -20,6 +20,14 @@
 		position: relative;
 		top: 0;
 		border-bottom: 1px solid #666;
+
+		em {
+			position: absolute;
+			top: 20px;
+			right: 0;
+			font-size: 3em;
+			color: lighten($green, 10%);
+		}
 	}
 
 	h1 { font-weight: 900; font-size: 2em; }

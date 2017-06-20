@@ -16,6 +16,7 @@ class Portfolio extends React.Component {
 					<header>
 						<h1><span className="plus">+</span>COINHOVER</h1>
 						<h2>Watch your cryptocurrency asset balances in once place.</h2>
+						<em className="num">$5000</em>
 					</header>
 					<AssetsTable assets={ assets }/>
 					<SocialMediaFooter />
