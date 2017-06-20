@@ -28,6 +28,13 @@ class AssetsTable extends React.Component {
 
 export default AssetsTable
 
-AssetsTable.propTypes = {
-	assets: PropTypes.array.isRequired
-}
+// AssetsTable.propTypes = {
+// 	assets: PropTypes.array.isRequired
+// }
+
+React.PropTypes.arrayOf(
+	React.PropTypes.shape({
+		id: React.PropTypes.string.isRequired,
+		name: React.PropTypes.string.isRequired
+	})
+).isRequired
