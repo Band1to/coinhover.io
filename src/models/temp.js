@@ -1,7 +1,8 @@
 export const assets = [
 	{
 		"id": "bitcoin", 
-		"name": "Bitcoin", 
+		"name": "Bitcoin",
+		"balance": "1.1",
 		"symbol": "BTC", 
 		"rank": "1", 
 		"price_usd": "573.137", 
@@ -18,6 +19,7 @@ export const assets = [
 	{
 		"id": "ethereum",
 		"name": "Ethereum",
+		"balance": "3.5",
 		"symbol": "ETH",
 		"rank": "2",
 		"price_usd": "369.776",
@@ -34,6 +36,7 @@ export const assets = [
 	{
 		"id": "lisk",
 		"name": "Lisk",
+		"balance": "619.2272319",
 		"symbol": "LSK",
 		"rank": "23",
 		"price_usd": "3.15493",
@@ -50,6 +53,7 @@ export const assets = [
 	{
 		"id": "sonm",
 		"name": "SONM (Pre-Launch)",
+		"balance": "10,928.88",
 		"symbol": "SNM",
 		"rank": "729",
 		"price_usd": "0.521461",
@@ -66,6 +70,7 @@ export const assets = [
 	{
 		"id": "dogecoin",
 		"name": "Dogecoin",
+		"balance": "303.74",
 		"symbol": "DOGE",
 		"rank": "21",
 		"price_usd": "0.00316303",

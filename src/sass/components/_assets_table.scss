@@ -1,48 +1,4 @@
-.asset-table {
-	margin-top: 30px;
-	input {
-		padding: 14px;
-		// color: $gray;
-		border: 1px solid $gray;
-		background: $purple_dark;
-		@include rounded(4px);
-	}
-}
-
-.flex-container {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	justify-content: space-around;
-
-	.flex-item:first-child {
-		margin-left: -5px;
-		max-width: 260px;
-		min-width: 260px;
-		text-align: left;
-	}
-}
-
-.flex-item {
-	flex: 1;
-	margin-right: 10px;
-	padding: 5px;
-	width: auto;
-	height: 50px;
-	font-size: 1.2em;
-	line-height: 50px;
-	text-align: center;
-
-	em {
-		position: relative;
-	    top: 4px;
-	    margin-right: 4px;
-		font-size: 1.5em;
-	}
-}
+.asset-table { margin-top: 30px; }
 
 .asset-btn,
 .add-btn {
@@ -52,17 +8,6 @@
 	&:hover { border: 1px solid $offwhite; }
 }
 
-.icon-bitcoin {
-	float: left;
-	font-size: 2em;
-	margin: 0 10px;
-	color: $bitcoin;
-}
-
-.add-asset-row {
-	margin-top: 10px;
-}
-
 .add-btn {
 	padding: 15px 10px;
 	width: 238px;
@@ -70,6 +15,8 @@
 	opacity: .7;
 	&:hover { background: none; opacity: 1; }
 }
+
+.add-asset-row { margin-top: 10px; }
 
 .icon-plus-outline {
 	float: left;
