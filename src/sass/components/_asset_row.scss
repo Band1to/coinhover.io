@@ -26,6 +26,9 @@
 		&:hover {
 			border: 1px solid white;
 		}
+		&::placeholder {
+			color: white;
+		}
 	}
 
 	.flex-item:first-child {

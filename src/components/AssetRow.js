@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const onChangeHandler = () => {
-
+const onChangeHandler = (type) => {
+	console.log('type:', type);
 };
 
 export default function AssetRow ({ asset }) {
@@ -20,9 +20,9 @@ export default function AssetRow ({ asset }) {
 			</li>
 			<li className="flex-item num">
 				<input type="text"
-					   placeholder="Holdings"
-					   value={ asset.balance }
-					   onChange={ () => onChangeHandler() }/>
+					   placeholder={ asset.balance }
+					   onChange={() => onChangeHandler('change') }
+					   onBlur={() => onChangeHandler('blur')} />
 			</li>
 			<li className="flex-item num">
 				<div className="flex-border">
