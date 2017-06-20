@@ -53,7 +53,7 @@ export const assets = [
 	{
 		"id": "sonm",
 		"name": "SONM (Pre-Launch)",
-		"balance": "10,928.88",
+		"balance": "10928.88",
 		"symbol": "SNM",
 		"rank": "729",
 		"price_usd": "0.521461",

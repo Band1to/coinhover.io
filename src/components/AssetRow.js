@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { multiply, round } from '../utils/formatter'
 
 const onChangeHandler = (type) => {
 	console.log('type:', type);
 };
 
 export default function AssetRow ({ asset }) {
-	// <div className="icon-bitcoin"></div> {asset.name} ({asset.symbol})
+
+	const value = round(multiply(asset.balance, asset.price_usd));
+	
 	return (
 		<ul className="flex-container">
 			<li className="flex-item">
@@ -26,7 +29,7 @@ export default function AssetRow ({ asset }) {
 			</li>
 			<li className="flex-item num">
 				<div className="flex-border">
-					{ asset.price_usd }
+					${ value }
 				</div>
 			</li>
 			<li className="flex-item positive num">
