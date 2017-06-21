@@ -17,10 +17,10 @@ class AssetsTable extends React.Component {
 			<section className="asset-table">
 				{ assets.map(asset =>
 					<AssetRow
-						key={asset.id}
-						asset={asset}
-						balance={asset.balance}
-						price_usd={asset.price_usd}/>) }
+						key={ asset.id }
+						asset={ asset} 
+						balance={ asset.balance }
+						price_usd={ asset.price_usd }/>) }
 				
 				<div className="add-asset-row">
 					<div className="add-btn">

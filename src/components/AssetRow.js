@@ -24,6 +24,9 @@ class AssetRow extends React.Component {
 	}
 
 	render() {
+		const symbol = this.state.asset.symbol;
+		const name = this.state.asset.name;
+
 		return (
 			<ul className="flex-container">
 				<li className="flex-item">
@@ -31,8 +34,8 @@ class AssetRow extends React.Component {
 						<div className="coin-logo">
 							<img src="/static/imgs/coins/bitcoin.png"/>
 						</div>
-						<strong>{this.state.asset.symbol}</strong>
-						<small>{this.state.asset.name}</small>
+						<strong>{ symbol }</strong>
+						<small>{ name }</small>
 					</div>
 				</li>
 				<li className="flex-item num">
@@ -59,3 +62,10 @@ class AssetRow extends React.Component {
 }
 
 export default AssetRow
+
+AssetRow.propTypes = {
+	asset: PropTypes.object.isRequired,
+	balance: PropTypes.string.isRequired,
+	value: PropTypes.string.isRequired,
+	price_usd: PropTypes.string.isRequired
+};
