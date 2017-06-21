@@ -44,7 +44,7 @@ class AssetRow extends React.Component {
 						   onChange={ this.handleChange } />
 				</li>
 				<li className="flex-item num">
-					<div className="flex-border">
+					<div className="flex-border calculated">
 						${ this.state.value }
 					</div>
 				</li>
@@ -66,6 +66,5 @@ export default AssetRow
 AssetRow.propTypes = {
 	asset: PropTypes.object.isRequired,
 	balance: PropTypes.string.isRequired,
-	value: PropTypes.string.isRequired,
 	price_usd: PropTypes.string.isRequired
 };
