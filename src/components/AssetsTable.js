@@ -11,11 +11,17 @@ class AssetsTable extends React.Component {
 	}
 
 	render() {
-		const assets = this.state.assets ? this.state.assets : [];	
+		const assets = this.state.assets ? this.state.assets : [];
 
 		return (
 			<section className="asset-table">
-				{ assets.map(asset => <AssetRow key={asset.id} asset={asset}/>) }
+				{ assets.map(asset =>
+					<AssetRow
+						key={asset.id}
+						asset={asset}
+						balance={asset.balance}
+						price_usd={asset.price_usd}/>) }
+				
 				<div className="add-asset-row">
 					<div className="add-btn">
 						<div className="icon-plus-outline"></div> Add Asset
