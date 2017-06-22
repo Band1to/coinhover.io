@@ -15,15 +15,15 @@ https://coinhover.io
 
 #### Public APIs
 https://coinmarketcap.com/api
+
 https://www.cryptocompare.com/api
+
 https://www.cryptonator.com/api
 
 #### Support / Affiliate links
-Coinbase, Changelly, Shapeshift
+[Coinbase](https://www.coinbase.com/invite_friends), [Changelly](https://changelly.com/affiliate), [Shapeshift](https://shapeshift.io/legacy/affiliate.html)
 
 #### Donation options
-Bitcoin `1EPP6ccY3XhwiPAGMYoEgCfhbqmZehmNAQ`
-
-ETH `0x01E2f9Ba53b6Cb91e7f158090D24ebBcAdF0C564`
-
-LSK `16811843780664295310L`
+- Bitcoin `1EPP6ccY3XhwiPAGMYoEgCfhbqmZehmNAQ`
+- ETH `0x01E2f9Ba53b6Cb91e7f158090D24ebBcAdF0C564`
+- LSK `16811843780664295310L`
