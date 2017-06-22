@@ -6,8 +6,12 @@ https://coinhover.io
 
 #### Dev scripts
 `npm run dev`
+
 `npm run build`
-`npm t -- --watch` JestJS (snapshot update) `npm t -- --u`
+
+`npm t -- --watch` JestJS
+
+`npm t -- --u` Jest snapshot update
 
 #### Public APIs
 https://coinmarketcap.com/api
