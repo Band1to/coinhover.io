@@ -25,97 +25,15 @@ exports[`<Portfolio /> component should render 1`] = `
         $5000
       </em>
     </header>
-    <AssetsTable
-      assets={
-        Array [
-          Object {
-            "24h_volume_usd": "72855700.0",
-            "available_supply": "15844176.0",
-            "balance": "1.1",
-            "id": "bitcoin",
-            "last_updated": "1472762067",
-            "market_cap_usd": "9080883500.0",
-            "name": "Bitcoin",
-            "percent_change_1h": "0.04",
-            "percent_change_24h": "-0.3",
-            "percent_change_7d": "-0.57",
-            "price_btc": "1.0",
-            "price_usd": "573.137",
-            "rank": "1",
-            "symbol": "BTC",
-            "total_supply": "15844176.0",
-          },
-          Object {
-            "24h_volume_usd": "681315000.0",
-            "available_supply": "92629604.0",
-            "balance": "3.5",
-            "id": "ethereum",
-            "last_updated": "1497910467",
-            "market_cap_usd": "34252204541.0",
-            "name": "Ethereum",
-            "percent_change_1h": "-0.17",
-            "percent_change_24h": "-0.31",
-            "percent_change_7d": "-3.43",
-            "price_btc": "0.148029",
-            "price_usd": "369.776",
-            "rank": "2",
-            "symbol": "ETH",
-            "total_supply": "92629604.0",
-          },
-          Object {
-            "24h_volume_usd": "10079000.0",
-            "available_supply": "108527025.0",
-            "balance": "619.2272319",
-            "id": "lisk",
-            "last_updated": "1497910474",
-            "market_cap_usd": "342395167.0",
-            "name": "Lisk",
-            "percent_change_1h": "0.08",
-            "percent_change_24h": "0.38",
-            "percent_change_7d": "-3.26",
-            "price_btc": "0.00126298",
-            "price_usd": "3.15493",
-            "rank": "23",
-            "symbol": "LSK",
-            "total_supply": "108527025.0",
-          },
-          Object {
-            "24h_volume_usd": "131354.0",
-            "available_supply": null,
-            "balance": "10928.88",
-            "id": "sonm",
-            "last_updated": "1497910502",
-            "market_cap_usd": null,
-            "name": "SONM (Pre-Launch)",
-            "percent_change_1h": "0",
-            "percent_change_24h": "55.21",
-            "percent_change_7d": null,
-            "price_btc": "0.00020875",
-            "price_usd": "0.521461",
-            "rank": "729",
-            "symbol": "SNM",
-            "total_supply": null,
-          },
-          Object {
-            "24h_volume_usd": "12095800.0",
-            "available_supply": "109868913184",
-            "balance": "3",
-            "id": "dogecoin",
-            "last_updated": "1497910445",
-            "market_cap_usd": "347518668.0",
-            "name": "Dogecoin",
-            "percent_change_1h": "0.04",
-            "percent_change_24h": "-1.2",
-            "percent_change_7d": "-2.39",
-            "price_btc": "0.00000127",
-            "price_usd": "0.00316303",
-            "rank": "21",
-            "symbol": "DOGE",
-            "total_supply": "109868913184",
-          },
-        ]
-      }
-    />
+    <div
+      className="animate-spin"
+    >
+      <div
+        className="icon-spin6"
+      >
+        Loading
+      </div>
+    </div>
     <SocialMediaFooter />
   </section>
 </div>

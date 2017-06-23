@@ -25,7 +25,7 @@ class Portfolio extends React.Component {
 			// set state.assets to updated local_coins and pass into AssetTable
 			// set loading to false
 			allCoins = res.data;
-			this.setState({ coins: res.data });
+			this.setState({ coins: res.data, loading: false });
 			// console.log('this', this.state);
 		});
 
@@ -43,7 +43,14 @@ class Portfolio extends React.Component {
 						<h2>Watch your cryptocurrency asset balances in once place.</h2>
 						<em className="num">$5000</em>
 					</header>
-					<AssetsTable assets={ assets }/>
+					{ this.state.loading ? (
+						<div className="loading">
+							<div className="loader"></div>
+							<span>Loading coin data...</span>
+						</div>
+					) : (
+						<AssetsTable assets={ assets }/>
+					)}
 					<SocialMediaFooter />
 				</section>
 			</div>
