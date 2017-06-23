@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { multiply, round } from '../utils/formatter'
+import { cleanNonNumericChars, multiply, round } from '../utils/formatter'
 
 const rounder = (balance, price_usd) => round(multiply(balance, price_usd))
 
@@ -17,7 +17,7 @@ class AssetRow extends React.Component {
 	}
 
 	handleChange(event) {
-		const balance = event.target.value;
+		const balance = cleanNonNumericChars(event.target.value);
 		const price_usd = this.state.asset.price_usd;
 		const value = rounder(balance, price_usd);
 		this.setState({ balance, value });

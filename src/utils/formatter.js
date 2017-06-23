@@ -5,3 +5,26 @@ export const capitalizeFirst = (string) => {
 export const round = (value) => Math.round((value) * 100) / 100;
 
 export const multiply = (num1, num2) => num1 * num2;
+
+// https://github.com/amirfl/react-native-num-textinput
+export const cleanNonNumericChars = (text) => {
+	const precision = 3;
+	if (!text || typeof text !== 'string') { return ""; }
+	// Remove non numeric and non .- chars
+	text = text.replace(/[^\d.-]/g, '');
+	// Remove extra periods ('.', only one, at most left allowed in the string)
+	let splitText = text.split('.');
+	text = splitText.shift() + (splitText.length ? '.' + splitText[0].slice(0, precision) : '');
+	// Remove '-' signs if there is more than one, or if it is not most left char
+	for (let i=1; i<text.length; i++) {
+   		let char = text.substr(i,1);
+   		if (char == '-') {
+ 			text = text.substr(0,i) + text.substr(i+1);
+ 			// decrement value to avoid skipping character
+ 			i--;
+   		}
+	}
+	// Remove leading zeros
+	text = text.replace(/^(-)?0+(?=\d)/,'$1'); //?=\d is a positive lookahead, which matches any digit 0-9
+	return text;
+}
