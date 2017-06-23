@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { cleanNonNumeric, floorDecimal, multiply, round } from '../utils/formatter'
+import { cleanNonNumeric, floorCents, multiply, round, truncate } from '../utils/formatter'
 
-const rounder = (balance, price_usd) => round(multiply(balance, floorDecimal(price_usd)));
+const rounder = (balance, price_usd) => round(multiply(balance, floorCents(price_usd)));
 
 const percentageClasser = (number) => {
 	let classString = 'flex-item num';
@@ -44,7 +44,7 @@ class AssetRow extends React.Component {
 							<img src="/static/imgs/coins/bitcoin.png"/>
 						</div>
 						<strong>{ symbol }</strong>
-						<small>{ name }</small>
+						<small>{ truncate(name, 23) }</small>
 					</div>
 				</li>
 				<li className="flex-item num">

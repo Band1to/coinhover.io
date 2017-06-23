@@ -2,11 +2,16 @@ export const capitalizeFirst = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export const floorDecimal = (num) => (Math.floor(num * 100) / 100);
+export const floorCents = (num) => (Math.floor(num * 100) / 100);
 
 export const round = (value) => Math.round((value) * 100) / 100;
 
 export const multiply = (num1, num2) => num1 * num2;
+
+export const truncate = (text, count) => {
+	const trimmed = text.substring(0, count);
+	return text.length > 20 ? `${trimmed}...` : text;
+};
 
 // https://github.com/amirfl/react-native-num-textinput
 export const cleanNonNumeric = (text) => {
