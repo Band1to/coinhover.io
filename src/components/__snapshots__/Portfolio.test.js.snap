@@ -87,7 +87,7 @@ exports[`<Portfolio /> component should render 1`] = `
             "last_updated": "1497910502",
             "market_cap_usd": null,
             "name": "SONM (Pre-Launch)",
-            "percent_change_1h": "-1.94",
+            "percent_change_1h": "0",
             "percent_change_24h": "55.21",
             "percent_change_7d": null,
             "price_btc": "0.00020875",
