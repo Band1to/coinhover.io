@@ -1,0 +1,12 @@
+[
+	{
+		"id": "bitcoin",
+		"name": "Bitcoin",
+		"logo": "/static/imgs/coins/bitcoin.png"
+	},
+	{
+		"id": "ethereum",
+		"name": "Ethereum",
+		"logo": "/static/imgs/coins/ethereum.png"
+	}
+]

@@ -2,11 +2,31 @@ import React from 'react'
 import SocialMediaFooter from './SocialMediaFooter'
 import AssetsTable from './AssetsTable'
 import { assets } from '../models/temp'
+import local_coins from '../coins.json'
+import * as api from '../services/api'
+
+let allCoins = [];
 
 class Portfolio extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {};
+		this.state = {
+			loading: true,
+			coins: [],
+			assets: []
+		};
+	}
+
+	componentDidMount() {
+		api.getAllCoins().then((res) => {
+			// set res.data to coins
+			// find coin data in coins and match to item in local_coins
+			// set state.assets to updated local_coins and pass into AssetTable
+			// set loading to false
+			allCoins = res.data;
+			this.setState({ coins: res.data });
+			console.log('this', this.state);
+		});
 	}
 
 	render() {
