@@ -1,8 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { cleanNonNumericChars, multiply, round } from '../utils/formatter'
+import { cleanNonNumeric, multiply, parseDecimal, round } from '../utils/formatter'
 
-const rounder = (balance, price_usd) => round(multiply(balance, price_usd))
+const rounder = (balance, price_usd) => round(multiply(balance, parseDecimal(price_usd)));
+
+const percentageClasser = (number) => {
+	let classString = 'flex-item num';
+	if (number == 0) return classString;
+    classString = number >= 0 ? `${classString} positive` : `${classString} negative`;
+    return classString;
+};
 
 class AssetRow extends React.Component {
 
@@ -11,13 +18,13 @@ class AssetRow extends React.Component {
 		this.state = {
 			asset: props.asset,
 			balance: props.balance,
-			value: rounder(props.balance, Math.floor(props.price_usd))
+			value: rounder(props.balance, props.price_usd)
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
 
 	handleChange(event) {
-		const balance = cleanNonNumericChars(event.target.value);
+		const balance = cleanNonNumeric(event.target.value);
 		const price_usd = this.state.asset.price_usd;
 		const value = rounder(balance, price_usd);
 		this.setState({ balance, value });
@@ -27,6 +34,7 @@ class AssetRow extends React.Component {
 		const symbol = this.state.asset.symbol;
 		const name = this.state.asset.name;
 		const price_usd = `USD price ${this.state.asset.price_usd}`;
+		const percent_change_1h = this.state.asset.percent_change_1h;
 
 		return (
 			<ul className="flex-container">
@@ -49,7 +57,7 @@ class AssetRow extends React.Component {
 						${ this.state.value }
 					</div>
 				</li>
-				<li className="flex-item positive num">
+				<li className={ percentageClasser(percent_change_1h) }>
 					<div className="flex-border">
 						{ this.state.asset.percent_change_1h }%
 					</div>

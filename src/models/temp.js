@@ -62,7 +62,7 @@ export const assets = [
 		"market_cap_usd": null,
 		"available_supply": null,
 		"total_supply": null,
-		"percent_change_1h": "-1.94",
+		"percent_change_1h": "0",
 		"percent_change_24h": "55.21",
 		"percent_change_7d": null,
 		"last_updated": "1497910502"

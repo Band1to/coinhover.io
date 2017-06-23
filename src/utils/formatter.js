@@ -6,8 +6,10 @@ export const round = (value) => Math.round((value) * 100) / 100;
 
 export const multiply = (num1, num2) => num1 * num2;
 
+export const parseDecimal = (number) => parseFloat(Number(number).toFixed(2));
+
 // https://github.com/amirfl/react-native-num-textinput
-export const cleanNonNumericChars = (text) => {
+export const cleanNonNumeric = (text) => {
 	const precision = 3;
 	if (!text || typeof text !== 'string') { return ""; }
 	// Remove non numeric and non .- chars
