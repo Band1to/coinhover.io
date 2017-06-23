@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { cleanNonNumeric, multiply, parseDecimal, round } from '../utils/formatter'
+import { cleanNonNumeric, floorDecimal, multiply, round } from '../utils/formatter'
 
-const rounder = (balance, price_usd) => round(multiply(balance, parseDecimal(price_usd)));
+const rounder = (balance, price_usd) => round(multiply(balance, floorDecimal(price_usd)));
 
 const percentageClasser = (number) => {
 	let classString = 'flex-item num';
