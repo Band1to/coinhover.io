@@ -99,7 +99,7 @@ exports[`<Portfolio /> component should render 1`] = `
           Object {
             "24h_volume_usd": "12095800.0",
             "available_supply": "109868913184",
-            "balance": "303.74",
+            "balance": "3",
             "id": "dogecoin",
             "last_updated": "1497910445",
             "market_cap_usd": "347518668.0",

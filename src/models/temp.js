@@ -70,7 +70,7 @@ export const assets = [
 	{
 		"id": "dogecoin",
 		"name": "Dogecoin",
-		"balance": "303.74",
+		"balance": "3",
 		"symbol": "DOGE",
 		"rank": "21",
 		"price_usd": "0.00316303",

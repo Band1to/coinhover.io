@@ -11,7 +11,7 @@ class AssetRow extends React.Component {
 		this.state = {
 			asset: props.asset,
 			balance: props.balance,
-			value: rounder(props.balance, props.price_usd)
+			value: rounder(props.balance, Math.floor(props.price_usd))
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -26,6 +26,7 @@ class AssetRow extends React.Component {
 	render() {
 		const symbol = this.state.asset.symbol;
 		const name = this.state.asset.name;
+		const price_usd = `USD price ${this.state.asset.price_usd}`;
 
 		return (
 			<ul className="flex-container">
@@ -44,13 +45,13 @@ class AssetRow extends React.Component {
 						   onChange={ this.handleChange } />
 				</li>
 				<li className="flex-item num">
-					<div className="flex-border calculated">
+					<div className="flex-border calculated" title={ price_usd }>
 						${ this.state.value }
 					</div>
 				</li>
 				<li className="flex-item positive num">
 					<div className="flex-border">
-						{ this.state.asset.percent_change_1h }
+						{ this.state.asset.percent_change_1h }%
 					</div>
 				</li>
 				<li className="flex-item num">
