@@ -12,3 +12,9 @@ export const getAllCoins = () => {
     	.then(res => res)
     	.catch(err => log('api.userLogin', err));
 };
+
+export const getCoin = (coin) => {
+	return axios.get(coin_ticker(coin))
+		.then(res => res)
+    	.catch(err => log('api.userLogin', err));
+}

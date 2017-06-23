@@ -25,8 +25,12 @@ class Portfolio extends React.Component {
 			// set loading to false
 			allCoins = res.data;
 			this.setState({ coins: res.data });
-			console.log('this', this.state);
+			// console.log('this', this.state);
 		});
+
+		// api.getCoin('bitcoin').then((res) => {
+		// 	console.log('Got bitcoin? ', res.data[0]);
+		// });
 	}
 
 	render() {
