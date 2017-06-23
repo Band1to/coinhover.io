@@ -18,6 +18,7 @@ class Portfolio extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log('local_coins', local_coins);
 		api.getAllCoins().then((res) => {
 			// set res.data to coins
 			// find coin data in coins and match to item in local_coins
