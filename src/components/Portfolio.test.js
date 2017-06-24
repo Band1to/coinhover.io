@@ -14,6 +14,7 @@ describe('<Portfolio /> component', () => {
 	});
 
 	it('contains the AssetsTable component', () => {
+		portfolio.setState({ loading: false });
 		expect(portfolio.find(AssetsTable).length).toBe(1);
 	});
 

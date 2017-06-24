@@ -26,13 +26,14 @@ exports[`<Portfolio /> component should render 1`] = `
       </em>
     </header>
     <div
-      className="animate-spin"
+      className="loading"
     >
       <div
-        className="icon-spin6"
-      >
-        Loading
-      </div>
+        className="loader"
+      />
+      <span>
+        Loading coin data...
+      </span>
     </div>
     <SocialMediaFooter />
   </section>
