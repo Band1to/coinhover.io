@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import AssetThead from './AssetThead'
 import AssetRow from './AssetRow'
 
 class AssetsTable extends React.Component {
@@ -15,6 +16,7 @@ class AssetsTable extends React.Component {
 
 		return (
 			<section className="asset-table">
+				<AssetThead />
 				{ assets.map(asset =>
 					<AssetRow
 						key={ asset.id }

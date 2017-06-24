@@ -4,6 +4,7 @@ exports[`<AssetsTable /> component should render 1`] = `
 <section
   className="asset-table"
 >
+  <AssetThead />
   <div
     className="add-asset-row"
   >

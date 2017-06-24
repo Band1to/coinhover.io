@@ -3,6 +3,7 @@ import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json'
 import AssetsTable from './AssetsTable'
 import AssetRow from './AssetRow'
+import AssetThead from './AssetThead'
 
 const assetsTable = enzyme.shallow(<AssetsTable />);
 
@@ -12,7 +13,7 @@ describe('<AssetsTable /> component', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	// it('contains the AssetsTable component', () => {
-	// 	expect(assetsTable.find(AssetRow).length).toBe(1);
-	// });
+	it('contains the AssetThead component', () => {
+		expect(assetsTable.find(AssetThead).length).toBe(1);
+	});
 });

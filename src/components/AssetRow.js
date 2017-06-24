@@ -38,7 +38,7 @@ class AssetRow extends React.Component {
 
 		return (
 			<ul className="flex-container">
-				<li className="flex-item">
+				<li className="flex-item flex-button">
 					<div className="asset-btn">
 						<div className="coin-logo">
 							<img src="/static/imgs/coins/bitcoin.png"/>
@@ -53,7 +53,7 @@ class AssetRow extends React.Component {
 						   onChange={ this.handleChange } />
 				</li>
 				<li className="flex-item num">
-					<div className="flex-border calculated" title={ price_usd }>
+					<div className="flex-border" title={ price_usd }>
 						${ this.state.value }
 					</div>
 				</li>
