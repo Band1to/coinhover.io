@@ -14,7 +14,7 @@ class AssetsTable extends React.Component {
 
 	componentDidMount() {
 		const storedCoins = getCoins();
-		console.log(' storedCoins', storedCoins);
+		console.log(' storedCoins', storedCoins.length);
 	}
 
 	render() {

@@ -516,18 +516,6 @@
         "logo": "/static/imgs/coins/veritaseum.png"
 	},
 	{
-		"id": "vertcoin", 
-        "name": "Vertcoin", 
-        "symbol": "VTC",
-        "logo": "/static/imgs/coins/vertcoin.png"
-	},
-	{
-		"id": "vslice", 
-        "name": "vSlice", 
-        "symbol": "VSL",
-        "logo": "/static/imgs/coins/vslice.png"
-	},
-	{
 		"id": "waves", 
         "name": "Waves", 
         "symbol": "WAVES",
@@ -538,12 +526,6 @@
         "name": "Wings", 
         "symbol": "WINGS",
         "logo": "/static/imgs/coins/wings.png"
-	},
-	{
-		"id": "ybcoin", 
-        "name": "YbCoin", 
-        "symbol": "YBC",
-        "logo": "/static/imgs/coins/ybcoin.png"
 	},
 	{
 		"id": "zcash", 

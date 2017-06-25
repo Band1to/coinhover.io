@@ -10,7 +10,7 @@ export const matchCoins = R.curry((api_coin, local_coin) => {
 		local_coin.percent_change_1h = api_coin.percent_change_1h;
 		local_coin.percent_change_24h = api_coin.percent_change_24h;
 		local_coin.percent_change_7d = api_coin.percent_change_7d;
-		if (!local_coin.balance) local_coin.balance = '0';
+		if (R.isNil(local_coin.balance)) local_coin.balance = '0';
 		return local_coin;
 	}
 });
