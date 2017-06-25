@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AssetThead from './AssetThead'
-import AssetRow from './AssetRow'
-import { getCoins } from '../services/coinStorage'
+import AssetRow from '../assetRow/AssetRow'
+import { getCoins } from '../../services/coinStorage'
 
 class AssetsTable extends React.Component {
 	constructor(props) {

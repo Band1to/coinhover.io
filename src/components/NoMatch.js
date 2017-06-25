@@ -1,5 +1,5 @@
 import React from 'react'
-import SocialMediaFooter from './SocialMediaFooter'
+import SocialMediaFooter from './common/SocialMediaFooter'
 
 export default function NoMatch() {
 	return (

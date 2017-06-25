@@ -2,8 +2,8 @@ import React from 'react'
 import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json'
 import Portfolio from './Portfolio'
-import SocialMediaFooter from './SocialMediaFooter'
-import AssetsTable from './AssetsTable'
+import SocialMediaFooter from '../common/SocialMediaFooter'
+import AssetsTable from '../assetsTable/AssetsTable'
 
 const portfolio = enzyme.shallow(<Portfolio />);
 

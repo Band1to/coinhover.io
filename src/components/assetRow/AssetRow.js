@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { cleanNonNumeric, floorCents, multiply, round, truncate } from '../utils/formatter'
+import { cleanNonNumeric, floorCents, multiply, round, truncate } from '../../utils/formatter'
 
 const rounder = (balance, price_usd) => round(multiply(balance, floorCents(price_usd)));
 

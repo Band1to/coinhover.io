@@ -10,6 +10,7 @@ exports[`<AssetsTable /> component should render 1`] = `
   >
     <div
       className="add-btn"
+      onClick={[Function]}
     >
       <div
         className="icon-plus-outline"

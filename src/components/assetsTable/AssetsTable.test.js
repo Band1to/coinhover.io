@@ -2,8 +2,8 @@ import React from 'react'
 import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json'
 import AssetsTable from './AssetsTable'
-import AssetRow from './AssetRow'
 import AssetThead from './AssetThead'
+import AssetRow from '../assetRow/AssetRow'
 
 const assetsTable = enzyme.shallow(<AssetsTable />);
 

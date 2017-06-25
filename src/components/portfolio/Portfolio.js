@@ -1,11 +1,11 @@
 import React from 'react'
 import * as R from 'ramda';
-import SocialMediaFooter from './SocialMediaFooter'
-import AssetsTable from './AssetsTable'
-import { assets } from '../models/temp'
-import local_coins from '../coins.json'
-import * as api from '../services/api'
-import { matchCoins, storeCoins } from '../services/coinStorage'
+import SocialMediaFooter from '../common/SocialMediaFooter'
+import AssetsTable from '../assetsTable/AssetsTable'
+import { assets } from '../../models/temp'
+import local_coins from '../../coins.json'
+import * as api from '../../services/api'
+import { matchCoins, storeCoins } from '../../services/coinStorage'
 
 let localCoins = local_coins;
 let allCoins = [];
@@ -31,14 +31,15 @@ class Portfolio extends React.Component {
 			// 2) Find coin data in coins and match to item in local_coins
 			// 3) Set state.assets to updated local_coins and pass into AssetTable
 			// 4) Set loading to false
-			allCoins = res.data;
+			// allCoins = res.data;
 
-			R.forEach(mapLocal, allCoins);
-			storeCoins(localCoins);
+			// R.forEach(mapLocal, allCoins);
+			// storeCoins(localCoins);
 
 			// this.setState({ assets: localCoins, loading: false });
 			this.setState({ assets: [], loading: false });
 		});
+
 
 		// api.getCoin('bitcoin').then((res) => {
 		// 	console.log('Got bitcoin? ', res.data[0]);
