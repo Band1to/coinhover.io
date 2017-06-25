@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AssetThead from './AssetThead'
 import AssetRow from './AssetRow'
+import { getCoins } from '../services/coinStorage'
 
 class AssetsTable extends React.Component {
 	constructor(props) {
@@ -9,11 +10,20 @@ class AssetsTable extends React.Component {
 		this.state = {
 			assets: props.assets
 		};
-		console.log('this.state', this.state);
+	}
+
+	componentDidMount() {
+		const storedCoins = getCoins();
+		console.log(' storedCoins', storedCoins);
 	}
 
 	render() {
 		const assets = this.state.assets ? this.state.assets : [];
+
+		const handleClick = (e) => {
+		    e.preventDefault();
+		    console.log('The link was clicked.', this.state);
+		};
 
 		return (
 			<section className="asset-table">
@@ -26,7 +36,7 @@ class AssetsTable extends React.Component {
 						price_usd={ asset.price_usd }/>) }
 				
 				<div className="add-asset-row">
-					<div className="add-btn">
+					<div className="add-btn" onClick={ handleClick }>
 						<div className="icon-plus-outline"></div> Add Asset
 					</div>
 				</div>

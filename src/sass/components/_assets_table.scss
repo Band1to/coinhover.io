@@ -12,6 +12,7 @@
 	text-align: left;
 	opacity: .7;
 	&:hover { background: none; opacity: 1; }
+	@include noselect();
 }
 
 .add-asset-row { margin-top: 10px; }

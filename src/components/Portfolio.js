@@ -5,35 +5,14 @@ import AssetsTable from './AssetsTable'
 import { assets } from '../models/temp'
 import local_coins from '../coins.json'
 import * as api from '../services/api'
+import { matchCoins, storeCoins } from '../services/coinStorage'
 
 let localCoins = local_coins;
 let allCoins = [];
 
-const matchCoins = R.curry((api_coin, local_coin) => {
-	if (api_coin.id === local_coin.id) {
-		local_coin.price_usd = api_coin.price_usd;
-		local_coin.percent_change_1h = api_coin.percent_change_1h;
-		local_coin.percent_change_24h = api_coin.percent_change_24h;
-		local_coin.percent_change_7d = api_coin.percent_change_7d;
-		if (!local_coin.balance) local_coin.balance = '0';
-		return local_coin;
-	}
-});
-
 const mapLocal = (api_coin) => {
 	const matchCoin = matchCoins(api_coin);
 	R.forEach(matchCoin, localCoins);
-
-	// for (var i=0; i<localCoins.length; i++) {
-	// 	let local_coin = localCoins[i];
-	// 	if (local_coin.id === all_coin.id) {
-	// 		local_coin.price_usd = all_coin.price_usd;
-	// 		local_coin.percent_change_1h = all_coin.percent_change_1h;
-	// 		local_coin.percent_change_24h = all_coin.percent_change_24h;
-	// 		local_coin.percent_change_7d = all_coin.percent_change_7d;
-	// 		return local_coin;
-	// 	}
-	// }
 };
 
 class Portfolio extends React.Component {
@@ -55,10 +34,10 @@ class Portfolio extends React.Component {
 			allCoins = res.data;
 
 			R.forEach(mapLocal, allCoins);
-			console.log('localCoins', localCoins);
+			storeCoins(localCoins);
 
-			this.setState({ assets: localCoins, loading: false });
-			// console.log('this', this.state);
+			// this.setState({ assets: localCoins, loading: false });
+			this.setState({ assets: [], loading: false });
 		});
 
 		// api.getCoin('bitcoin').then((res) => {
