@@ -15,10 +15,11 @@ class SearchCoin extends React.Component {
 	}
 
 	componentDidMount() {
-		this.coinInput.focus(); 
-		this.handleChange = this.handleChange.bind(this);
 		stored.coins = getCoins();
 		this.setState({ coins: stored.coins });
+		this.coinInput.focus(); 
+		this.handleChange = this.handleChange.bind(this);
+		this.selectCoin = this.selectCoin.bind(this);
 	}
 
 	handleChange() {
@@ -35,10 +36,14 @@ class SearchCoin extends React.Component {
 		}
 	}
 
+	selectCoin(coin) {
+		console.log('clicked', coin);
+	}
+
 	render() {
 		const searched = this.state.searched.map((coin) => {
 			return (
-				<li key={ coin.id }>
+				<li key={ coin.id } onClick={ ()=> this.selectCoin(coin) }>
 					<div className="coin-logo">
 						<img src={ coin.logo }/>
 					</div>
@@ -54,7 +59,7 @@ class SearchCoin extends React.Component {
 					   className="coin-search-input"
 					   placeholder="Search"
 					   onChange={ ()=> this.handleChange() }
-					   ref={(input) => { this.coinInput = input; }} />
+					   ref={ (input) => { this.coinInput = input; } } />
 				<div className="coin-select">
 					<ul>
 						{ searched }

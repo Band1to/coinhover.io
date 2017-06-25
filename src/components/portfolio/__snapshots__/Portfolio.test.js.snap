@@ -22,7 +22,8 @@ exports[`<Portfolio /> component should render 1`] = `
       <em
         className="num"
       >
-        $5000
+        $
+        0
       </em>
     </header>
     <div

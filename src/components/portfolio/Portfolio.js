@@ -20,8 +20,8 @@ class Portfolio extends React.Component {
 		super(props)
 		this.state = {
 			loading: true,
-			coins: [],
-			assets: []
+			assets: [],
+			total: 0
 		};
 	}
 
@@ -40,20 +40,22 @@ class Portfolio extends React.Component {
 			this.setState({ assets: [], loading: false });
 		});
 
-
 		// api.getCoin('bitcoin').then((res) => {
 		// 	console.log('Got bitcoin? ', res.data[0]);
 		// });
 	}
 
 	render() {
+		const assets = this.state.assets;
+		const total = this.state.total;
+
 		return (
 			<div className="app-bg">
 				<section className="portfolio">
 					<header>
 						<h1><span className="plus">+</span>COINHOVER</h1>
 						<h2>Watch your cryptocurrency asset balances in once place.</h2>
-						<em className="num">$5000</em>
+						<em className="num">${ total }</em>
 					</header>
 					{ this.state.loading ? (
 						<div className="loading">
@@ -61,7 +63,7 @@ class Portfolio extends React.Component {
 							<span>Loading coin data...</span>
 						</div>
 					) : (
-						<AssetsTable assets={ this.state.assets }/>
+						<AssetsTable assets={ assets }/>
 					)}
 					<SocialMediaFooter />
 				</section>
