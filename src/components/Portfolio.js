@@ -15,6 +15,7 @@ const matchCoins = R.curry((api_coin, local_coin) => {
 		local_coin.percent_change_1h = api_coin.percent_change_1h;
 		local_coin.percent_change_24h = api_coin.percent_change_24h;
 		local_coin.percent_change_7d = api_coin.percent_change_7d;
+		if (!local_coin.balance) local_coin.balance = '0';
 		return local_coin;
 	}
 });
@@ -46,18 +47,17 @@ class Portfolio extends React.Component {
 	}
 
 	componentDidMount() {
-		// console.log('local_coins', local_coins);
 		api.getAllCoins().then((res) => {
-			// set res.data to coins
-			// find coin data in coins and match to item in local_coins
-			// set state.assets to updated local_coins and pass into AssetTable
-			// set loading to false
+			// 1) Set res.data to coins
+			// 2) Find coin data in coins and match to item in local_coins
+			// 3) Set state.assets to updated local_coins and pass into AssetTable
+			// 4) Set loading to false
 			allCoins = res.data;
 
 			R.forEach(mapLocal, allCoins);
 			console.log('localCoins', localCoins);
 
-			this.setState({ coins: res.data, loading: false });
+			this.setState({ assets: localCoins, loading: false });
 			// console.log('this', this.state);
 		});
 
@@ -81,7 +81,7 @@ class Portfolio extends React.Component {
 							<span>Loading coin data...</span>
 						</div>
 					) : (
-						<AssetsTable assets={ assets }/>
+						<AssetsTable assets={ this.state.assets }/>
 					)}
 					<SocialMediaFooter />
 				</section>

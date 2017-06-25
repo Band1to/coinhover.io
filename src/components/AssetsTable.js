@@ -9,6 +9,7 @@ class AssetsTable extends React.Component {
 		this.state = {
 			assets: props.assets
 		};
+		console.log('this.state', this.state);
 	}
 
 	render() {

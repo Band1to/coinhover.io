@@ -276,18 +276,6 @@
         "logo": "/static/imgs/coins/maidsafecoin.png"
 	},
 	{
-		"id": "maidsafecoin", 
-        "name": "MaidSafeCoin", 
-        "symbol": "MAID",
-        "logo": "/static/imgs/coins/maidsafecoin.png"
-	},
-	{
-		"id": "mcap", 
-        "name": "MCAP", 
-        "symbol": "MCAP",
-        "logo": "/static/imgs/coins/mcap.png"
-	},
-	{
 		"id": "mcap", 
         "name": "MCAP", 
         "symbol": "MCAP",
@@ -430,12 +418,6 @@
         "name": "Round", 
         "symbol": "ROUND",
         "logo": "/static/imgs/coins/round.png"
-	},
-	{
-		"id": "siacoin", 
-        "name": "Siacoin", 
-        "symbol": "SC",
-        "logo": "/static/imgs/coins/siacoin.png"
 	},
 	{
 		"id": "siacoin", 
