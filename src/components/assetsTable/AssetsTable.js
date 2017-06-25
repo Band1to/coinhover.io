@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import AssetThead from './AssetThead'
 import AssetRow from '../assetRow/AssetRow'
 import { getCoins } from '../../services/coinStorage'
+import SearchCoin from './SearchCoin'
 
 class AssetsTable extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			assets: props.assets
+			assets: props.assets,
+			search: false
 		};
 	}
 
@@ -22,7 +24,8 @@ class AssetsTable extends React.Component {
 
 		const handleClick = (e) => {
 		    e.preventDefault();
-		    console.log('The link was clicked.', this.state);
+		    this.setState({ search: true });
+		    console.log('handleClick', this.state);
 		};
 
 		return (
@@ -36,9 +39,15 @@ class AssetsTable extends React.Component {
 						price_usd={ asset.price_usd }/>) }
 				
 				<div className="add-asset-row">
-					<div className="add-btn" onClick={ handleClick }>
-						<div className="icon-plus-outline"></div> Add Asset
-					</div>
+					
+					{ this.state.search ? (
+						<SearchCoin />
+					) : (
+						<div className="add-btn" onClick={ handleClick }>
+							<div className="icon-plus-outline"></div> Add Asset
+						</div>
+					)}
+
 				</div>
 			</section>
 		)

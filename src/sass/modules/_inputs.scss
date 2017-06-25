@@ -1,6 +1,10 @@
-/* Inputs, Selects, Checkboxes etc...
-============================================================
-========================================================= */
-
 // removes chrome input highlight
 *:focus { outline: 0; }
+
+.flex-container input,
+.coin-search-input {
+	padding: 14px;
+	color: black;
+	border: 1px solid lighten($gray, 10%);
+	@include rounded(4px);
+}

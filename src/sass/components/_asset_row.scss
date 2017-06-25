@@ -12,12 +12,9 @@
 	small { margin-left: 8px; font-size: em(13); color: #ccc; }
 
 	input {
-		padding: 14px;
 		width: 80%;
 		min-width: 120px;
-		border: 1px solid lighten($gray, 10%);
 		background: none;
-		@include rounded(4px);
 		&:hover { border: 1px solid white; }
 		&::placeholder { color: white; }
 	}
@@ -47,12 +44,7 @@
 	line-height: 50px;
 	text-align: center;
 
-	em {
-		position: relative;
-	    top: 4px;
-	    margin-right: 4px;
-		font-size: 1.5em;
-	}
+	em { position: relative; top: 4px; margin-right: 4px; font-size: 1.5em; }
 }
 
 .coin-logo {
