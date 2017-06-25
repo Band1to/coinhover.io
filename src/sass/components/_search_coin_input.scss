@@ -1,24 +1,16 @@
-.coin-search-input {
-	width: 238px;
-}
+.coin-search-input { width: 238px; }
 
 .coin-select {
 	li {
 		width: 100%;
-	    // margin-top: 10px;
 	    padding: 5px;
 		height: 40px;
-		// margin-bottom: 20px;
 		border-bottom: 1px dotted $gray;
 		cursor: pointer;
-		&:hover {
-			color: $green;
-		}
+		&:hover { color: $green; }
 	}
-	span {
-		position: relative;
-		top: 1em;
-	}
+
+	span { position: relative; top: 1em; }
 
 	.coin-logo { top: 5px; }
 }

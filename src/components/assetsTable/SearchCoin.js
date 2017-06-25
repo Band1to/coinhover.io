@@ -1,7 +1,9 @@
 import React from 'react'
+import * as R from 'ramda';
 import { getCoins } from '../../services/coinStorage'
 
 const stored = { coins: [] };
+const testMatch = (re, str) => str.search(re) != -1;
 
 class SearchCoin extends React.Component {
 	constructor(props) {
@@ -21,10 +23,15 @@ class SearchCoin extends React.Component {
 
 	handleChange() {
 		const text = document.getElementById('coin-search').value;
+
 		if (text.length > 1) {
-			console.log(' stored.coins', stored.coins);
-			this.setState({ searched: stored.coins });
-			// Start search
+			const findMatches = (coin) => testMatch(text, coin.name.toLowerCase()) ? coin : null;
+			const matches = R.map(findMatches, this.state.coins);
+			const exactMatches = R.reject(R.isNil, matches);
+			this.setState({ searched: exactMatches });
+		}
+		else {
+			this.setState({ searched: [] });
 		}
 	}
 
