@@ -35,13 +35,14 @@ class AssetRow extends React.Component {
 		const name = this.state.asset.name;
 		const price_usd = `USD price ${this.state.asset.price_usd}`;
 		const percent_change_1h = this.state.asset.percent_change_1h;
+		const logo = this.state.asset.logo;
 
 		return (
 			<ul className="flex-container">
 				<li className="flex-item flex-button">
 					<div className="asset-btn">
 						<div className="coin-logo">
-							<img src="/static/imgs/coins/bitcoin.png"/>
+							<img src={ logo }/>
 						</div>
 						<strong>{ symbol }</strong>
 						<small>{ truncate(name, 23) }</small>
