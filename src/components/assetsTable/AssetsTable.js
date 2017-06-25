@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AssetThead from './AssetThead'
 import AssetRow from '../assetRow/AssetRow'
-import { getCoins } from '../../services/coinStorage'
+// import { getCoins } from '../../services/coinStorage'
 import SearchCoin from './SearchCoin'
 
 class AssetsTable extends React.Component {
@@ -15,8 +15,7 @@ class AssetsTable extends React.Component {
 	}
 
 	componentDidMount() {
-		const storedCoins = getCoins();
-		console.log(' storedCoins', storedCoins.length);
+		
 	}
 
 	render() {
@@ -39,7 +38,6 @@ class AssetsTable extends React.Component {
 						price_usd={ asset.price_usd }/>) }
 				
 				<div className="add-asset-row">
-					
 					{ this.state.search ? (
 						<SearchCoin />
 					) : (
@@ -47,7 +45,6 @@ class AssetsTable extends React.Component {
 							<div className="icon-plus-outline"></div> Add Asset
 						</div>
 					)}
-
 				</div>
 			</section>
 		)
