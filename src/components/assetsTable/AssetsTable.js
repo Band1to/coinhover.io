@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AssetThead from './AssetThead'
 import AssetRow from '../assetRow/AssetRow'
-// import { getCoins } from '../../services/coinStorage'
 import SearchCoin from './SearchCoin'
 
 class AssetsTable extends React.Component {
@@ -14,17 +13,12 @@ class AssetsTable extends React.Component {
 		};
 	}
 
-	componentDidMount() {
-		
-	}
-
 	render() {
 		const assets = this.state.assets ? this.state.assets : [];
 
 		const handleClick = (e) => {
 		    e.preventDefault();
 		    this.setState({ search: true });
-		    console.log('handleClick', this.state);
 		};
 
 		return (
