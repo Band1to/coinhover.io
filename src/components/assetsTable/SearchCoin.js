@@ -7,7 +7,6 @@ const testMatch = (re, str) => str.search(re) != -1;
 
 class SearchCoin extends React.Component {
 	constructor(props) {
-		console.log('props', props);
 		super(props)
 		this.state = {
 			coins: [],

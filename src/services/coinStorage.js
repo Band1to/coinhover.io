@@ -1,7 +1,8 @@
 import * as R from 'ramda';
+import local_coins from '../coins.json'
 
 const storage = {
-	coins: []
+	coins: local_coins
 };
 
 export const matchCoins = R.curry((api_coin, local_coin) => {

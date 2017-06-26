@@ -7,9 +7,20 @@
 	}
 }
 
-.coin-search-input { width: 238px; }
+.coin-search-input {
+	width: 238px;
+	box-shadow: 0px 0px 1px 1px #666;
+	@include transition(box-shadow, .3s, ease-in-out);
+	&:hover {
+		background: white;
+		box-shadow: 0px 0px 5px 5px $violet;
+	}
+}
 
 .coin-select {
+	float: left;
+	width: 100%;
+	
 	li {
 		width: 100%;
 	    padding: 5px;
