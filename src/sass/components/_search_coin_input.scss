@@ -1,9 +1,11 @@
 #search-coin-component {
 	.icon-cancel-outline {
+		opacity: .7;
 		font-size: 1.5em;
 	    margin-top: 10px;
 	    margin-left: 5px;
 	    cursor: pointer;
+	    &:hover { opacity: 1; }
 	}
 }
 
