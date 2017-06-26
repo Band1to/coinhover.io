@@ -26,19 +26,19 @@ class Portfolio extends React.Component {
 	}
 
 	componentDidMount() {
-		api.getAllCoins().then((res) => {
+		// api.getAllCoins().then((res) => {
 			// 1) Set res.data to coins
 			// 2) Find coin data in coins and match to item in local_coins
 			// 3) Set state.assets to updated local_coins and pass into AssetTable
 			// 4) Set loading to false
-			allCoins = res.data;
+			// allCoins = res.data;
 
-			R.forEach(mapLocal, allCoins);
-			storeCoins(localCoins);
-
+			// R.forEach(mapLocal, allCoins);
+			// storeCoins(localCoins);
 			// this.setState({ assets: localCoins, loading: false });
-			this.setState({ assets: [], loading: false });
-		});
+		// });
+
+		this.setState({ assets: [], loading: false });
 
 		// api.getCoin('bitcoin').then((res) => {
 		// 	console.log('Got bitcoin? ', res.data[0]);

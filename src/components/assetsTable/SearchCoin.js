@@ -7,11 +7,13 @@ const testMatch = (re, str) => str.search(re) != -1;
 
 class SearchCoin extends React.Component {
 	constructor(props) {
+		console.log('props', props);
 		super(props)
 		this.state = {
 			coins: [],
 			searched: []
 		};
+		this.close = this.close.bind(this);
 	}
 
 	componentDidMount() {
@@ -40,6 +42,10 @@ class SearchCoin extends React.Component {
 		console.log('clicked', coin);
 	}
 
+	close() {
+		this.props.closeSearch();
+	}
+
 	render() {
 		const searched = this.state.searched.map((coin) => {
 			return (
@@ -53,13 +59,14 @@ class SearchCoin extends React.Component {
 		});
 
 		return (
-			<div>
+			<div id="search-coin-component">
 				<input type="text"
 					   id="coin-search"
-					   className="coin-search-input"
+					   className="coin-search-input fl"
 					   placeholder="Search"
 					   onChange={ ()=> this.handleChange() }
 					   ref={ (input) => { this.coinInput = input; } } />
+				<div className="icon-cancel-outline fl" onClick={ this.close }></div>
 				<div className="coin-select">
 					<ul>
 						{ searched }

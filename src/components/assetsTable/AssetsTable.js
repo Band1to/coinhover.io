@@ -11,6 +11,11 @@ class AssetsTable extends React.Component {
 			assets: props.assets,
 			search: false
 		};
+		this.closeSearch = this.closeSearch.bind(this);
+	}
+
+	closeSearch() {
+		this.setState({ search: false });
 	}
 
 	render() {
@@ -33,7 +38,7 @@ class AssetsTable extends React.Component {
 				
 				<div className="add-asset-row">
 					{ this.state.search ? (
-						<SearchCoin />
+						<SearchCoin closeSearch={ this.closeSearch } />
 					) : (
 						<div className="add-btn" onClick={ handleClick }>
 							<div className="icon-plus-outline"></div> Add Asset
