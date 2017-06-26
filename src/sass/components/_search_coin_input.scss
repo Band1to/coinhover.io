@@ -19,7 +19,7 @@
 
 .coin-select {
 	float: left;
-	width: 100%;
+	width: 99%;
 	
 	li {
 		width: 100%;
@@ -27,7 +27,8 @@
 		height: 40px;
 		border-bottom: 1px dotted $gray;
 		cursor: pointer;
-		&:hover { color: $green; }
+		@include transition(background, .2s, ease-in-out);
+		&:hover { color: $green; background: $violet; }
 	}
 
 	span { position: relative; top: 1em; }

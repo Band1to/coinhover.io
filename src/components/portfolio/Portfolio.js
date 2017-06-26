@@ -1,5 +1,5 @@
 import React from 'react'
-import * as R from 'ramda';
+import * as R from 'ramda'
 import SocialMediaFooter from '../common/SocialMediaFooter'
 import AssetsTable from '../assetsTable/AssetsTable'
 import { assets } from '../../models/temp'
@@ -39,10 +39,6 @@ class Portfolio extends React.Component {
 		// });
 
 		this.setState({ assets: [], loading: false });
-
-		// api.getCoin('bitcoin').then((res) => {
-		// 	console.log('Got bitcoin? ', res.data[0]);
-		// });
 	}
 
 	render() {
@@ -72,4 +68,4 @@ class Portfolio extends React.Component {
 	}
 }
 
-export default Portfolio;
+export default Portfolio

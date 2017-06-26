@@ -1,15 +1,15 @@
 import React from 'react'
-import * as R from 'ramda';
-import { getCoins } from '../../services/coinStorage'
+import * as R from 'ramda'
+import * as api from '../../services/api'
+import { addToPortfolio, getCoins } from '../../services/coinStorage'
 
-const stored = { coins: [] };
+const stored = { coins: getCoins() };
 const testMatch = (re, str) => str.search(re) != -1;
 
 class SearchCoin extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			coins: [],
 			searched: []
 		};
 		this.close = this.close.bind(this);
@@ -17,7 +17,6 @@ class SearchCoin extends React.Component {
 
 	componentDidMount() {
 		stored.coins = getCoins();
-		this.setState({ coins: stored.coins });
 		this.coinInput.focus(); 
 		this.handleChange = this.handleChange.bind(this);
 		this.selectCoin = this.selectCoin.bind(this);
@@ -28,7 +27,7 @@ class SearchCoin extends React.Component {
 
 		if (text.length > 1) {
 			const findMatches = (coin) => testMatch(text, coin.name.toLowerCase()) ? coin : null;
-			const matches = R.map(findMatches, this.state.coins);
+			const matches = R.map(findMatches, stored.coins);
 			const exactMatches = R.reject(R.isNil, matches);
 			this.setState({ searched: exactMatches });
 		}
@@ -38,7 +37,11 @@ class SearchCoin extends React.Component {
 	}
 
 	selectCoin(coin) {
-		console.log('clicked', coin);
+		api.getCoin(coin.id).then((res) => {
+			const apiCoin = R.head(res.data);
+			addToPortfolio(apiCoin);
+		});
+		this.props.closeSearch();
 	}
 
 	close() {

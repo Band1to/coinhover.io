@@ -6,8 +6,8 @@ export default function NoMatch() {
 		<div className="app-bg">
 			<section className="welcome">				
 				<h1>COINHOVER</h1>
-				<p>Oops, could not find that... did you mean</p>
-				<p><a href="/">coinhover.io</a></p>
+				<p>Oops, could not find that...</p>
+				<p>Did you mean: <a href="/">coinhover.io</a></p>
 				<SocialMediaFooter />
 			</section>
 		</div>

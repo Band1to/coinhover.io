@@ -4,19 +4,19 @@ export default function AssetThead() {
 	return (
 		<ul className="flex-container">
 			<li className="flex-item">
-				<small className="">Name</small>
+				<small>Name</small>
 			</li>
 			<li className="flex-item">
-				<small className="">Balance</small>
+				<small>Balance</small>
 			</li>
 			<li className="flex-item">
-				<small className="">Value</small>
+				<small>Value</small>
 			</li>
 			<li className="flex-item">
-				<small className="">1HR change</small>
+				<small>1HR change</small>
 			</li>
 			<li className="flex-item">
-				<small className="">% of portfolio</small>
+				<small>% of portfolio</small>
 			</li>
 		</ul>
 	)

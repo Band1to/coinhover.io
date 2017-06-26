@@ -38,23 +38,6 @@
 		font-weight: 400; color: $green;
 		&:hover { color: lighten($green, 10%); }
 	}
-
-	footer {
-		position: fixed;
-		bottom: 20px;
-		width: 100%;
-		margin: 0 auto;
-		padding: 30px 30px 0 0;
-
-		em {
-			margin-right: 8px;
-			font-size: 14px;
-			color: #ccc;
-			opacity: .8;
-		}
-
-		li { float: left; margin-right: 5px; }
-	}
 }
 
 .loading {

@@ -1,8 +1,9 @@
-import * as R from 'ramda';
+import * as R from 'ramda'
 import local_coins from '../coins.json'
 
 const storage = {
-	coins: local_coins
+	coins: local_coins,
+	portfolio: []
 };
 
 export const matchCoins = R.curry((api_coin, local_coin) => {
@@ -18,3 +19,6 @@ export const matchCoins = R.curry((api_coin, local_coin) => {
 
 export const storeCoins = (coins) => storage.coins = coins;
 export const getCoins = () => storage.coins;
+
+export const addToPortfolio = (coin) => storage.portfolio.push(coin);
+export const getPortfolio = () => storage.portfolio;
