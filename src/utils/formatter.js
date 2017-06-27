@@ -1,6 +1,13 @@
 export const capitalizeFirst = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
-}
+};
+
+export const percentClasser = (number) => {
+	let classString = 'flex-item num';
+	if (number == 0) return classString;
+    classString = number >= 0 ? `${classString} positive` : `${classString} negative`;
+    return classString;
+};
 
 export const floorCents = (num) => (Math.floor(num * 100) / 100);
 
@@ -36,4 +43,4 @@ export const cleanNonNumeric = (text) => {
 	// Remove leading zeros
 	text = text.replace(/^(-)?0+(?=\d)/,'$1'); //?=\d is a positive lookahead, which matches any digit 0-9
 	return text;
-}
+};

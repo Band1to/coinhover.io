@@ -1,13 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { cleanNonNumeric, floorCents, multiply, rounder, truncate } from '../../utils/formatter'
-
-const percentageClasser = (number) => {
-	let classString = 'flex-item num';
-	if (number == 0) return classString;
-    classString = number >= 0 ? `${classString} positive` : `${classString} negative`;
-    return classString;
-};
+import { cleanNonNumeric, floorCents, multiply, percentClasser, rounder, truncate } from '../../utils/formatter'
 
 class AssetRow extends React.Component {
 
@@ -57,7 +50,7 @@ class AssetRow extends React.Component {
 						${ this.state.value }
 					</div>
 				</li>
-				<li className={ percentageClasser(percent_change_1h) }>
+				<li className={ percentClasser(percent_change_1h) }>
 					<div className="flex-border">
 						{ this.state.asset.percent_change_1h }%
 					</div>
