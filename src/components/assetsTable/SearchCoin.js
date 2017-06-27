@@ -1,7 +1,7 @@
 import React from 'react'
 import * as R from 'ramda'
 import * as api from '../../services/api'
-import { addToPortfolio, findCoins } from '../../services/coinStorage'
+import { addToPortfolio, findCoins } from '../../services/coinFactory'
 
 class SearchCoin extends React.Component {
 	constructor(props) {

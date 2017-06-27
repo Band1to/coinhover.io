@@ -4,7 +4,7 @@ import AssetsTable from '../assetsTable/AssetsTable'
 import { assets } from '../../models/temp'
 import local_coins from '../../coins.json'
 import * as api from '../../services/api'
-import { sortById, updatePortfolio, updateLocalCoins } from '../../services/coinStorage'
+import { sortById, updatePortfolio, updateLocalCoins } from '../../services/coinFactory'
 
 let localCoins = local_coins;
 
@@ -29,7 +29,7 @@ class Portfolio extends React.Component {
 
 	render() {
 		const assets = this.state.assets;
-		const total = this.state.total;
+		const total  = this.state.total;
 
 		return (
 			<div className="app-bg">
