@@ -6,16 +6,18 @@ const storage = {
 	portfolio: []
 };
 
-export const matchCoins = R.curry((api_coin, local_coin) => {
-	if (api_coin.id === local_coin.id) {
-		local_coin.price_usd = api_coin.price_usd;
-		local_coin.percent_change_1h = api_coin.percent_change_1h;
-		local_coin.percent_change_24h = api_coin.percent_change_24h;
-		local_coin.percent_change_7d = api_coin.percent_change_7d;
-		if (R.isNil(local_coin.balance)) local_coin.balance = '0';
-		return local_coin;
-	}
-});
+const sortById = R.sortBy(R.compose(R.prop('id')));
+
+export const updateLocalCoins = (localCoins, remoteCoins) => {
+	const ids = new Set(localCoins.map((localCoin) => localCoin.id));
+	const filteredRemote = remoteCoins.filter((remoteCoin) => ids.has(remoteCoin.id));
+
+	const sortedLocal  = sortById(localCoins);
+	const sortedRemote = sortById(filteredRemote);
+	const zipped = R.zip(sortedLocal, sortedRemote);
+
+	return zipped.map((z) => R.merge(z[0], z[1]));
+};
 
 export const storeCoins = (coins) => storage.coins = coins;
 export const getCoins = () => storage.coins;

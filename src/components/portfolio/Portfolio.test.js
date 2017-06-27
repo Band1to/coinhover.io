@@ -4,6 +4,9 @@ import toJson from 'enzyme-to-json'
 import Portfolio from './Portfolio'
 import SocialMediaFooter from '../common/SocialMediaFooter'
 import AssetsTable from '../assetsTable/AssetsTable'
+import local_coins from '../../coins.json'
+import remote_coins from '../../remote_tokens.json'
+import { matcher } from './Portfolio'
 
 const portfolio = enzyme.shallow(<Portfolio />);
 
@@ -22,3 +25,15 @@ describe('<Portfolio /> component', () => {
 		expect(portfolio.find(SocialMediaFooter).length).toBe(1);
 	});
 });
+
+describe('matcher in Portfolio', function () {
+	it('should be defined', () => {
+		expect(matcher).toBeDefined();
+	})
+
+	it('should return the same length as local_coins', () => {
+		expect(local_coins).toHaveLength(90);
+		expect(remote_coins).toHaveLength(919);
+		expect(matcher(local_coins, remote_coins)).toHaveLength(local_coins.length);
+	});
+})
