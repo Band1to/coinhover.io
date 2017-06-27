@@ -1,11 +1,10 @@
 import React from 'react'
-import * as R from 'ramda'
 import SocialMediaFooter from '../common/SocialMediaFooter'
 import AssetsTable from '../assetsTable/AssetsTable'
 import { assets } from '../../models/temp'
 import local_coins from '../../coins.json'
 import * as api from '../../services/api'
-import { sortById, storeCoins, updateLocalCoins } from '../../services/coinStorage'
+import { sortById, updatePortfolio, updateLocalCoins } from '../../services/coinStorage'
 
 let localCoins = local_coins;
 
@@ -22,7 +21,7 @@ class Portfolio extends React.Component {
 	componentDidMount() {
 		api.getAllCoins().then((res) => {
 			const portfolioCoins = updateLocalCoins(localCoins, res.data);
-			storeCoins(portfolioCoins);
+			updatePortfolio(portfolioCoins);
 			this.setState({ assets: portfolioCoins, loading: false });
 		});
 		// this.setState({ assets: [], loading: false });
