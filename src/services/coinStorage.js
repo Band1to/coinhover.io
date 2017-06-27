@@ -8,6 +8,8 @@ const storage = {
 
 const sortById = R.sortBy(R.compose(R.prop('id')));
 
+const testMatch = (re, str) => str.search(re) != -1;
+
 export const updateLocalCoins = (localCoins, remoteCoins) => {
 	const ids = new Set(localCoins.map((localCoin) => localCoin.id));
 	const filteredRemote = remoteCoins.filter((remoteCoin) => ids.has(remoteCoin.id));
@@ -15,6 +17,12 @@ export const updateLocalCoins = (localCoins, remoteCoins) => {
 	const sortedRemote = sortById(filteredRemote);
 	const zipped = R.zip(sortedLocal, sortedRemote);
 	return zipped.map((z) => R.merge(z[0], z[1]));
+};
+
+export const findCoins = (text) => {
+	const findMatches = (coin) => testMatch(text, coin.name.toLowerCase()) ? coin : null;
+	const matches = R.map(findMatches, storage.coins);
+	return R.reject(R.isNil, matches);
 };
 
 // export const storeLocalCoins = (coins) => storage.coins = coins;

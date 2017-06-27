@@ -75,6 +75,5 @@ export default AssetRow
 
 AssetRow.propTypes = {
 	asset: PropTypes.object.isRequired,
-	balance: PropTypes.string.isRequired,
 	price_usd: PropTypes.string.isRequired
 };
