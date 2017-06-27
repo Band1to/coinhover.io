@@ -19,12 +19,12 @@ class Portfolio extends React.Component {
 	}
 
 	componentDidMount() {
-		api.getAllCoins().then((res) => {
-			const portfolioCoins = updateLocalCoins(localCoins, res.data);
-			updatePortfolio(portfolioCoins);
-			this.setState({ assets: portfolioCoins, loading: false });
-		});
-		// this.setState({ assets: [], loading: false });
+		// api.getAllCoins().then((res) => {
+		// 	const portfolioCoins = updateLocalCoins(localCoins, res.data);
+		// 	updatePortfolio(portfolioCoins);
+		// 	this.setState({ assets: portfolioCoins, loading: false });
+		// });
+		this.setState({ assets: local_coins, loading: false });
 	}
 
 	render() {

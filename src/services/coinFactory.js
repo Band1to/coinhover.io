@@ -25,7 +25,6 @@ export const findCoins = (text) => {
 	return R.reject(R.isNil, matches);
 };
 
-// export const storeLocalCoins = (coins) => storage.coins = coins;
 export const getLocalCoins = () => storage.coins;
 
 export const updatePortfolio = (coins) => storage.portfolio = coins;

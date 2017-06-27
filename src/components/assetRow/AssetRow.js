@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { cleanNonNumeric, floorCents, multiply, round, truncate } from '../../utils/formatter'
-
-const rounder = (balance, price_usd) => round(multiply(balance, floorCents(price_usd)));
+import { cleanNonNumeric, floorCents, multiply, rounder, truncate } from '../../utils/formatter'
 
 const percentageClasser = (number) => {
 	let classString = 'flex-item num';
@@ -20,6 +18,7 @@ class AssetRow extends React.Component {
 			balance: props.balance,
 			value: rounder(props.balance, props.price_usd)
 		};
+
 		this.handleChange = this.handleChange.bind(this);
 	}
 
