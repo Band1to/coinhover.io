@@ -1,10 +1,15 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import SocialMediaFooter from '../common/SocialMediaFooter'
 import AssetsTable from '../assetsTable/AssetsTable'
-import { assets } from '../../models/temp'
+// import { assets } from '../../models/temp'
 import local_coins from '../../coins.json'
 import * as api from '../../services/api'
 import { updateLocalCoins } from '../../services/coinFactory'
+
+const mapStateToProps = ({ portfolio }) => ({
+	portfolio
+});
 
 let localCoins = local_coins;
 
@@ -13,9 +18,10 @@ class Portfolio extends React.Component {
 		super(props)
 		this.state = {
 			loading: true,
-			assets: [],
+			assets: props.portfolio,
 			total: 0
 		};
+		console.log('props', props);
 	}
 
 	componentDidMount() {
@@ -26,7 +32,8 @@ class Portfolio extends React.Component {
 		// });
 
 		// this.setState({ assets: local_coins, loading: false });
-		this.setState({ assets: [], loading: false });
+		// this.setState({ assets: [], loading: false });
+		this.setState({ loading: false });
 	}
 
 	render() {
@@ -56,4 +63,4 @@ class Portfolio extends React.Component {
 	}
 }
 
-export default Portfolio
+export default connect(mapStateToProps, null)(Portfolio)

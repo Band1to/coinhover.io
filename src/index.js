@@ -17,7 +17,7 @@ const store = createStore(reducer, compose(
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 ));
 
-store.dispatch(addCoin('bitcoin'));
+// store.dispatch(addCoin('bitcoin'));
 
 ReactDOM.render(
 	<Provider store={ store }>

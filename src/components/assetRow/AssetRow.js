@@ -42,6 +42,7 @@ class AssetRow extends React.Component {
 				</li>
 				<li className="flex-item num">
 					<input type="text"
+						   className="white"
 						   value={ this.state.balance }
 						   onChange={ this.handleChange } />
 				</li>
