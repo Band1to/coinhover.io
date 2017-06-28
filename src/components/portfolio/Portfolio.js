@@ -12,7 +12,7 @@ const mapStateToProps = ({ portfolio }) => ({
 
 let localCoins = local_coins;
 
-class Portfolio extends React.Component {
+export class Portfolio extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -62,4 +62,5 @@ class Portfolio extends React.Component {
 	}
 }
 
-export default connect(mapStateToProps, null)(Portfolio)
+const PortfolioContainer = Portfolio;
+export default connect(mapStateToProps, null)(PortfolioContainer)

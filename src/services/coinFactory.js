@@ -27,11 +27,10 @@ export const findCoins = (text) => {
 
 export const getLocalCoins = () => storage.coins;
 
-// export const updatePortfolio = (coins) => storage.portfolio = coins;
+// export const updatePortfolio = (coins) => storage.portfolio = coins; // Use with localStorage
 export const getPortfolio = () => storage.portfolio;
 
 export const addToPortfolio = (coin) => {
-	console.log('addToPortfolio', coin);
 	storage.portfolio.push(coin);
 	return getPortfolio();
 };

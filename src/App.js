@@ -1,10 +1,11 @@
 import React from 'react'
+import { connect } from "react-redux"
 import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './components/Routes'
 
 const supportsHistory = "pushState" in window.history
 
-export default class App extends React.Component {
+class App extends React.Component {
 	render() {
 	    return (
 			<Router forceRefresh={!supportsHistory}>
@@ -13,3 +14,5 @@ export default class App extends React.Component {
 	    );
 	}
 }
+
+export default connect(null, null)(App)

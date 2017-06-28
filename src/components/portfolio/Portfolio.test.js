@@ -1,7 +1,7 @@
 import React from 'react'
 import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json'
-import Portfolio from './Portfolio'
+import { Portfolio } from './Portfolio'
 import SocialMediaFooter from '../common/SocialMediaFooter'
 import AssetsTable from '../assetsTable/AssetsTable'
 import local_coins from '../../coins.json'

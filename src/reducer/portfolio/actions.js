@@ -5,7 +5,6 @@ import { addToPortfolio } from '../../services/coinFactory'
 export const ADD_COIN = 'ADD_COIN'
 
 export function addCoin(coin) {
-	console.log('addCoin', coin);
 	return dispatch =>
 		api.getCoin(coin)
 			.then((res) => addToPortfolio(R.head(res.data)))
