@@ -1,7 +1,7 @@
 import * as R from 'ramda'
 import local_coins from '../coins.json'
 
-const storage = {
+export const storage = {
 	coins: local_coins,
 	portfolio: []
 };
@@ -27,6 +27,9 @@ export const findCoins = (text) => {
 
 export const getLocalCoins = () => storage.coins;
 
-export const updatePortfolio = (coins) => storage.portfolio = coins;
-export const addToPortfolio = (coin) => storage.portfolio.push(coin);
+// export const updatePortfolio = (coins) => storage.portfolio = coins;
 export const getPortfolio = () => storage.portfolio;
+export const addToPortfolio = (coin) => {
+	storage.portfolio.push(coin);
+	return getPortfolio();
+};

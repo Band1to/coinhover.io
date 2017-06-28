@@ -4,7 +4,7 @@ import AssetsTable from '../assetsTable/AssetsTable'
 import { assets } from '../../models/temp'
 import local_coins from '../../coins.json'
 import * as api from '../../services/api'
-import { sortById, updatePortfolio, updateLocalCoins } from '../../services/coinFactory'
+import { updateLocalCoins } from '../../services/coinFactory'
 
 let localCoins = local_coins;
 
@@ -24,7 +24,9 @@ class Portfolio extends React.Component {
 		// 	updatePortfolio(portfolioCoins);
 		// 	this.setState({ assets: portfolioCoins, loading: false });
 		// });
-		this.setState({ assets: local_coins, loading: false });
+
+		// this.setState({ assets: local_coins, loading: false });
+		this.setState({ assets: [], loading: false });
 	}
 
 	render() {

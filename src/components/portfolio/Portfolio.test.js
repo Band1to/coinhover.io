@@ -6,7 +6,7 @@ import SocialMediaFooter from '../common/SocialMediaFooter'
 import AssetsTable from '../assetsTable/AssetsTable'
 import local_coins from '../../coins.json'
 import remote_coins from '../../remote_tokens.json'
-import { matcher } from './Portfolio'
+import { updateLocalCoins } from '../../services/coinFactory'
 
 const portfolio = enzyme.shallow(<Portfolio />);
 
@@ -26,14 +26,14 @@ describe('<Portfolio /> component', () => {
 	});
 });
 
-describe('matcher in Portfolio', function () {
+describe('updateLocalCoins in coinFactory', function () {
 	it('should be defined', () => {
-		expect(matcher).toBeDefined();
+		expect(updateLocalCoins).toBeDefined();
 	})
 
 	it('should return the same length as local_coins', () => {
 		expect(local_coins).toHaveLength(90);
 		expect(remote_coins).toHaveLength(919);
-		expect(matcher(local_coins, remote_coins)).toHaveLength(local_coins.length);
+		expect(updateLocalCoins(local_coins, remote_coins)).toHaveLength(local_coins.length);
 	});
 })
