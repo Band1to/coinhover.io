@@ -8,10 +8,11 @@ export function addCoin(coin) {
 	console.log('addCoin', coin);
 	return dispatch =>
 		api.getCoin(coin)
-			.then((res_coin)  => addToPortfolio(R.head(res_coin)))
+			.then((res) => addToPortfolio(R.head(res.data)))
 			.then((portfolio) => dispatch(add(portfolio)));
 }
 
+// action creator
 export function add(portfolio) {
 	return {
 		type: ADD_COIN,

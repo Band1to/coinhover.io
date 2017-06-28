@@ -8,7 +8,7 @@ import reducer from './reducer'
 
 import App from './App'
 import css from './coinhover.scss'
-import { addCoin } from './reducer/portfolio/actions'
+// import { addCoin } from './reducer/portfolio/actions'
 
 const element = document.getElementById('coinhover');
 

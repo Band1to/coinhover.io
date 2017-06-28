@@ -2,10 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import SocialMediaFooter from '../common/SocialMediaFooter'
 import AssetsTable from '../assetsTable/AssetsTable'
-// import { assets } from '../../models/temp'
 import local_coins from '../../coins.json'
 import * as api from '../../services/api'
-import { updateLocalCoins } from '../../services/coinFactory'
+// import { updateLocalCoins } from '../../services/coinFactory'
 
 const mapStateToProps = ({ portfolio }) => ({
 	portfolio
@@ -21,7 +20,7 @@ class Portfolio extends React.Component {
 			assets: props.portfolio,
 			total: 0
 		};
-		console.log('props', props);
+		// console.log('props', props);
 	}
 
 	componentDidMount() {
