@@ -1,14 +1,13 @@
 import * as R from 'ramda'
 import * as api from '../../services/api'
-import { addToPortfolio } from '../../services/coinFactory'
 
 export const ADD_COIN = 'ADD_COIN'
 
 export function addCoin(coin) {
 	return dispatch =>
 		api.getCoin(coin)
-			.then((res) => addToPortfolio(R.head(res.data)))
-			.then((portfolio) => dispatch(add(portfolio)));
+			.then((res) => R.head(res.data))
+			.then((remote_coin) => dispatch(add(remote_coin)));
 }
 
 // action creator

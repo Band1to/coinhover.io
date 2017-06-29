@@ -20,7 +20,7 @@ export class Portfolio extends React.Component {
 			assets: props.portfolio,
 			total: 0
 		};
-		// console.log('props', props);
+		console.log('props', props);
 	}
 
 	componentDidMount() {
@@ -38,7 +38,7 @@ export class Portfolio extends React.Component {
 	render() {
 		const assets = this.state.assets;
 		const total  = this.state.total;
-
+		console.log('assets', assets);
 		return (
 			<div className="app-bg">
 				<section className="portfolio">
