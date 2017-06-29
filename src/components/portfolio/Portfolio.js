@@ -6,24 +6,24 @@ import local_coins from '../../coins.json'
 import * as api from '../../services/api'
 // import { updateLocalCoins } from '../../services/coinFactory'
 
-const mapStateToProps = ({ portfolio }) => ({
-	portfolio
-});
+// const mapStateToProps = ({ portfolio }) => ({
+// 	portfolio
+// });
 
 let localCoins = local_coins;
 
-export class Portfolio extends React.Component {
+class Portfolio extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			loading: true,
-			assets: props.portfolio,
+			// assets: props.portfolio,
 			total: 0
 		};
-		console.log('props', props);
 	}
 
 	componentDidMount() {
+		// console.log('Portfolio state', this.state);
 		// api.getAllCoins().then((res) => {
 		// 	const portfolioCoins = updateLocalCoins(localCoins, res.data);
 		// 	updatePortfolio(portfolioCoins);
@@ -36,9 +36,9 @@ export class Portfolio extends React.Component {
 	}
 
 	render() {
-		const assets = this.state.assets;
-		const total  = this.state.total;
-		console.log('assets', assets);
+		// const assets = this.props.portfolio;
+		const total = this.state.total;
+
 		return (
 			<div className="app-bg">
 				<section className="portfolio">
@@ -53,7 +53,7 @@ export class Portfolio extends React.Component {
 							<span>Loading coin data...</span>
 						</div>
 					) : (
-						<AssetsTable assets={ assets }/>
+						<AssetsTable />
 					)}
 					<SocialMediaFooter />
 				</section>
@@ -62,5 +62,6 @@ export class Portfolio extends React.Component {
 	}
 }
 
-const PortfolioContainer = Portfolio;
-export default connect(mapStateToProps, null)(PortfolioContainer)
+export default Portfolio;
+// const PortfolioContainer = Portfolio;
+// export default connect(mapStateToProps, null)(PortfolioContainer)

@@ -1,17 +1,23 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import AssetThead from './AssetThead'
 import AssetRow from '../assetRow/AssetRow'
 import SearchCoin from './SearchCoin'
 
+const mapStateToProps = ({ portfolio }) => ({
+	portfolio
+});
+
 class AssetsTable extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			assets: props.assets,
+			// assets: props.assets,
 			search: false
 		};
 		this.closeSearch = this.closeSearch.bind(this);
+		console.log(' AssetsTable this.state', this.state);
 	}
 
 	closeSearch() {
@@ -19,7 +25,7 @@ class AssetsTable extends React.Component {
 	}
 
 	render() {
-		const assets = this.state.assets ? this.state.assets : [];
+		const assets = this.props.portfolio ? this.props.portfolio : [];
 
 		const handleClick = (e) => {
 		    e.preventDefault();
@@ -50,7 +56,9 @@ class AssetsTable extends React.Component {
 	}
 }
 
-export default AssetsTable
+// export default AssetsTable
+const AssetsTableContainer = AssetsTable;
+export default connect(mapStateToProps, null)(AssetsTableContainer)
 
 AssetsTable.propTypes = {
    arrayWithShape: PropTypes.arrayOf(PropTypes.shape({
