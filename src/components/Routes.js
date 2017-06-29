@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Portfolio from './Portfolio'
+import Portfolio from './portfolio/Portfolio'
 import NoMatch from './NoMatch'
 
 const Routes = () => {

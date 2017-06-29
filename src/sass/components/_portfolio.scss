@@ -3,32 +3,65 @@
 	@include linear-gradient($purple, $violet);
 }
 
-.welcome {
-	margin: 40px auto;
-	width: 640px;
-	text-align: center;
-	h1 {
+.plus {
+    position: relative;
+	top: 5px;
+    margin-right: 5px;
+	font-size: 1.5em;
+	font-weight: 100;
+}
+
+.portfolio {
+	position: relative;
+	margin: 0 auto;
+	padding: 15px 30px 30px 30px;
+
+	header {
 		position: relative;
-    	left: -20px;
-		margin: 20% 0 5px 0;
-		font-weight: 900;
-		font-size: 4em;
+		top: 0;
+		border-bottom: 1px solid #666;
+
+		em {
+			position: absolute;
+			top: 20px;
+			right: 0;
+			font-size: 3em;
+			color: lighten($green, 10%);
+		}
 	}
-	h2 { font-size: 1.5em; line-height: 32px; color: #ccc; }
+
+	h1 { font-weight: 900; font-size: 2em; }
+	h2 { font-size: 1em; line-height: 32px; color: #ccc; }
 	h2, p { margin-bottom: 10px; color: #ccc; }
+
 	a {
 		font-weight: 400; color: $green;
 		&:hover { color: lighten($green, 10%); }
 	}
-	footer {
-		margin: 20px auto; width: 83px;
-		li { float: left; margin-right: 5px; }
-	}
-	.plus {
-	    position: relative;
-	    top: 13px;
-	    left: 10px;
-		font-size: 1.5em;
-		font-weight: 100;
-	}
+}
+
+.loading {
+	font-size: 1.25em;
+	text-align: center;
+	span { opacity: .5; position: relative; top: -40px; }
+}
+
+.loader {
+	position: relative;
+	margin: 60px auto;
+	width: 10em;
+	height: 10em;
+	font-size: 10px;
+	text-indent: -9999em;
+	border-radius: 50%;
+	border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+	border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+	border-left: 1.1em solid #ffffff;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation: load8 1.1s infinite linear;
+	animation: load8 1.1s infinite linear;
+	&:after { border-radius: 50%; width: 10em; height: 10em; }
 }

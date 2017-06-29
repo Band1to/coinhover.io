@@ -1,25 +1,20 @@
-/* Colors module
-============================================================
-========================================================= */
-
-// Primary
-$blue: 	 #024562;
-$green:  #249B7A;
-$orange: #EC7063;
-$red: 	 #F25A43;
-$gray:	 #454545;
-
+$blue: #024562;
+$green: #00B290;
+$orange: #FF4500;
+$orange_bright: #FF5719;
+$teal: #00FFCE;
+$red: #F25A43;
+$gray: #454545;
 $purple: #040d40;
+$purple_dark: #191933;
 $violet: #842b59;
+$offwhite: #fff5ee;
+$bitcoin: #f7931a;
 
-// Brands
-$facebook: #438acb;
-$twitter:  #5cbde9;
-
-// Elements
 $body: $violet;
-// $button: $blue;
-// $buttonHover: lighten($blue, 10%);
 
-.facebook { color: $facebook; }
-.twitter { color: $twitter; }
+.positive { color: $green; }
+
+.negative { color: $red; }
+
+.white { color: #fff; }

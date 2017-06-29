@@ -9,10 +9,15 @@ exports[`<Portfolio /> component should render 1`] = `
   >
     <header>
       <h1>
-        COINHOVER
+        <span
+          className="plus"
+        >
+          +
+        </span>
+         COINHOVER
       </h1>
       <h2>
-        A cryptocurrency asset balance calculator
+        The cryptocurrency calculator
       </h2>
       <p>
         Currently in development...
