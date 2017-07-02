@@ -14,7 +14,7 @@ export function Header({ portfolio = [] }) {
 	return (
 		<header>
 			<h1><span className="plus">+</span>COINHOVER</h1>
-			<h2>Watch your cryptocurrency asset balances in once place.</h2>
+			<h2>The cryptocurrency portfolio calculator.</h2>
 			<em className="num">${ total.toFixed(2) }</em>
 		</header>
 	)
