@@ -17,7 +17,6 @@ class SearchCoin extends React.Component {
 		this.state = {
 			searched: []
 		};
-		// console.log('props', props);
 		this.close = this.close.bind(this);
 	}
 
@@ -35,7 +34,7 @@ class SearchCoin extends React.Component {
 	}
 
 	clickCoin(coin) {
-		console.log('clickCoin', coin);
+		// console.log('clickCoin', coin);
 		this.props.selectCoinId(coin.id);
 		this.props.closeSearch();
 	}

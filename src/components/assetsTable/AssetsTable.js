@@ -17,7 +17,6 @@ class AssetsTable extends React.Component {
 			search: false
 		};
 		this.closeSearch = this.closeSearch.bind(this);
-		console.log(' AssetsTable this.state', this.state);
 	}
 
 	closeSearch() {
@@ -26,7 +25,7 @@ class AssetsTable extends React.Component {
 
 	render() {
 		const assets = this.props.portfolio ? this.props.portfolio : [];
-
+		// console.log('Portfolio assets', assets);
 		const handleClick = (e) => {
 		    e.preventDefault();
 		    this.setState({ search: true });
