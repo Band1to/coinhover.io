@@ -7,10 +7,6 @@ const mapStateToProps = ({ portfolio }) => ({
 	portfolio
 });
 
-var total = [0, 1, 2, 3].reduce(function(sum, value) {
-	return sum + value;
-}, 0);
-
 const calcTotal = (assets) => {
 	const values = assets.map((asset) => asset.value);
 	const total = values.reduce((sum, value) => sum + value, 0);
