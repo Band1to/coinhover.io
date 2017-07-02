@@ -25,6 +25,7 @@ export default (state = initialState, action) => {
 
 		case UPDATE_VALUE:
 			return state.map((coin) => {
+				
 				if (coin.id === action.coin.id) {
 					coin.value = action.coin.value;
 					return coin;

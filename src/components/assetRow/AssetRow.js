@@ -40,6 +40,7 @@ export class AssetRow extends React.Component {
 		const name = this.state.asset.name;
 		const price_usd = `USD price ${this.state.asset.price_usd}`;
 		const percent_change_24h = this.state.asset.percent_change_24h;
+		const percentage = this.state.asset.percentage;
 		const logo = this.state.asset.logo;
 
 		return (
@@ -70,7 +71,7 @@ export class AssetRow extends React.Component {
 					</div>
 				</li>
 				<li className="flex-item num">
-					<div className="flex-border">40%</div>
+					<div className="flex-border">{ percentage }%</div>
 				</li>
 			</ul>
 		)
