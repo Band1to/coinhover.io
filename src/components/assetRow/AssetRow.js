@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { updateCoin } from '../../reducer/portfolio/actions'
 import { cleanNonNumeric, truncate } from '../../utils/formatter'
-import { floorCents, multiply, rounder } from '../../utils/math'
+import { floorCents, formatPercentage, multiply, rounder } from '../../utils/math'
 import { percentClasser } from '../../utils/styler'
 
 const mapDispatchToProps = (dispatch) => ({
@@ -41,7 +41,7 @@ export class AssetRow extends React.Component {
 		const name = this.state.asset.name;
 		const price_usd = `USD price ${this.state.asset.price_usd}`;
 		const percent_change_24h = this.state.asset.percent_change_24h;
-		const percentage = this.state.asset.percentage ? this.state.asset.percentage : 0;
+		const percentage = formatPercentage(this.state.asset.percentage);
 		const logo = this.state.asset.logo;
 
 		return (
@@ -72,7 +72,7 @@ export class AssetRow extends React.Component {
 					</div>
 				</li>
 				<li className="flex-item num">
-					<div className="flex-border">{ percentage.toFixed(2) }%</div>
+					<div className="flex-border">{ percentage }%</div>
 				</li>
 			</ul>
 		)
