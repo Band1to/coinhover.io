@@ -54,7 +54,6 @@ export class AssetsTable extends React.Component {
 	}
 }
 
-// export default AssetsTable
 const AssetsTableContainer = AssetsTable;
 export default connect(mapStateToProps, null)(AssetsTableContainer)
 

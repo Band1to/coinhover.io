@@ -12,7 +12,6 @@ export default class Portfolio extends React.Component {
 		super(props)
 		this.state = {
 			loading: true,
-			total: 0
 		};
 	}
 
@@ -27,8 +26,6 @@ export default class Portfolio extends React.Component {
 	}
 
 	render() {
-		const total = this.state.total;
-
 		return (
 			<div className="app-bg">
 				<section className="portfolio">

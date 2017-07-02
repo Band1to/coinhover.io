@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> component should render 1`] = `
+<header>
+  <h1>
+    <span
+      className="plus"
+    >
+      +
+    </span>
+    COINHOVER
+  </h1>
+  <h2>
+    Watch your cryptocurrency asset balances in once place.
+  </h2>
+  <em
+    className="num"
+  >
+    $
+    0
+  </em>
+</header>
+`;
