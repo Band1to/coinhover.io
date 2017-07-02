@@ -1,8 +1,12 @@
 import * as R from 'ramda'
 import * as api from '../../services/api'
 import { zeroBalance } from '../../utils/modifier'
-import { ADD_COIN, REMOVE_COIN, UPDATE_VALUE } from './consts'
 
+export const ADD_COIN = 'ADD_COIN'
+export const REMOVE_COIN = 'REMOVE_COIN'
+export const UPDATE_VALUE = 'UPDATE_VALUE'
+
+// actions /////////////////////////////////////////////////////////////////////
 export function addCoin(coin) {
 	return dispatch =>
 		api.getCoin(coin)
@@ -11,7 +15,11 @@ export function addCoin(coin) {
 			.then((remote_coin) => dispatch(add(remote_coin)));
 }
 
-// action creators
+export function removeCoin(coin) {
+	return dispatch => dispatch(remove(coin));
+}
+
+// action creators /////////////////////////////////////////////////////////////
 export function add(portfolio) {
 	return {
 		type: ADD_COIN,
@@ -19,10 +27,10 @@ export function add(portfolio) {
 	}
 }
 
-export function remove(portfolio) {
+export function remove(coin) {
 	return {
 		type: REMOVE_COIN,
-		portfolio
+		coin
 	}
 }
 
