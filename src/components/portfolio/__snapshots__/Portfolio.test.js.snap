@@ -7,7 +7,7 @@ exports[`<Portfolio /> component should render 1`] = `
   <section
     className="portfolio"
   >
-    <Header />
+    <Connect(Header) />
     <div
       className="loading"
     >

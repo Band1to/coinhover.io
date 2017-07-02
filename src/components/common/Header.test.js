@@ -1,7 +1,7 @@
 import React from 'react'
 import * as enzyme from 'enzyme'
 import toJson from 'enzyme-to-json'
-import Header from './Header'
+import { Header } from './Header'
 
 const header = enzyme.shallow(<Header />);
 

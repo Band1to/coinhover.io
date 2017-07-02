@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-// const mapStateToProps = ({ portfolio }) => ({
-// 	portfolio
-// });
+const mapStateToProps = ({ portfolio }) => ({
+	portfolio
+});
 
-export default function Header(props) {
+export function Header(props) {
+	console.log('Header props', props);
 	let total = 0;
 	return (
 		<header>
@@ -17,6 +18,5 @@ export default function Header(props) {
 	)
 }
 
-// export default Portfolio;
-// const PortfolioContainer = Portfolio;
-// export default connect(mapStateToProps, null)(PortfolioContainer);
+const HeaderContainer = Header;
+export default connect(mapStateToProps, null)(HeaderContainer);
