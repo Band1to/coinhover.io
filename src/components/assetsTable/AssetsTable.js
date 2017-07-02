@@ -13,7 +13,6 @@ class AssetsTable extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			// assets: props.assets,
 			search: false
 		};
 		this.closeSearch = this.closeSearch.bind(this);

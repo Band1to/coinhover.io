@@ -1,8 +1,9 @@
 import React from 'react'
 import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json'
-import { Portfolio } from './Portfolio'
+import Portfolio from './Portfolio'
 import SocialMediaFooter from '../common/SocialMediaFooter'
+// import Header from '../common/Header'
 import AssetsTable from '../assetsTable/AssetsTable'
 import local_coins from '../../coins.json'
 import remote_coins from '../../remote_tokens.json'
@@ -16,12 +17,18 @@ describe('<Portfolio /> component', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
+	// it('contains the Header component', () => {
+	// 	portfolio.setState({ loading: false });
+	// 	expect(portfolio.find(Header).length).toBe(1);
+	// });
+
 	it('contains the AssetsTable component', () => {
 		portfolio.setState({ loading: false });
 		expect(portfolio.find(AssetsTable).length).toBe(1);
 	});
 
 	it('contains the SocialMediaFooter component', () => {
+		portfolio.setState({ loading: false });
 		expect(portfolio.find(SocialMediaFooter).length).toBe(1);
 	});
 });

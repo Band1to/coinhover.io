@@ -1,23 +1,17 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import SocialMediaFooter from '../common/SocialMediaFooter'
+import Header from '../common/Header'
 import AssetsTable from '../assetsTable/AssetsTable'
-import local_coins from '../../coins.json'
+import SocialMediaFooter from '../common/SocialMediaFooter'
 import * as api from '../../services/api'
+// import local_coins from '../../coins.json'
 // import { updateLocalCoins } from '../../services/coinFactory'
+// let localCoins = local_coins;
 
-// const mapStateToProps = ({ portfolio }) => ({
-// 	portfolio
-// });
-
-let localCoins = local_coins;
-
-class Portfolio extends React.Component {
+export default class Portfolio extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			loading: true,
-			// assets: props.portfolio,
 			total: 0
 		};
 	}
@@ -29,24 +23,16 @@ class Portfolio extends React.Component {
 		// 	updatePortfolio(portfolioCoins);
 		// 	this.setState({ assets: portfolioCoins, loading: false });
 		// });
-
-		// this.setState({ assets: local_coins, loading: false });
-		// this.setState({ assets: [], loading: false });
 		this.setState({ loading: false });
 	}
 
 	render() {
-		// const assets = this.props.portfolio;
 		const total = this.state.total;
 
 		return (
 			<div className="app-bg">
 				<section className="portfolio">
-					<header>
-						<h1><span className="plus">+</span>COINHOVER</h1>
-						<h2>Watch your cryptocurrency asset balances in once place.</h2>
-						<em className="num">${ total }</em>
-					</header>
+					<Header />
 					{ this.state.loading ? (
 						<div className="loading">
 							<div className="loader"></div>
@@ -61,7 +47,3 @@ class Portfolio extends React.Component {
 		)
 	}
 }
-
-export default Portfolio;
-// const PortfolioContainer = Portfolio;
-// export default connect(mapStateToProps, null)(PortfolioContainer)
