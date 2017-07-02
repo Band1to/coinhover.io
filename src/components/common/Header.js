@@ -2,19 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { notEmpty } from '../../utils/utility'
+import { calcTotal } from '../../utils/math'
 
 const mapStateToProps = ({ portfolio }) => ({
 	portfolio
 });
 
-const calcTotal = (assets) => {
-	const values = assets.map((asset) => asset.value);
-	const total = values.reduce((sum, value) => sum + value, 0);
-	return total;
-};
-
 export function Header({ portfolio = [] }) {
 	const assets = portfolio;
+	console.log('assets', assets);
 	let total = notEmpty(assets) ? calcTotal(assets) : 0;
 
 	return (
