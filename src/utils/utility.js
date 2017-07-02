@@ -1,3 +1,3 @@
-import { compose, isEmpty, join, juxt, head, not, tail, toUpper } from 'ramda';
+import * as R from 'ramda'
 
-export const notEmpty = compose(not, isEmpty);
+export const notEmpty = R.compose(R.not, R.isEmpty);
