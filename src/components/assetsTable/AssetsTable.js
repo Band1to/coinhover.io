@@ -9,7 +9,7 @@ const mapStateToProps = ({ portfolio }) => ({
 	portfolio
 });
 
-class AssetsTable extends React.Component {
+export class AssetsTable extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
