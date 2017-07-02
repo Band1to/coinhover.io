@@ -1,4 +1,4 @@
-import { ADD_COIN, REMOVE_COIN, UPDATE_COIN } from './actions'
+import { ADD_COIN, REMOVE_COIN, UPDATE_VALUE } from './actions'
 import * as R from 'ramda'
 
 const initialState = [];
@@ -20,6 +20,11 @@ export default (state = initialState, action) => {
 		case REMOVE_COIN:
 			console.log('R.filter(removeCoin, state)', R.filter(removeCoin, state));
 			return R.filter(removeCoin, state);
+		case UPDATE_VALUE:
+			console.log('UPDATE_VALUE');
+			console.log(' state', state);
+			console.log('  action', action);
+			return state;
 		default:
 			return state;
 	}

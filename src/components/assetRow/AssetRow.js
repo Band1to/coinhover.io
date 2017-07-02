@@ -1,10 +1,18 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import { updateCoin } from '../../reducer/portfolio/actions'
 import { cleanNonNumeric, truncate } from '../../utils/formatter'
 import { floorCents, multiply, rounder } from '../../utils/math'
 import { percentClasser } from '../../utils/styler'
 
-class AssetRow extends React.Component {
+const mapDispatchToProps = (dispatch) => ({
+	dispatchUpdateCoin(coin) {
+		dispatch(updateCoin(coin))
+	}
+});
+
+export class AssetRow extends React.Component {
 
 	constructor(props) {
 		super(props)
@@ -23,7 +31,7 @@ class AssetRow extends React.Component {
 		const value = rounder(balance, price_usd);
 		const coin = this.state.asset;
 		coin.value = value;
-		
+		this.props.dispatchUpdateCoin(coin);
 		this.setState({ balance, value });
 	}
 
@@ -69,7 +77,8 @@ class AssetRow extends React.Component {
 	}
 }
 
-export default AssetRow
+const AssetRowContainer = AssetRow;
+export default connect(null, mapDispatchToProps)(AssetRowContainer)
 
 AssetRow.propTypes = {
 	asset: PropTypes.object.isRequired,

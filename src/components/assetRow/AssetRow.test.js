@@ -1,7 +1,7 @@
 import React from 'react'
 import * as enzyme from 'enzyme'
 import toJson from 'enzyme-to-json'
-import AssetRow from './AssetRow'
+import { AssetRow } from './AssetRow'
 
 const bitcoin = {
 	"id": "bitcoin", 

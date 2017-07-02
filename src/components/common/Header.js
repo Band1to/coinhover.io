@@ -7,17 +7,30 @@ const mapStateToProps = ({ portfolio }) => ({
 	portfolio
 });
 
+var total = [0, 1, 2, 3].reduce(function(sum, value) {
+	return sum + value;
+}, 0);
+
 const calcTotal = (assets) => {
 	let values;
 	if (assets) {
-		values = new Set(assets.map((asset) => asset.value));
+		values = assets.map((asset) => {
+			return asset.value;
+		});
+
+		const total = values.reduce(function(sum, value) {
+			return sum + value;
+		}, 0);
+
+		return total;
+		console.log('total', total);
 	}
 	return 0;
 };
 
 export function Header(props) {
 	const assets = props.portfolio;
-	console.log('assets', assets);
+	console.log('HEADER assets', assets);
 	let total = notEmpty(assets) ? calcTotal(assets) : 0;
 	console.log(' total', total);
 	return (
