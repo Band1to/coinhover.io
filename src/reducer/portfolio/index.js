@@ -15,16 +15,23 @@ const removeCoin = (coin, state) => {
 export default (state = initialState, action) => {
 	switch(action.type) {
 		case ADD_COIN:
-			console.log('[...state, action.portfolio]', [...state, action.portfolio]);
+			// console.log('[...state, action.portfolio]', [...state, action.portfolio]);
 			return [...state, action.portfolio];
+
 		case REMOVE_COIN:
-			console.log('R.filter(removeCoin, state)', R.filter(removeCoin, state));
+			// console.log('REMOVE_COIN');
+			// console.log('R.filter(removeCoin, state)', R.filter(removeCoin, state));
 			return R.filter(removeCoin, state);
+
 		case UPDATE_VALUE:
-			console.log('UPDATE_VALUE');
-			console.log(' state', state);
-			console.log('  action', action);
-			return state;
+			return state.map((coin) => {
+				if (coin.id === action.coin.id) {
+					coin.value = action.coin.value;
+					return coin;
+				}
+				return coin;
+			});
+
 		default:
 			return state;
 	}
