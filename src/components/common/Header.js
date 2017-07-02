@@ -12,27 +12,15 @@ var total = [0, 1, 2, 3].reduce(function(sum, value) {
 }, 0);
 
 const calcTotal = (assets) => {
-	let values;
-	if (assets) {
-		values = assets.map((asset) => {
-			return asset.value;
-		});
-
-		const total = values.reduce(function(sum, value) {
-			return sum + value;
-		}, 0);
-
-		return total;
-		console.log('total', total);
-	}
-	return 0;
+	const values = assets.map((asset) => asset.value);
+	const total = values.reduce((sum, value) => sum + value, 0);
+	return total;
 };
 
-export function Header(props) {
-	const assets = props.portfolio;
-	console.log('HEADER assets', assets);
+export function Header({ portfolio = [] }) {
+	const assets = portfolio;
 	let total = notEmpty(assets) ? calcTotal(assets) : 0;
-	console.log(' total', total);
+
 	return (
 		<header>
 			<h1><span className="plus">+</span>COINHOVER</h1>
