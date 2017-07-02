@@ -34,7 +34,6 @@ class SearchCoin extends React.Component {
 	}
 
 	clickCoin(coin) {
-		// console.log('clickCoin', coin);
 		this.props.selectCoinId(coin.id);
 		this.props.closeSearch();
 	}

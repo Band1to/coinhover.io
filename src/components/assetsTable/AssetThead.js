@@ -13,7 +13,7 @@ export default function AssetThead() {
 				<small>Value</small>
 			</li>
 			<li className="flex-item">
-				<small>1HR change</small>
+				<small>24HR change</small>
 			</li>
 			<li className="flex-item">
 				<small>% of portfolio</small>
