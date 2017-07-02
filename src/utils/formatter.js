@@ -2,13 +2,6 @@ export const capitalizeFirst = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-export const percentClasser = (number) => {
-	let classString = 'flex-item num';
-	if (number == 0) return classString;
-    classString = number >= 0 ? `${classString} positive` : `${classString} negative`;
-    return classString;
-};
-
 export const floorCents = (num) => (Math.floor(num * 100) / 100);
 
 export const round = (value) => Math.round((value) * 100) / 100;

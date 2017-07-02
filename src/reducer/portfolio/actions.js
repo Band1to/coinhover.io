@@ -7,6 +7,10 @@ export function addCoin(coin) {
 	return dispatch =>
 		api.getCoin(coin)
 			.then((res) => R.head(res.data))
+			.then((remote_coin) => {
+				console.log('remote_coin', remote_coin);
+				return remote_coin;
+			})
 			.then((remote_coin) => dispatch(add(remote_coin)));
 }
 

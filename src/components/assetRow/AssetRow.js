@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { cleanNonNumeric, floorCents, multiply, percentClasser, rounder, truncate } from '../../utils/formatter'
+import { cleanNonNumeric, floorCents, multiply, rounder, truncate } from '../../utils/formatter'
+import { percentClasser } from '../../utils/styler'
 
 class AssetRow extends React.Component {
 
