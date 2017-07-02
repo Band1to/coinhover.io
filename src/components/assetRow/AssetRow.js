@@ -21,6 +21,9 @@ class AssetRow extends React.Component {
 		const balance = cleanNonNumeric(event.target.value);
 		const price_usd = this.state.asset.price_usd;
 		const value = rounder(balance, price_usd);
+		const coin = this.state.asset;
+		coin.value = value;
+		
 		this.setState({ balance, value });
 	}
 

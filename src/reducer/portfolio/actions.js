@@ -19,6 +19,10 @@ export function removeCoin(coin) {
 	return dispatch => dispatch(remove(coin));
 }
 
+export function updateCoin(coin) {
+	return dispatch => dispatch(update(coin));
+}
+
 // action creators /////////////////////////////////////////////////////////////
 export function add(portfolio) {
 	return {
@@ -34,9 +38,9 @@ export function remove(coin) {
 	}
 }
 
-export function updateValue(portfolio) {
+export function update(coin) {
 	return {
 		type: UPDATE_VALUE,
-		portfolio
+		coin
 	}
 }
