@@ -24,7 +24,8 @@ export class AssetsTable extends React.Component {
 
 	render() {
 		const assets = this.props.portfolio ? this.props.portfolio : [];
-		// console.log('Portfolio assets', assets);
+		console.log('AssetsTable assets', assets);
+
 		const handleClick = (e) => {
 		    e.preventDefault();
 		    this.setState({ search: true });
@@ -38,7 +39,8 @@ export class AssetsTable extends React.Component {
 						key={ asset.id }
 						asset={ asset} 
 						balance={ asset.balance }
-						price_usd={ asset.price_usd }/>) }
+						price_usd={ asset.price_usd }
+						percentage={ asset.percentage } />) }
 				
 				<div className="add-asset-row">
 					{ this.state.search ? (

@@ -9,9 +9,7 @@ const mapStateToProps = ({ portfolio }) => ({
 });
 
 export function Header({ portfolio = [] }) {
-	const assets = portfolio;
-	console.log('assets', assets);
-	let total = notEmpty(assets) ? calcTotal(assets) : 0;
+	const total = notEmpty(portfolio) ? calcTotal(portfolio) : 0;
 
 	return (
 		<header>

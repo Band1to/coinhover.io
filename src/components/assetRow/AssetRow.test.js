@@ -15,6 +15,7 @@ const bitcoin = {
 	"market_cap_usd": "9080883500.0", 
 	"available_supply": "15844176.0", 
 	"total_supply": "15844176.0", 
+	"percentage": 100,
 	"percent_change_1h": "0.04", 
 	"percent_change_24h": "-0.3", 
 	"percent_change_7d": "-0.57", 
@@ -26,7 +27,8 @@ const assetRow = enzyme.shallow(
 		key={ bitcoin.id }
 		asset={ bitcoin} 
 		balance={ bitcoin.balance }
-		price_usd={ bitcoin.price_usd } />);
+		price_usd={ bitcoin.price_usd }
+		percentage={ bitcoin.percentage } />);
 
 describe('<AssetRow /> component', () => {
 	it('should render', () => {

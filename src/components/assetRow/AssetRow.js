@@ -19,7 +19,8 @@ export class AssetRow extends React.Component {
 		this.state = {
 			asset: props.asset,
 			balance: props.balance,
-			value: rounder(props.balance, props.price_usd)
+			value: rounder(props.balance, props.price_usd),
+			percentage: props.percentage
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -40,8 +41,10 @@ export class AssetRow extends React.Component {
 		const name = this.state.asset.name;
 		const price_usd = `USD price ${this.state.asset.price_usd}`;
 		const percent_change_24h = this.state.asset.percent_change_24h;
-		const percentage = this.state.asset.percentage;
+		const percentage = this.state.percentage ? this.state.percentage : 0;
 		const logo = this.state.asset.logo;
+
+		console.log('percentage', percentage);
 
 		return (
 			<ul className="flex-container">
@@ -71,7 +74,7 @@ export class AssetRow extends React.Component {
 					</div>
 				</li>
 				<li className="flex-item num">
-					<div className="flex-border">{ percentage }%</div>
+					<div className="flex-border">{ percentage.toFixed(2) }%</div>
 				</li>
 			</ul>
 		)

@@ -24,8 +24,11 @@ export default (state = initialState, action) => {
 			return R.filter(removeCoin, state);
 
 		case UPDATE_VALUE:
+			const values = state.map((coin) => coin.value);
+			const total  = values.reduce((x, y) => x + y);
+
 			return state.map((coin) => {
-				
+				coin.percentage = (coin.value / total * 100);
 				if (coin.id === action.coin.id) {
 					coin.value = action.coin.value;
 					return coin;
