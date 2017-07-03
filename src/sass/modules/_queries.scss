@@ -10,6 +10,12 @@
 /* 1000
 ========================================================= */
 @media all and (max-width: 1000px) {
+	.flex-container input {
+		padding: 16px 15px;
+		min-width: 100px;
+	}
+
+	.flex-item { font-size: em(12); }
 }
 
 /* 900

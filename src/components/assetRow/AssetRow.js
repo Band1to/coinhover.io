@@ -44,7 +44,6 @@ export class AssetRow extends React.Component {
 		const percent_change_24h = this.state.asset.percent_change_24h;
 		const percentage = formatPercentage(this.state.asset.percentage);
 		const logo = this.state.asset.logo;
-		console.log('this.state.asset', this.state.asset);
 
 		return (
 			<ul className="flex-container">
@@ -93,5 +92,7 @@ export default connect(null, mapDispatchToProps)(AssetRowContainer)
 
 AssetRow.propTypes = {
 	asset: PropTypes.object.isRequired,
-	price_usd: PropTypes.string.isRequired
+	balance: PropTypes.number,
+	price_usd: PropTypes.string.isRequired,
+	value: PropTypes.string
 };
