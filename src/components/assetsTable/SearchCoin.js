@@ -6,8 +6,8 @@ import { addToPortfolio, findCoins } from '../../services/coinFactory'
 import { addCoin } from '../../reducer/portfolio/actions'
 
 const mapDispatchToProps = (dispatch) => ({
-	selectCoinId(coin_id) {
-		dispatch(addCoin(coin_id))
+	selectCoin(coin) {
+		dispatch(addCoin(coin))
 	}
 });
 
@@ -34,7 +34,7 @@ class SearchCoin extends React.Component {
 	}
 
 	clickCoin(coin) {
-		this.props.selectCoinId(coin.id);
+		this.props.selectCoin(coin);
 		this.props.closeSearch();
 	}
 
