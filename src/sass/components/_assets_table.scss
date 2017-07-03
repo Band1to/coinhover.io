@@ -3,6 +3,7 @@
 	border: 1px solid #666;
 	cursor: pointer;
 	@include rounded(5px);
+	@include clearfix();
 	&:hover { border: 1px solid $offwhite; }
 }
 

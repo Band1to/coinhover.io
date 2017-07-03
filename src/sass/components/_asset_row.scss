@@ -7,10 +7,6 @@
 	-webkit-flex-flow: row wrap;
 	justify-content: space-around;
 
-	strong { font-weight: 700; }
-
-	small { margin-left: 8px; font-size: em(13); color: #ccc; }
-
 	input {
 		width: 80%;
 		min-width: 120px;
@@ -21,7 +17,7 @@
 }
 
 .flex-border {
-	border-left: 1px dashed $gray;
+	border-left:  1px dashed $gray;
 	border-right: 1px dashed $gray;
 	@include rounded(18px);
 }
@@ -30,7 +26,7 @@
 	flex-shrink: 0;
 	margin-left: -5px;
 	max-width: 260px;
-	min-width: 260px;
+	min-width: 200px;
 	text-align: left;
 }
 
@@ -43,7 +39,6 @@
 	font-size: 1em;
 	line-height: 50px;
 	text-align: center;
-
 	em { position: relative; top: 4px; margin-right: 4px; font-size: 1.5em; }
 }
 
@@ -53,4 +48,17 @@
 	top: 9px;
 	left: 9px;
 	margin-right: 16px;
+}
+
+.asset-btn {
+	height: 48px;
+	strong, small { float: left; width: 100%; text-align: left; }
+	strong { margin-top: -15px; font-weight: 700; }
+	small { margin-top: -30px; font-size: em(13); color: #ccc; }
+}
+
+.asset-name {
+	float: left;
+	padding-top: 5px;
+    margin-left: 10px;
 }

@@ -51,8 +51,10 @@ export class AssetRow extends React.Component {
 						<div className="coin-logo">
 							<img src={ logo }/>
 						</div>
-						<strong>{ symbol }</strong>
-						<small>{ truncate(name, 23) }</small>
+						<div className="asset-name">
+							<strong>{ symbol }</strong>
+							<small>{ truncate(name, 23) }</small>
+						</div>
 					</div>
 				</li>
 				<li className="flex-item num">

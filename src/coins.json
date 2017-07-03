@@ -115,7 +115,7 @@
 		"id": "bytecoin-bcn",
         "name": "Bytecoin",
         "symbol": "BCN",
-        "logo": "/static/imgs/coins/ethereum.png",
+        "logo": "/static/imgs/coins/bytecoin-bcn.png",
         "balance": "0",
         "price_usd": "0"
 	},
