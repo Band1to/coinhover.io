@@ -11,14 +11,15 @@
 		width: 80%;
 		min-width: 120px;
 		background: none;
+		@include rounded(5px);
 		&:hover { border: 1px solid white; }
 		&::placeholder { color: white; }
 	}
 }
 
 .flex-border {
-	border-left:  1px dashed $gray;
-	border-right: 1px dashed $gray;
+	border-left:  1px dotted $gray;
+	border-right: 1px dotted $gray;
 	@include rounded(18px);
 }
 

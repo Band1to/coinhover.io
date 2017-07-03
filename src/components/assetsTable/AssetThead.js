@@ -10,6 +10,9 @@ export default function AssetThead() {
 				<small>Balance</small>
 			</li>
 			<li className="flex-item">
+				<small>Price</small>
+			</li>
+			<li className="flex-item">
 				<small>Value</small>
 			</li>
 			<li className="flex-item">

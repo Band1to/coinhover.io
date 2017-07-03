@@ -3,7 +3,7 @@
 
 .flex-container input,
 .coin-search-input {
-	padding: 14px;
+	padding: 14px 14px 13px 14px;
 	border: 1px solid lighten($gray, 10%);
 	@include rounded(4px);
 }
