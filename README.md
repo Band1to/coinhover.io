@@ -26,4 +26,4 @@ https://www.cryptonator.com/api
 #### Donation options
 - Bitcoin `19p4582NVW9TTFmvUSv2VgGJQQJZsfoZ32`
 - ETH `0x01E2f9Ba53b6Cb91e7f158090D24ebBcAdF0C564`
-- LSK `16811843780664295310L`
+- LSK https://freewallet.org/id/cfc6cb32/lsk | `16811843780664295310L`
