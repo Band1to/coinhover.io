@@ -11,7 +11,7 @@ exports[`<Header /> component should render 1`] = `
     COINHOVER
   </h1>
   <h2>
-    Watch your cryptocurrency asset balances in once place.
+    The cryptocurrency portfolio calculator.
   </h2>
   <em
     className="num"
