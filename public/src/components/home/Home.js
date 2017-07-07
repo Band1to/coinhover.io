@@ -1,4 +1,5 @@
 import React from 'react'
+import { hashHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import SocialMediaFooter from '../common/SocialMediaFooter'
