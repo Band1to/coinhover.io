@@ -13,16 +13,16 @@
 		padding: 15px;
 		width: 180px;
 		color: white;
+		@include text-shadow(1px, 1px, $violet);
 		background: $violet;
 		border: 1px solid lighten($violet, 10%);
 		@include transition(background, .2s, ease-in-out);
 		@include rounded(4px);
 		&:hover {
-			color: $green;
+			@include text-shadow(10px, 1px, 1px, #000);
 			background: lighten($violet, 10%);
 		}
 		&:active {
-			color: white;
 			background: darken($violet, 10%);
 		}
 	}
