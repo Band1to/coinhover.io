@@ -6,6 +6,7 @@ import Routes from './components/Routes'
 const supportsHistory = "pushState" in window.history
 
 			// <Router forceRefresh={!supportsHistory}>
+			// </Router>
 class App extends React.Component {
 	render() {
 	    return (
