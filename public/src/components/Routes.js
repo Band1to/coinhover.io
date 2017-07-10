@@ -1,6 +1,5 @@
 import React from 'react'
-import { browserHistory, BrowserRouter, HashRouter, hashHistory, Route, Router, Switch } from 'react-router-dom'
-import { createMemoryHistory } from 'react-router';
+import { browserHistory, HashRouter, Route, Switch } from 'react-router-dom'
 import Portfolio from './portfolio/Portfolio'
 import Home from './home/Home'
 import NoMatch from './NoMatch'
