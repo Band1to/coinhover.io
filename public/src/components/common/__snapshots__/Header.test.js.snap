@@ -17,7 +17,7 @@ exports[`<Header /> component should render 1`] = `
     className="num"
   >
     $
-    0.00
+    0
   </em>
 </header>
 `;
