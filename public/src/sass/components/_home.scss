@@ -19,7 +19,6 @@
 		@include transition(background, .2s, ease-in-out);
 		@include rounded(4px);
 		&:hover {
-			@include text-shadow(10px, 1px, 1px, #000);
 			background: lighten($violet, 10%);
 		}
 		&:active {
