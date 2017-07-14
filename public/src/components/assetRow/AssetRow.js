@@ -92,7 +92,7 @@ export default connect(null, mapDispatchToProps)(AssetRowContainer)
 
 AssetRow.propTypes = {
 	asset: PropTypes.object.isRequired,
-	balance: PropTypes.number,
+	balance: PropTypes.string,
 	price_usd: PropTypes.string.isRequired,
 	value: PropTypes.string
 };
