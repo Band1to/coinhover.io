@@ -1,6 +1,6 @@
 import * as R from 'ramda'
 import * as api from '../../services/api'
-import { linkLogo, zeroBalanceValue } from '../../utils/modifier'
+import { linkLogo, formatPriceUSD, zeroBalanceValue } from '../../utils/modifier'
 
 export const ADD_COIN = 'ADD_COIN'
 export const REMOVE_COIN = 'REMOVE_COIN'
@@ -13,6 +13,7 @@ export function addCoin(coin) {
 			.then((res) => R.head(res.data))
 			.then((remote_coin) => linkLogo(coin, remote_coin))
 			.then((remote_coin) => zeroBalanceValue(remote_coin))
+			.then((remote_coin) => formatPriceUSD(remote_coin))
 			.then((remote_coin) => dispatch(add(remote_coin)));
 }
 

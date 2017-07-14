@@ -10,7 +10,7 @@ export const calcTotal = (assets) => {
 	const values = assets.map((asset) => asset.value);
 	const total = values.reduce((sum, value) => sum + value, 0);
 	return total;
-};
+}
 
 export const formatPercentage = (percent) => {
 	const num = percent ? percent : 0;
@@ -25,4 +25,4 @@ export const formatPercentage = (percent) => {
 	}
 
 	return currency;
-};
+}

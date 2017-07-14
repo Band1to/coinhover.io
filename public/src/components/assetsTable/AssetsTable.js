@@ -36,11 +36,11 @@ export class AssetsTable extends React.Component {
 				{ assets.map(asset =>
 					<AssetRow
 						key={ asset.id }
-						asset={ asset} 
+						asset={ asset}
 						balance={ asset.balance }
 						price_usd={ asset.price_usd }
 						percentage={ asset.percentage } />) }
-				
+
 				<div className="add-asset-row">
 					{ this.state.search ? (
 						<SearchCoin closeSearch={ this.closeSearch } />
