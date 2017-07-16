@@ -22,6 +22,8 @@ const ExtractTextPluginConfig = new ExtractTextPlugin({
   allChunks: true
 })
 
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([{ from: "public/src/static", to: "static" }])
+
 const PATHS = {
   app: src,
   build: coinhover,
@@ -69,13 +71,32 @@ const base = {
 }
 
 const developmentConfig = {
+  devServer: {
+    hot: false,
+    quiet: true,
+    publicPath: "",
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    stats: "errors-only",
+    open: true,
+    proxy: {
+      '/app': {
+        target: 'http://localhost',
+        secure: false
+      }
+    }
+  },
+  node: {
+    net: 'empty',
+    dns: 'empty'
+  },
   devtool: 'cheap-module-inline-source-map',
-  plugins: [ExtractTextPluginConfig, HtmlWebpackPluginConfig]
+  plugins: [CopyWebpackPluginConfig, ExtractTextPluginConfig, HtmlWebpackPluginConfig]
 }
 
 const productionConfig = {
   devtool: 'cheap-module-source-map',
-  plugins: [ExtractTextPluginConfig, HtmlWebpackPluginConfig, productionPlugin]
+  plugins: [CopyWebpackPluginConfig, ExtractTextPluginConfig, HtmlWebpackPluginConfig, productionPlugin]
 }
 
 // module.exports = {
