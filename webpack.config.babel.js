@@ -16,6 +16,12 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 
+const ExtractTextPluginConfig = new ExtractTextPlugin({
+  filename: "coinhover.css",
+  disable: false,
+  allChunks: true
+})
+
 const PATHS = {
   app: src,
   build: coinhover,
@@ -64,12 +70,12 @@ const base = {
 
 const developmentConfig = {
   devtool: 'cheap-module-inline-source-map',
-  plugins: [ExtractTextPlugin, HtmlWebpackPluginConfig]
+  plugins: [ExtractTextPluginConfig, HtmlWebpackPluginConfig]
 }
 
 const productionConfig = {
   devtool: 'cheap-module-source-map',
-  plugins: [ExtractTextPlugin, HtmlWebpackPluginConfig, productionPlugin]
+  plugins: [ExtractTextPluginConfig, HtmlWebpackPluginConfig, productionPlugin]
 }
 
 // module.exports = {
