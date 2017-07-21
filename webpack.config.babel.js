@@ -101,7 +101,7 @@ const productionConfig = {
   plugins: [CopyWebpackPluginConfig, ExtractTextPluginConfig, HtmlWebpackPluginConfig, productionPlugin]
 }
 
-log(`${chalk.magenta('🤖 LAUNCH_COMMAND')} ${chalk.green('npm run:')} ${chalk.red(LAUNCH_COMMAND)}`)
+log(`${chalk.magenta('🤖 ')} ${chalk.green('npm run:')} ${chalk.red(LAUNCH_COMMAND)}`)
 
 export default Object.assign({}, base,
   isProduction === true ? productionConfig : developmentConfig
