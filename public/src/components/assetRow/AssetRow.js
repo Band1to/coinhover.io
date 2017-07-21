@@ -1,6 +1,8 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
+import { numberWithCommas } from '../../utils/math'
 import { updateCoin } from '../../reducer/portfolio/actions'
 import { cleanNonNumeric, truncate } from '../../utils/formatter'
 import { floorCents, formatPercentage, multiply, rounder } from '../../utils/math'
@@ -71,7 +73,7 @@ export class AssetRow extends React.Component {
 				</li>
 				<li className="flex-item num">
 					<div className="flex-border" title={ this.state.value }>
-						${ this.state.value }
+						${ numberWithCommas(this.state.value) }
 					</div>
 				</li>
 				<li className={ percentClasser(percent_change_24h) }>

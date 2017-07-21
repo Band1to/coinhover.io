@@ -1,6 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
 import AssetThead from './AssetThead'
 import AssetRow from '../assetRow/AssetRow'
 import SearchCoin from './SearchCoin'

@@ -6,7 +6,7 @@ export const rounder = (balance, price_usd) => round(multiply(balance, floorCent
 
 export const multiply = (num1, num2) => num1 * num2;
 
-const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+export const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 export const calcTotal = (assets) => {
 	const values = assets.map((asset) => asset.value);
