@@ -34,6 +34,7 @@ const PATHS = {
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 
 const isProduction = LAUNCH_COMMAND === 'production'
+process.env.BABEL_ENV = LAUNCH_COMMAND
 
 const productionPlugin = new webpack.DefinePlugin({
   'process.env': {
@@ -78,30 +79,32 @@ const developmentConfig = {
     quiet: true,
     publicPath: "",
     contentBase: path.join(__dirname, "dist"),
+    hot: true,
+    inline: true,
     compress: true,
     stats: "errors-only",
-    open: true,
-    proxy: {
-      '/app': {
-        target: 'http://localhost',
-        secure: false
-      }
-    }
-  },
-  node: {
-    net: 'empty',
-    dns: 'empty'
+    open: true
   },
   devtool: 'cheap-module-inline-source-map',
-  plugins: [CopyWebpackPluginConfig, ExtractTextPluginConfig, HtmlWebpackPluginConfig]
+  plugins: [
+    CopyWebpackPluginConfig,
+    ExtractTextPluginConfig,
+    HtmlWebpackPluginConfig,
+    new webpack.HotModuleReplacementPlugin()
+  ]
 }
 
 const productionConfig = {
   devtool: 'cheap-module-source-map',
-  plugins: [CopyWebpackPluginConfig, ExtractTextPluginConfig, HtmlWebpackPluginConfig, productionPlugin]
+  plugins: [
+    CopyWebpackPluginConfig,
+    ExtractTextPluginConfig,
+    HtmlWebpackPluginConfig,
+    productionPlugin
+  ]
 }
 
-log(`${chalk.magenta('🤖 ')} ${chalk.green('npm run:')} ${chalk.red(LAUNCH_COMMAND)}`)
+log(`${chalk.magenta('🤖 ')} ${chalk.italic.green('npm run:')} ${chalk.red(LAUNCH_COMMAND)}`)
 
 export default Object.assign({}, base,
   isProduction === true ? productionConfig : developmentConfig
