@@ -11,7 +11,7 @@ export const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d)
 export const calcTotal = (assets) => {
 	const values = assets.map((asset) => asset.value);
 	const total = values.reduce((sum, value) => sum + value, 0);
-	return numberWithCommas(total);
+	return numberWithCommas(floorCents(total));
 }
 
 export const formatPercentage = (percent) => {

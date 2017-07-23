@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Routes from './components/Routes'
+import Routes from './config/Routes'
 
 class App extends React.Component {
 	render() {
