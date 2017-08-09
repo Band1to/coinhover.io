@@ -27,8 +27,8 @@ export class AssetsTable extends React.Component {
 		const assets = this.props.portfolio ? this.props.portfolio : [];
 
 		const handleClick = (e) => {
-		    e.preventDefault();
-		    this.setState({ search: true });
+	    e.preventDefault();
+	    this.setState({ search: true });
 		};
 
 		return (
@@ -60,8 +60,8 @@ const AssetsTableContainer = AssetsTable;
 export default connect(mapStateToProps, null)(AssetsTableContainer)
 
 AssetsTable.propTypes = {
-   arrayWithShape: PropTypes.arrayOf(PropTypes.shape({
+  arrayWithShape: PropTypes.arrayOf(PropTypes.shape({
 		id: PropTypes.string.isRequired,
 		name: PropTypes.string.isRequired
-   }))
+  }))
 }

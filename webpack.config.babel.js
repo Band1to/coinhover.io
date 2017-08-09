@@ -78,11 +78,10 @@ const base = {
 
 const developmentConfig = {
   devServer: {
-    hot: false,
-    quiet: true,
     publicPath: "",
     contentBase: path.join(__dirname, "dist"),
     hot: true,
+    quiet: true,
     inline: true,
     compress: true,
     stats: "errors-only",
