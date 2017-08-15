@@ -141,7 +141,7 @@
 		"symbol": "DNT",
 		"balance": "0",
     "price_usd": "0"
-	}
+	},
 	{
 		"id": "dogecoin",
     "name": "Dogecoin",
@@ -476,7 +476,7 @@
 		"symbol": "SNM",
 		"balance": "0",
     "price_usd": "0"
-	}
+	},
 	{
 		"id": "status",
 		"name": "Status",
