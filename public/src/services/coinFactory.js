@@ -19,6 +19,12 @@ export const updateLocalCoins = (localCoins, remoteCoins) => {
 	return zipped.map((z) => R.merge(z[0], z[1]));
 };
 
+export const coinsList = () => {
+	// storage.coins
+	console.log('coinsList', local_coins)
+	return local_coins;
+};
+
 export const findCoins = (text) => {
 	const findMatches = (coin) => testMatch(text, coin.name.toLowerCase()) ? coin : null;
 	const matches = R.map(findMatches, storage.coins);

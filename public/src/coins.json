@@ -1,9 +1,9 @@
 [
 	{
-    "id": "antshares",
-    "name": "AntShares",
-    "symbol": "ANS",
-    "logo": "/static/imgs/coins/antshares.png",
+    "id": "neo",
+    "name": "NEO",
+    "symbol": "NEO",
+    "logo": "/static/imgs/coins/neo.png",
     "balance": "0",
     "price_usd": "0"
   },
@@ -251,14 +251,6 @@
     "name": "GridCoin",
     "symbol": "GRC",
     "logo": "/static/imgs/coins/gridcoin.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "gulden",
-    "name": "Gulden",
-    "symbol": "NLG",
-    "logo": "/static/imgs/coins/gulden.png",
     "balance": "0",
     "price_usd": "0"
 	},
