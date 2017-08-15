@@ -1,5 +1,69 @@
 [
 	{
+		"id": "bitcoin",
+		"name": "Bitcoin",
+		"symbol": "BTC",
+		"logo": "/static/imgs/coins/bitcoin.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "ethereum",
+		"name": "Ethereum",
+		"symbol": "ETH",
+		"logo": "/static/imgs/coins/ethereum.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "litecoin",
+    "name": "Litecoin",
+    "symbol": "LTC",
+    "logo": "/static/imgs/coins/litecoin.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "ripple",
+    "name": "Ripple",
+    "symbol": "XRP",
+    "logo": "/static/imgs/coins/ripple.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "dashcoin",
+    "name": "Dashcoin",
+    "symbol": "DSH",
+    "logo": "/static/imgs/coins/dashcoin.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "ethereum-classic",
+    "name": "Ethereum Classic",
+    "symbol": "ETC",
+    "logo": "/static/imgs/coins/ethereum-classic.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "stratis",
+    "name": "Stratis",
+    "symbol": "STRAT",
+    "logo": "/static/imgs/coins/stratis.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "lisk",
+    "name": "Lisk",
+    "symbol": "LSK",
+    "logo": "/static/imgs/coins/lisk.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
     "id": "neo",
     "name": "NEO",
     "symbol": "NEO",
@@ -7,6 +71,14 @@
     "balance": "0",
     "price_usd": "0"
   },
+	{
+		"id": "gas",
+		"name": "Gas",
+		"symbol": "GAS",
+		"logo": "/static/imgs/coins/gas.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
   {
   	"id": "ardor",
     "name": "Ardor",
@@ -44,14 +116,6 @@
     "name": "BitBay",
     "symbol": "BAY",
     "logo": "/static/imgs/coins/bitbay.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "bitcoin",
-		"name": "Bitcoin",
-		"symbol": "BTC",
-		"logo": "/static/imgs/coins/bitcoin.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -104,14 +168,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "dashcoin",
-    "name": "Dashcoin",
-    "symbol": "DSH",
-    "logo": "/static/imgs/coins/dashcoin.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "decred",
     "name": "Decred",
     "symbol": "DCR",
@@ -138,6 +194,7 @@
 	{
 		"id": "district0x",
 		"name": "district0x",
+		"logo": "/static/imgs/coins/district0x.png",
 		"symbol": "DNT",
 		"balance": "0",
     "price_usd": "0"
@@ -175,22 +232,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "ethereum-classic",
-    "name": "Ethereum Classic",
-    "symbol": "ETC",
-    "logo": "/static/imgs/coins/ethereum-classic.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "ethereum",
-		"name": "Ethereum",
-		"symbol": "ETH",
-		"logo": "/static/imgs/coins/ethereum.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "etheroll",
     "name": "Etheroll",
     "symbol": "DICE",
@@ -211,14 +252,6 @@
     "name": "Factom",
     "symbol": "FCT",
     "logo": "/static/imgs/coins/factom.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "firstblood",
-    "name": "FirstBlood",
-    "symbol": "1ST",
-    "logo": "/static/imgs/coins/firstblood.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -279,22 +312,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "lisk",
-    "name": "Lisk",
-    "symbol": "LSK",
-    "logo": "/static/imgs/coins/lisk.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "litecoin",
-    "name": "Litecoin",
-    "symbol": "LTC",
-    "logo": "/static/imgs/coins/litecoin.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "lykke",
     "name": "Lykke",
     "symbol": "LKK",
@@ -307,14 +324,6 @@
     "name": "MaidSafeCoin",
     "symbol": "MAID",
     "logo": "/static/imgs/coins/maidsafecoin.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "monacoin",
-    "name": "MonaCoin",
-    "symbol": "MONA",
-    "logo": "/static/imgs/coins/monacoin.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -339,6 +348,14 @@
     "name": "NEM",
     "symbol": "XEM",
     "logo": "/static/imgs/coins/nem.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "numeraire",
+		"name": "Numeraire",
+		"symbol": "NMR",
+		"logo": "/static/imgs/coins/numeraire.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -391,38 +408,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "quantum",
-    "name": "Quantum",
-    "symbol": "QAU",
-    "logo": "/static/imgs/coins/quantum.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "quantum-resistant-ledger",
-    "name": "Quantum Resistant Ledger",
-    "symbol": "QRL",
-    "logo": "/static/imgs/coins/quantum-resistant-ledger.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "reddcoin",
-    "name": "ReddCoin",
-    "symbol": "RDD",
-    "logo": "/static/imgs/coins/reddcoin.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "ripple",
-    "name": "Ripple",
-    "symbol": "XRP",
-    "logo": "/static/imgs/coins/ripple.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "rlc",
     "name": "iExec RLC",
     "symbol": "RLC",
@@ -431,26 +416,10 @@
     "price_usd": "0"
 	},
 	{
-		"id": "round",
-    "name": "Round",
-    "symbol": "ROUND",
-    "logo": "/static/imgs/coins/round.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "siacoin",
     "name": "Siacoin",
     "symbol": "SC",
     "logo": "/static/imgs/coins/siacoin.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "singulardtv",
-    "name": "SingularDTV",
-    "symbol": "SNGLS",
-    "logo": "/static/imgs/coins/singulardtv.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -466,12 +435,14 @@
 		"id": "sonm",
 		"name": "SONM",
 		"symbol": "SNM",
+		"logo": "/static/imgs/coins/sonm.png",
 		"balance": "0",
     "price_usd": "0"
 	},
 	{
 		"id": "status",
 		"name": "Status",
+		"logo": "/static/imgs/coins/status.png",
 		"symbol": "SNT",
 		"balance": "0",
 		"price_usd": "0"
@@ -497,22 +468,6 @@
     "name": "Storjcoin X",
     "symbol": "SJCX",
     "logo": "/static/imgs/coins/storjcoin-x.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "stratis",
-    "name": "Stratis",
-    "symbol": "STRAT",
-    "logo": "/static/imgs/coins/stratis.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "supernet-unity",
-    "name": "SuperNET",
-    "symbol": "UNITY",
-    "logo": "/static/imgs/coins/supernet-unity.png",
     "balance": "0",
     "price_usd": "0"
 	},
