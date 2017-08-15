@@ -79,6 +79,14 @@
     "balance": "0",
     "price_usd": "0"
 	},
+	{
+		"id": "omisego",
+		"name": "OmiseGo",
+		"symbol": "OMG",
+		"logo": "/static/imgs/coins/omisego.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
   {
   	"id": "ardor",
     "name": "Ardor",
@@ -423,6 +431,12 @@
     "balance": "0",
     "price_usd": "0"
 	},
+	{
+		"id": "signatum",
+		"name": "Signatum",
+		"symbol": "SIGT",
+		"logo": "/static/imgs/coins/signatum.png"
+	}
 	{
 		"id": "skycoin",
     "name": "Skycoin",
