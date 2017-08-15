@@ -24,7 +24,6 @@ class SearchCoin extends React.Component {
 
 	componentDidMount() {
 		this.setState({ coins: coinsList });
-		console.log('this.state', this.state)
 		// this.coinInput.focus();
 		// this.handleChange = this.handleChange.bind(this);
 		this.clickCoin = this.clickCoin.bind(this);

@@ -27,7 +27,6 @@ export class AssetsTable extends React.Component {
 
 	render() {
 		const coins = local_coins;
-		console.log('AssetsTable coins', coins)
 		const assets = this.props.portfolio ? this.props.portfolio : [];
 
 		const handleClick = (e) => {
