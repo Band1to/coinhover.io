@@ -3,13 +3,7 @@ import { connect } from 'react-redux'
 import * as R from 'ramda'
 import * as api from '../../services/api'
 import { addToPortfolio, coinsList, findCoins } from '../../services/coinFactory'
-import { addCoin } from '../../reducer/portfolio/actions'
-
-const mapDispatchToProps = (dispatch) => ({
-	selectCoin(coin) {
-		dispatch(addCoin(coin))
-	}
-});
+import { addCoin } from '../../actions'
 
 class SearchCoin extends React.Component {
 	constructor(props) {
@@ -19,6 +13,7 @@ class SearchCoin extends React.Component {
 			coins: props.coins,
 			searched: []
 		};
+
 		this.close = this.close.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -41,7 +36,7 @@ class SearchCoin extends React.Component {
 	}
 
 	clickCoin(coin) {
-		this.props.selectCoin(coin);
+		this.props.addCoin(coin);
 		this.props.closeSearch();
 	}
 
@@ -88,6 +83,12 @@ class SearchCoin extends React.Component {
 				</div>
 			</div>
 		)
+	}
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		addCoin: (...args) => { dispatch(addCoin(...args)) }
 	}
 }
 
