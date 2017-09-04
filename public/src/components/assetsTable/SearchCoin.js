@@ -20,6 +20,7 @@ class SearchCoin extends React.Component {
 			searched: []
 		};
 		this.close = this.close.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}
 
 	componentDidMount() {
@@ -29,12 +30,15 @@ class SearchCoin extends React.Component {
 		this.clickCoin = this.clickCoin.bind(this);
 	}
 
-	// handleChange() {
-	// 	const text = document.getElementById('coin-search').value;
-	// 	const search = (text)  => this.setState({ searched: findCoins(text) });
-	// 	const clearSearch = () => this.setState({ searched: [] });
-	// 	text.length > 1 ? search(text) : clearSearch();
-	// }
+	handleChange() {
+		const text = document.getElementById('coin-search').value;
+		const search = (text)  => {
+			console.log('findCoins(text)', findCoins(text))
+			this.setState({ searched: findCoins(text) });
+		}
+		const clearSearch = () => this.setState({ searched: [] });
+		text.length > 1 ? search(text) : clearSearch();
+	}
 
 	clickCoin(coin) {
 		this.props.selectCoin(coin);
@@ -70,12 +74,12 @@ class SearchCoin extends React.Component {
 
 		return (
 			<div id="search-coin-component">
-				{/* <input type="text"
+				<input type="text"
 					   id="coin-search"
 					   className="coin-search-input fl"
 					   placeholder="Search"
 					   onChange={ ()=> this.handleChange() }
-					   ref={ (input) => { this.coinInput = input; } } /> */}
+					   ref={ (input) => { this.coinInput = input; } } />
 				<div className="icon-cancel-outline fl" onClick={ this.close }></div>
 				<div className="coin-select">
 					<ul>
