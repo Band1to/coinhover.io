@@ -31,7 +31,7 @@
 		height: 40px;
 		color: #ccc;
 		cursor: pointer;
-		border-bottom: 1px dotted $gray;
+		// border-bottom: 1px dotted $gray;
 		@include transition(background, .3s, ease-in-out);
 		&:hover { color: white; background: $violet; }
 	}

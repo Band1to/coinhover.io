@@ -248,14 +248,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "expanse",
-    "name": "Expanse",
-    "symbol": "EXP",
-    "logo": "/static/imgs/coins/expanse.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "factom",
     "name": "Factom",
     "symbol": "FCT",
