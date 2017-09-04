@@ -9,7 +9,6 @@ import chalk from 'chalk'
 const coinhover = path.resolve(__dirname, "coinhover")
 const src = path.resolve(__dirname, "public/src")
 const log = console.log
-// const environment = process.env.NODE_ENV;
 // https://gist.github.com/leongaban/dc92204454b3513e511645af98107775
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -80,7 +79,7 @@ const developmentConfig = {
   devServer: {
     publicPath: "",
     contentBase: path.join(__dirname, "dist"),
-    hot: true,
+    // hot: false,
     quiet: true,
     inline: true,
     compress: true,
@@ -92,7 +91,7 @@ const developmentConfig = {
     CopyWebpackPluginConfig,
     ExtractTextPluginConfig,
     HtmlWebpackPluginConfig,
-    new webpack.HotModuleReplacementPlugin()
+    // new webpack.HotModuleReplacementPlugin()
   ]
 }
 

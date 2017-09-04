@@ -8,7 +8,7 @@
   env: {
     start: {
       presets: [
-        "react-hmre"
+        // "react-hmre"
       ]
     }
   }

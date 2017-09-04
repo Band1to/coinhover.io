@@ -2,15 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import AssetThead from '../components/AssetTable/AssetThead'
-import AssetRow from '../assetRow/AssetRow'
+import AssetThead from '../../components/AssetTable/AssetThead'
+import AssetRow from '../AssetRow/AssetRow'
 import SearchCoin from '../SearchCoin/SearchCoin'
 import local_coins from '../../coins.json'
 // import { coinsList } from '../../services/coinFactory'
-
-const mapStateToProps = ({ portfolio }) => ({
-	portfolio
-});
 
 export class AssetsTable extends React.Component {
 	constructor(props) {
@@ -58,6 +54,10 @@ export class AssetsTable extends React.Component {
 		)
 	}
 }
+
+const mapStateToProps = ({ portfolio }) => ({
+	portfolio
+});
 
 const AssetsTableContainer = AssetsTable;
 export default connect(mapStateToProps, null)(AssetsTableContainer)

@@ -2,17 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { numberWithCommas } from '../../utils/math'
-import { updateCoin } from '../../reducer/portfolio/actions'
-import { cleanNonNumeric, truncate } from '../../utils/formatter'
-import { floorCents, formatPercentage, multiply, rounder } from '../../utils/math'
+// Utils
 import { percentClasser } from '../../utils/styler'
+import { cleanNonNumeric, truncate } from '../../utils/formatter'
+import {
+	floorCents,
+	formatPercentage,
+	multiply,
+	numberWithCommas,
+	rounder
+} from '../../utils/math'
 
-const mapDispatchToProps = (dispatch) => ({
-	dispatchUpdateCoin(coin) {
-		dispatch(updateCoin(coin))
-	}
-});
+// Actions
+import { updateCoin } from '../../actions'
 
 export class AssetRow extends React.Component {
 
@@ -88,6 +90,12 @@ export class AssetRow extends React.Component {
 		)
 	}
 }
+
+const mapDispatchToProps = (dispatch) => ({
+	dispatchUpdateCoin(coin) {
+		dispatch(updateCoin(coin))
+	}
+});
 
 const AssetRowContainer = AssetRow;
 export default connect(null, mapDispatchToProps)(AssetRowContainer)
