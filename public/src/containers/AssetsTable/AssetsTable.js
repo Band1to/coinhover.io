@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import AssetThead from '../../components/AssetTable/AssetThead'
 import AssetRow from '../AssetRow/AssetRow'
-import SearchCoin from '../SearchCoin/SearchCoin'
+import SearchCoin from '../Search/SearchCoin'
 import local_coins from '../../coins.json'
 // import { coinsList } from '../../services/coinFactory'
 

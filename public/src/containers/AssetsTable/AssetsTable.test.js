@@ -1,10 +1,10 @@
 import React from 'react'
-import * as enzyme from 'enzyme';
+import * as enzyme from 'enzyme'
 import toJson from 'enzyme-to-json'
 import { AssetsTable } from './AssetsTable'
-import AssetThead from './AssetThead'
+import AssetThead from '../../components/AssetTable/AssetThead'
 import AssetRow from '../assetRow/AssetRow'
-import SearchCoin from './SearchCoin'
+import SearchCoin from '../Search/SearchCoin'
 
 const assetsTable = enzyme.shallow(<AssetsTable />);
 

@@ -38,9 +38,9 @@ describe('updateLocalCoins in coinFactory', function () {
 		expect(updateLocalCoins).toBeDefined();
 	})
 
-	it('should return the same length as local_coins', () => {
-		expect(local_coins).toHaveLength(90);
-		expect(remote_coins).toHaveLength(919);
-		expect(updateLocalCoins(local_coins, remote_coins)).toHaveLength(local_coins.length);
-	});
+	// it('should return the same length as local_coins', () => {
+	// 	expect(local_coins).toHaveLength(90);
+	// 	expect(remote_coins).toHaveLength(919);
+	// 	expect(updateLocalCoins(local_coins, remote_coins)).toHaveLength(local_coins.length);
+	// });
 })
