@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import AssetThead from './AssetThead'
+import AssetThead from '../components/AssetTable/AssetThead'
 import AssetRow from '../assetRow/AssetRow'
-import SearchCoin from '../SearchCoin'
+import SearchCoin from '../SearchCoin/SearchCoin'
 import local_coins from '../../coins.json'
 // import { coinsList } from '../../services/coinFactory'
 
