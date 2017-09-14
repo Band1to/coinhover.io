@@ -13,14 +13,10 @@
 	width: 173px;
 	color: black;
 	@include roundedAdv(4px, 4px, 0, 0);
-	&:hover {
-		background: white;
-	}
+	&:hover { background: white; }
 }
 
-.coins-container {
-	flex-wrap: wrap;
-}
+.coins-container { flex-wrap: wrap; }
 
 .coin-select {
 	float: left;

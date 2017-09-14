@@ -1,4 +1,3 @@
-import fs from 'fs'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
@@ -12,25 +11,25 @@ const log = console.log
 // https://gist.github.com/leongaban/dc92204454b3513e511645af98107775
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/public/src/index.html',
+  template: `${__dirname}/public/src/index.html`,
   filename: 'index.html',
   inject: 'body'
 })
 
 const ExtractTextPluginConfig = new ExtractTextPlugin({
-  filename: "coinhover.css",
+  filename: 'coinhover.css',
   disable: false,
   allChunks: true
 })
 
-const CopyWebpackPluginConfig = new CopyWebpackPlugin([{ from: "public/src/static", to: "static" }])
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([{ from: 'public/src/static', to: 'static' }]);
 
 const PATHS = {
   app: src,
-  build: coinhover,
-}
+  build: coinhover
+};
 
-const LAUNCH_COMMAND = process.env.npm_lifecycle_event
+const LAUNCH_COMMAND = process.env.npm_lifecycle_event;
 
 const isProduction = LAUNCH_COMMAND === 'production'
 process.env.BABEL_ENV = LAUNCH_COMMAND
@@ -54,13 +53,13 @@ const base = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['babel-loader']
       },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader", "sass-loader"],
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
           publicPath: coinhover
         })
       }
@@ -77,20 +76,20 @@ const base = {
 
 const developmentConfig = {
   devServer: {
-    publicPath: "",
-    contentBase: path.join(__dirname, "dist"),
+    publicPath: '',
+    contentBase: path.join(__dirname, 'dist'),
     // hot: false,
     quiet: true,
     inline: true,
     compress: true,
-    stats: "errors-only",
+    stats: 'errors-only',
     open: true
   },
   devtool: 'cheap-module-inline-source-map',
   plugins: [
     CopyWebpackPluginConfig,
     ExtractTextPluginConfig,
-    HtmlWebpackPluginConfig,
+    HtmlWebpackPluginConfig
     // new webpack.HotModuleReplacementPlugin()
   ]
 }

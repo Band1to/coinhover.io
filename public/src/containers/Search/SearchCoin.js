@@ -1,7 +1,6 @@
-/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { connect } from 'react-redux';
-import { coinsList, findCoins } from '../../services/coinFactory';
+import { findCoins } from '../../services/coinFactory';
 import { addCoin } from '../../actions';
 
 class SearchCoin extends React.Component {
@@ -14,14 +13,8 @@ class SearchCoin extends React.Component {
     };
 
     this.close = this.close.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  componentDidMount() {
-    this.setState({ coins: coinsList });
-    // this.coinInput.focus();
-    // this.handleChange = this.handleChange.bind(this);
     this.clickCoin = this.clickCoin.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange() {
@@ -44,18 +37,16 @@ class SearchCoin extends React.Component {
   }
 
   render() {
-    const coins = this.props.coins.map((coin) => {
-      return (
-        <li key={coin.id}>
-          <button onClick={() => this.clickCoin(coin)}>
-            <div className="coin-logo">
-              <img alt={coin.id} src={coin.logo} />
-            </div>
-            <span>{ coin.name }</span>
-          </button>
-        </li>
-      );
-    });
+    const coins = this.props.coins.map(coin => (
+      <li key={coin.id}>
+        <button onClick={() => this.clickCoin(coin)}>
+          <div className="coin-logo">
+            <img alt={coin.id} src={coin.logo} />
+          </div>
+          <span>{ coin.name }</span>
+        </button>
+      </li>
+    ));
 
     return (
       <div id="search-coin-component">

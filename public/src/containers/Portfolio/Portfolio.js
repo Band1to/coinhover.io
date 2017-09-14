@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Header from '../common/Header'
 import AssetsTable from '../assetsTable/AssetsTable'
 import SocialMediaFooter from '../common/SocialMediaFooter'

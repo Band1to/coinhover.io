@@ -14,5 +14,8 @@
   },
   "env": {
     "jest": true
+  },
+  "settings": {
+    "import/resolver": "webpack"
   }
 }
