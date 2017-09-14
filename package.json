@@ -9,7 +9,8 @@
     "dev": "webpack-dev-server",
     "production": "webpack -p",
     "build": "webpack -p",
-    "test": "jest"
+    "test": "eslint app && jest",
+    "test:fix": "eslint --fix app"
   },
   "now": {
     "name": "coinhover",
@@ -58,6 +59,11 @@
     "css-loader": "^0.28.4",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
     "jest": "^20.0.4",

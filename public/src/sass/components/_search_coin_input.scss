@@ -10,7 +10,6 @@
 }
 
 .coin-search-input {
-	// width: 238px;
 	width: 173px;
 	color: black;
 	box-shadow: 0px 0px 1px 1px #666;
@@ -21,12 +20,21 @@
 	}
 }
 
+.coins-container {
+	flex-wrap: wrap;
+}
+
 .coin-select {
 	float: left;
+	overflow-y: auto;
 	width: 99%;
+	max-height: 400px;
+	background: white;
 
 	li {
-		float: left;
+		// float: left;
+		display: flex;
+		justify-content: space-between;
 	  padding: 5px;
 		height: 40px;
 		color: #ccc;
@@ -34,6 +42,12 @@
 		// border-bottom: 1px dotted $gray;
 		@include transition(background, .3s, ease-in-out);
 		&:hover { color: white; background: $violet; }
+	}
+
+	button {
+		padding: 0;
+		background: none;
+		border: none;
 	}
 
 	span { position: relative; top: 1em; }
