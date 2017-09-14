@@ -1,0 +1,48 @@
+#search-coin-component {
+	.icon-cancel-outline {
+		opacity: .7;
+		font-size: 1.5em;
+	    margin-top: 10px;
+	    margin-left: 5px;
+	    cursor: pointer;
+	    &:hover { opacity: 1; }
+	}
+}
+
+.coin-search-input {
+	width: 173px;
+	color: black;
+	@include roundedAdv(4px, 4px, 0, 0);
+	&:hover { background: white; }
+}
+
+.coins-container { flex-wrap: wrap; }
+
+.coin-select {
+	float: left;
+	overflow-y: auto;
+	width: 99%;
+	max-height: 400px;
+	background: white;
+
+	li {
+		display: flex;
+		justify-content: space-between;
+	  padding: 5px;
+		height: 40px;
+		color: $gray;
+		cursor: pointer;
+		@include transition(background, .3s, ease-in-out);
+		&:hover { color: white; background: $violet; }
+	}
+
+	button {
+		padding: 0;
+		background: none;
+		border: none;
+	}
+
+	span { position: relative; top: 1em; }
+
+	.coin-logo { top: 5px; }
+}

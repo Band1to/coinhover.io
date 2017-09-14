@@ -22,7 +22,7 @@ class SearchCoin extends React.Component {
     const search = (txt) => {
       console.log('findCoins(txt)', findCoins(txt));
       this.setState({ searched: findCoins(txt) });
-    }
+    };
     const clearSearch = () => this.setState({ searched: [] });
     text.length > 1 ? search(text) : clearSearch();
   }
