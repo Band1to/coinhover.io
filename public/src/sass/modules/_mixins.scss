@@ -5,71 +5,89 @@
 // @include em(12);
 $em-base: 16;
 @function em($pxval, $base: $em-base) {
-    @if not unitless($pxval) {
-        $pxval: strip-units($pxval);
-    }
-    @if not unitless($base) {
-        $base: strip-units($base);
-    }
-    @return ($pxval / $base) * 1em;
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1em;
 }
 
 // @include clearfix;
 @mixin clearfix {
-    &:after {
-        content:"";
-        display:table;
-        clear:both;
-    }
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
 }
 
 // Disables cursor text selection
 @mixin noselect() {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 // CSS3 filters
 // http://css-tricks.com/almanac/properties/f/filter/
 @mixin filter($function: none) {
-    // <filter-function> [<filter-function]* | none
-    @include prefixer(filter, $function, webkit spec);
+  // <filter-function> [<filter-function]* | none
+  @include prefixer(filter, $function, webkit spec);
 }
 
 // @include transition(background, .2s, ease-in-out);
 @mixin transition($transition-property, $transition-time, $method) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
+  -webkit-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
 }
 
 // @include text-shadow(2px, 2px, #000);
 @mixin text-shadow($x, $y, $value) {
-    text-shadow: $x $y $value;
+  text-shadow: $x $y $value;
 }
 
 // @include box-shadow(0 5px 15px rgba(50, 50, 50, 0.2));
 @mixin box-shadow($value) {
-    -webkit-box-shadow: $value;
-    box-shadow: $value;
+  -webkit-box-shadow: $value;
+  box-shadow: $value;
 }
 
 // @include rounded(4px);
 @mixin rounded($radius: 10px) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// @include rounded(4px);
+@mixin roundedAdv($tl, $tr, $br, $bl) {
+  -webkit-border-top-left-radius: $tl;
+  -webkit-border-top-right-radius: $tr;
+  -webkit-border-bottom-right-radius: $br;
+  -webkit-border-bottom-left-radius: $bl;
+
+  -moz-border-radius-topleft: $tl;
+  -moz-border-radius-topright: $tr;
+  -moz-border-radius-bottomright: $br;
+  -moz-border-radius-bottomleft: $bl;
+
+  border-radius-top-left: $tl;
+  border-radius-top-right: $tr;
+  border-radius-bottom-right: $br;
+  border-radius-bottom-left: $bl;
 }
 
 // @include circle(width);
 @mixin circle($width) {
-    border-radius: 50%;
-    width: $width;
-    height: $width;
+  border-radius: 50%;
+  width: $width;
+  height: $width;
 }
 
 // @include bgcover;
