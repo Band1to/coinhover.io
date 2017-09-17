@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { findCoins } from '../../services/coinFactory'
-import { addCoin } from '../../actions'
+import { addCoin, setSearch } from '../../actions'
 
 class SearchCoin extends React.Component {
   constructor(props) {
@@ -12,6 +12,8 @@ class SearchCoin extends React.Component {
       searched: []
     };
 
+    console.log('props', props);
+
     this.close = this.close.bind(this);
     this.clickCoin = this.clickCoin.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +23,9 @@ class SearchCoin extends React.Component {
     const text = document.getElementById('coin-search').value;
     const search = (txt) => {
       console.log('findCoins(txt)', findCoins(txt));
-      this.setState({ searched: findCoins(txt) });
+      const searchedCoins = findCoins(txt);
+      this.props.setSearch(searchedCoins)
+      this.setState({ searched: searchedCoins });
     };
     const clearSearch = () => this.setState({ searched: [] });
     text.length > 1 ? search(text) : clearSearch();
@@ -72,7 +76,8 @@ class SearchCoin extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addCoin: (...args) => { dispatch(addCoin(...args)); }
+  addCoin: (...args) => { dispatch(addCoin(...args)); },
+  setSearch: (...args) => { dispatch(setSearch(...args)); }
 });
 
 export default connect(null, mapDispatchToProps)(SearchCoin);

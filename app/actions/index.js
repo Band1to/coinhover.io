@@ -1,10 +1,9 @@
 import * as actionTypes from '../actionTypes';
 
 // Search Actions
-// export {
-//   searchCoins,
-//   updateSearch
-// } from './Search'
+export {
+  setSearch
+} from './Search';
 
 // Portfolio Actions
 export {
