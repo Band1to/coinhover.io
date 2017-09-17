@@ -12,17 +12,5 @@
         }
       }
     ]
-  ],
-  env: {
-    // start: {
-    //   presets: [
-    //     "react-hmre"
-    //   ]
-    // },
-    // dev: {
-    //   presets: [
-    //     "react-hmre"
-    //   ]
-    // }
-  }
+  ]
 }

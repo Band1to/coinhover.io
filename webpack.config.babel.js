@@ -73,9 +73,10 @@ const base = {
       }
     ]
   },
-  resolve: {
-    modules: ['node_modules', path.resolve(__dirname, '/app')]
-  }
+  resolve: { modules: [path.resolve(__dirname, 'node_modules'), 'node_modules'] }
+  // resolve: {
+  //   modules: ['node_modules', path.resolve(__dirname, '/app')]
+  // }
 };
 
 const developmentConfig = {
