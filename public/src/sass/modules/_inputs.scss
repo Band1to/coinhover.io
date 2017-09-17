@@ -1,9 +1,0 @@
-// removes chrome input highlight
-*:focus { outline: 0; }
-
-.flex-container input,
-.coin-search-input {
-	padding: 14px 14px 13px 14px;
-	border: 1px solid white;
-	@include rounded(4px);
-}

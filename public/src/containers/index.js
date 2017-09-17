@@ -1,7 +1,0 @@
-export AssetRow from './assetRow/AssetRow'
-export AssetsTable from './assetsTable/AssetsTable'
-export Header from './common/Header'
-export SocialMediaFooter from './common/SocialMediaFooter'
-export Home from './home/Home'
-export Portfolio from './portfolio/Portfolio'
-export NoMatch from './NoMatch'
