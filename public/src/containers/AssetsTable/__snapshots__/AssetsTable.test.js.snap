@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AssetsTable /> component should render 1`] = `
+<section
+  className="asset-table"
+>
+  <AssetThead />
+  <div
+    className="add-asset-row"
+  >
+    <div
+      className="add-btn"
+      onClick={[Function]}
+    >
+      <div
+        className="icon-plus-outline"
+      />
+       Add Asset
+    </div>
+  </div>
+</section>
+`;

@@ -1,8 +1,8 @@
 import React from 'react'
 import { browserHistory, HashRouter, Route, Switch } from 'react-router-dom'
-import { Portfolio } from 'components'
-import { Home } from 'components'
-import { NoMatch } from 'components'
+import { Portfolio } from 'containers'
+import { Home } from 'containers'
+import { NoMatch } from 'containers'
 
 const Routes = () => {
   return (

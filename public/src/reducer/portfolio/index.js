@@ -1,4 +1,5 @@
-import { ADD_COIN, REMOVE_COIN, UPDATE_VALUE } from './actions'
+// import { ADD_COIN, REMOVE_COIN, UPDATE_VALUE } from './actions'
+import * as actionTypes from '../../actionTypes'
 import * as R from 'ramda'
 
 const initialState = [];
@@ -14,16 +15,16 @@ const removeCoin = (coin, state) => {
 
 export default (state = initialState, action) => {
 	switch(action.type) {
-		case ADD_COIN:
+		case actionTypes.ADD_COIN_PORTFOLIO:
 			// console.log('[...state, action.portfolio]', [...state, action.portfolio]);
 			return [...state, action.portfolio];
 
-		case REMOVE_COIN:
+		case actionTypes.REMOVE_COIN_PORTFOLIO:
 			// console.log('REMOVE_COIN');
 			// console.log('R.filter(removeCoin, state)', R.filter(removeCoin, state));
 			return R.filter(removeCoin, state);
 
-		case UPDATE_VALUE:
+		case actionTypes.UPDATE_COIN_VALUE:
 			const values = state.map((coin) => coin.value);
 			const total  = values.reduce((x, y) => x + y);
 

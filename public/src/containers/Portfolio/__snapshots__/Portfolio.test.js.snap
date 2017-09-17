@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Portfolio /> component should render 1`] = `
+<div
+  className="app-bg"
+>
+  <section
+    className="portfolio"
+  >
+    <Connect(Header) />
+    <div
+      className="loading"
+    >
+      <div
+        className="loader"
+      />
+      <span>
+        Loading coin data...
+      </span>
+    </div>
+    <SocialMediaFooter />
+  </section>
+</div>
+`;
