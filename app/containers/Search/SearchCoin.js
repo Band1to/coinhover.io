@@ -8,8 +8,7 @@ class SearchCoin extends React.Component {
     super(props);
 
     this.state = {
-      coins: props.coins,
-      searched: []
+      coins: props.search[0]
     };
 
     this.close = this.close.bind(this);
@@ -19,17 +18,16 @@ class SearchCoin extends React.Component {
 
   handleChange() {
     const text = document.getElementById('coin-search').value;
-    
+
     const search = (txt) => {
-      console.log('findCoins(txt)', findCoins(txt));
       const searchedCoins = findCoins(txt);
       this.props.setSearch(searchedCoins);
-      this.setState({ searched: searchedCoins });
+      this.setState({ coins: searchedCoins });
     };
 
     const clearSearch = () => {
       this.props.setSearch([]);
-      this.setState({ searched: [] });
+      this.setState({ coins: [] });
     };
 
     text.length > 1 ? search(text) : clearSearch();
@@ -45,7 +43,7 @@ class SearchCoin extends React.Component {
   }
 
   render() {
-    const coins = this.props.coins.map(coin => (
+    const coins = this.state.coins.map(coin => (
       <li key={coin.id}>
         <button onClick={() => this.clickCoin(coin)}>
           <div className="coin-logo">
@@ -79,9 +77,13 @@ class SearchCoin extends React.Component {
   }
 }
 
+const mapStateToProps = ({ search }) => ({
+  search
+});
+
 const mapDispatchToProps = dispatch => ({
   addCoin: (...args) => { dispatch(addCoin(...args)); },
   setSearch: (...args) => { dispatch(setSearch(...args)); }
 });
 
-export default connect(null, mapDispatchToProps)(SearchCoin);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchCoin);

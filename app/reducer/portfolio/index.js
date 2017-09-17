@@ -16,12 +16,9 @@ const removeCoin = (coin, state) => {
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADD_COIN_PORTFOLIO:
-      // console.log('[...state, action.portfolio]', [...state, action.portfolio]);
       return [...state, action.portfolio];
 
     case actionTypes.REMOVE_COIN_PORTFOLIO:
-      // console.log('REMOVE_COIN');
-      // console.log('R.filter(removeCoin, state)', R.filter(removeCoin, state));
       return R.filter(removeCoin, state);
 
     case actionTypes.UPDATE_COIN_VALUE:

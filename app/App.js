@@ -5,7 +5,6 @@ import { setSearch } from './actions';
 import local_coins from './coins.json';
 
 const coins = local_coins;
-console.log('coins', coins);
 
 class App extends React.Component {
   componentWillMount() {
@@ -22,6 +21,5 @@ class App extends React.Component {
 const mapDispatchToProps = dispatch => ({
   setSearch: (...args) => { dispatch(setSearch(...args)); }
 });
-
 
 export default connect(null, mapDispatchToProps)(App);

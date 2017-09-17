@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 import AssetThead from '../../components/AssetTable/AssetThead';
 import AssetRow from '../AssetRow/AssetRow';
 import SearchCoin from '../Search/SearchCoin';
-import local_coins from '../../coins.json';
-// import { coinsList } from '../../services/coinFactory'
 
 export class AssetsTable extends React.Component {
   constructor(props) {
@@ -22,7 +20,6 @@ export class AssetsTable extends React.Component {
   }
 
   render() {
-    const coins = local_coins;
     const assets = this.props.portfolio ? this.props.portfolio : [];
 
     const handleClick = (e) => {
@@ -44,7 +41,7 @@ export class AssetsTable extends React.Component {
 
         <div className="add-asset-row">
           { this.state.search ? (
-            <SearchCoin coins={coins} closeSearch={this.closeSearch} />
+            <SearchCoin closeSearch={this.closeSearch} />
           ) : (
             <div className="add-btn" onClick={handleClick}>
               <div className="icon-plus-outline" /> Add Asset
@@ -56,8 +53,8 @@ export class AssetsTable extends React.Component {
   }
 }
 
-const mapStateToProps = ({ portfolio }) => ({
-  portfolio
+const mapStateToProps = ({ portfolio, search }) => ({
+  portfolio, search
 });
 
 const AssetsTableContainer = AssetsTable;
