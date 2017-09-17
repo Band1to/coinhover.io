@@ -12,8 +12,6 @@ class SearchCoin extends React.Component {
       searched: []
     };
 
-    console.log('props', props);
-
     this.close = this.close.bind(this);
     this.clickCoin = this.clickCoin.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -21,13 +19,19 @@ class SearchCoin extends React.Component {
 
   handleChange() {
     const text = document.getElementById('coin-search').value;
+    
     const search = (txt) => {
       console.log('findCoins(txt)', findCoins(txt));
       const searchedCoins = findCoins(txt);
-      this.props.setSearch(searchedCoins)
+      this.props.setSearch(searchedCoins);
       this.setState({ searched: searchedCoins });
     };
-    const clearSearch = () => this.setState({ searched: [] });
+
+    const clearSearch = () => {
+      this.props.setSearch([]);
+      this.setState({ searched: [] });
+    };
+
     text.length > 1 ? search(text) : clearSearch();
   }
 
