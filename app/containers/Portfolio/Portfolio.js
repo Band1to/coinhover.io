@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../common/Header';
-import AssetsTable from '../assetsTable/AssetsTable';
-import SocialMediaFooter from '../common/SocialMediaFooter';
+import Header from '../Common/Header';
+import AssetsTable from '../AssetsTable/AssetsTable';
+import SocialMediaFooter from '../Common/SocialMediaFooter';
 import * as api from '../../services/api';
 // import local_coins from '../../coins.json'
 // import { updateLocalCoins } from '../../services/coinFactory'
