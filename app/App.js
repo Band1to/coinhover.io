@@ -4,11 +4,9 @@ import Routes from './config/Routes';
 import { setSearch } from './actions';
 import local_coins from './coins.json';
 
-const coins = local_coins;
-
 class App extends React.Component {
   componentWillMount() {
-    this.props.setSearch(coins);
+    this.props.setSearch(local_coins);
   }
 
   render() {
