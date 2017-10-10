@@ -1,6 +1,6 @@
 {
   "name": "coinhover",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "author": "Leon Gaban",
   "license": "MIT",
