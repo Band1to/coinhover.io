@@ -32,6 +32,14 @@
     "price_usd": "0"
 	},
 	{
+		"id": "bitcoin-cash",
+		"name": "Bitcoin Cash",
+		"symbol": "BCH",
+		"logo": "/static/imgs/coins/bitcoin-cash.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
 		"id": "dashcoin",
     "name": "Dashcoin",
     "symbol": "DSH",
