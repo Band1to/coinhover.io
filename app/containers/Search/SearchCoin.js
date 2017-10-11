@@ -8,7 +8,8 @@ class SearchCoin extends React.Component {
     super(props);
 
     this.state = {
-      coins: props.search[0]
+      coins: props.search[0],
+      saved: props.search[0]
     };
 
     this.close = this.close.bind(this);
@@ -27,7 +28,7 @@ class SearchCoin extends React.Component {
 
     const clearSearch = () => {
       this.props.setSearch([]);
-      this.setState({ coins: [] });
+      this.setState({ coins: this.state.saved });
     };
 
     text.length > 1 ? search(text) : clearSearch();
