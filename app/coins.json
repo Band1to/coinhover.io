@@ -40,22 +40,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "ethereum-classic",
-    "name": "Ethereum Classic",
-    "symbol": "ETC",
-    "logo": "/static/imgs/coins/ethereum-classic.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "stratis",
-    "name": "Stratis",
-    "symbol": "STRAT",
-    "logo": "/static/imgs/coins/stratis.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "lisk",
     "name": "Lisk",
     "symbol": "LSK",
@@ -76,14 +60,6 @@
 		"name": "Gas",
 		"symbol": "GAS",
 		"logo": "/static/imgs/coins/gas.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "omisego",
-		"name": "OmiseGo",
-		"symbol": "OMG",
-		"logo": "/static/imgs/coins/omisego.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -240,6 +216,14 @@
     "price_usd": "0"
 	},
 	{
+		"id": "ethereum-classic",
+    "name": "Ethereum Classic",
+    "symbol": "ETC",
+    "logo": "/static/imgs/coins/ethereum-classic.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
 		"id": "etheroll",
     "name": "Etheroll",
     "symbol": "DICE",
@@ -368,6 +352,14 @@
     "price_usd": "0"
 	},
 	{
+		"id": "omisego",
+		"name": "OmiseGo",
+		"symbol": "OMG",
+		"logo": "/static/imgs/coins/omisego.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
 		"id": "omni",
     "name": "Omni",
     "symbol": "OMNI",
@@ -434,6 +426,14 @@
     "name": "Skycoin",
     "symbol": "SKY",
     "logo": "/static/imgs/coins/skycoin.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "stratis",
+    "name": "Stratis",
+    "symbol": "STRAT",
+    "logo": "/static/imgs/coins/stratis.png",
     "balance": "0",
     "price_usd": "0"
 	},
