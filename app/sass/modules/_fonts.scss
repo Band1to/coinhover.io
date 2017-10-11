@@ -9,7 +9,29 @@
   font-weight: normal;
   font-style: normal;
 }
- 
+
+@font-face {
+  font-family: 'noway_roundregular';
+  src: url('/static/font/nowayround-regular-webfont.eot');
+  src: url('/static/font/nowayround-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/font/nowayround-regular-webfont.woff2') format('woff2'),
+       url('/static/font/nowayround-regular-webfont.woff') format('woff'),
+       url('/static/font/nowayround-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noway_rounditalic';
+  src: url('/static/font/nowayround-italic-webfont.eot');
+  src: url('/static/font/nowayround-italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/font/nowayround-italic-webfont.woff2') format('woff2'),
+       url('/static/font/nowayround-italic-webfont.woff') format('woff'),
+       url('/static/font/nowayround-italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 [class^="icon-"]:before, [class*=" icon-"]:before {
     font-family: "fontello";
     font-style: normal;
@@ -35,7 +57,7 @@
     animation: spin 2s infinite linear;
     display: inline-block;
 }
- 
+
 .icon-plus-outline:before { content: '\e800'; } /* '' */
 .icon-cancel-outline:before { content: '\e801'; } /* '' */
 .icon-resize-vertical:before { content: '\e802'; } /* '' */
