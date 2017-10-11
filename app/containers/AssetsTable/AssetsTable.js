@@ -44,7 +44,7 @@ export class AssetsTable extends React.Component {
             <SearchCoin closeSearch={this.closeSearch} />
           ) : (
             <div className="add-btn" onClick={handleClick}>
-              <div className="icon-plus-outline" /> Add Asset
+              + Add Asset
             </div>
           )}
         </div>

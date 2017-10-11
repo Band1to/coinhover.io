@@ -64,7 +64,9 @@ class SearchCoin extends React.Component {
           onChange={() => this.handleChange()}
           ref={(input) => { this.coinInput = input; }}
         />
-        <div className="icon-cancel-outline fl" role="button" tabIndex={0} onClick={this.close} />
+        <div className="cancel-search" role="button" tabIndex={0} onClick={this.close}>
+          <img src="static/imgs/x.svg"/>
+        </div>
         <div className="coins-container">
           <div className="coin-select">
             <ul>
