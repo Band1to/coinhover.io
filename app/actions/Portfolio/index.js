@@ -24,11 +24,13 @@ export function removeCoin(coin) {
 }
 
 export function updateCoin(coin) {
+  console.log('updateCoin', coin)
   return dispatch => dispatch(update(coin));
 }
 
 // action creators /////////////////////////////////////////////////////////////
 export function add(portfolio) {
+  console.log('add', portfolio)
   return {
     type: actionTypes.ADD_COIN_PORTFOLIO,
     portfolio
@@ -44,7 +46,7 @@ export function remove(coin) {
 
 export function update(coin) {
   return {
-    type: UPDATE_COIN_VALUE,
+    type: actionTypes.UPDATE_COIN_BALANCE,
     coin
   };
 }
