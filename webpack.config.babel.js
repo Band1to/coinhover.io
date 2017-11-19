@@ -56,6 +56,10 @@ const base = {
         use: ['babel-loader']
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
