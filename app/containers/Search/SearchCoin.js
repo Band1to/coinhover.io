@@ -71,7 +71,6 @@ class SearchCoin extends React.Component {
         />
         <div className="cancel-search">
           <div className="close-x" />
-          {/* <img src="static/imgs/x.svg"/> */}
         </div>
         <div className="coins-container">
           <div className="coin-select">

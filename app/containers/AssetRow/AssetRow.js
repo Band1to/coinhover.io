@@ -12,7 +12,7 @@ import {
 } from '../../utils/math';
 
 // Actions
-import { updateCoin } from '../../actions';
+import { removeCoin, updateCoin } from '../../actions';
 
 export class AssetRow extends React.Component {
   constructor(props) {
@@ -25,6 +25,7 @@ export class AssetRow extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.remove = this.remove.bind(this);
   }
 
   handleChange(event) {
@@ -33,8 +34,12 @@ export class AssetRow extends React.Component {
     const value = rounder(balance, priceUsd);
     const coin = this.state.asset;
     coin.value = value;
-    this.props.dispatchUpdateCoin(coin);
+    this.props.updateCoin(coin);
     this.setState({ balance, value });
+  }
+
+  remove(coin) {
+    this.props.removeCoin(coin);
   }
 
   render() {
@@ -45,6 +50,20 @@ export class AssetRow extends React.Component {
     const percentChange24h = this.state.asset.percent_change_24h;
     const percentage = formatPercentage(this.state.asset.percentage);
     const logo = this.state.asset.logo;
+
+    console.log('name', name);
+
+    // const {
+    //   symbol,
+    //   name,
+    //   price,
+    //   usdPrice,
+    //   percentChange24h,
+    //   percentage,
+    //   logo
+    // } = this.state.asset;
+    //
+    // const priceUsd = `USD price ${usdPrice}`;
 
     return (
       <ul className="flex-container">
@@ -86,7 +105,12 @@ export class AssetRow extends React.Component {
           <div className="flex-border">{ percentage }%</div>
         </li>
         <li>
-          <div className="close-x-smll" />
+          <div
+            className="close-x-smll"
+            role="button"
+            tabIndex={0}
+            onClick={() => this.remove(name)}
+          />
         </li>
       </ul>
     );
@@ -94,9 +118,11 @@ export class AssetRow extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  dispatchUpdateCoin(coin) {
-    dispatch(updateCoin(coin));
-  }
+  // dispatchUpdateCoin(coin) {
+  //   dispatch(updateCoin(coin));
+  // },
+  updateCoin: (...args) => { dispatch(updateCoin(...args)); },
+  removeCoin: (...args) => { dispatch(removeCoin(...args)); }
 });
 
 const AssetRowContainer = AssetRow;
