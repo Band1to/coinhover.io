@@ -464,6 +464,14 @@
     "price_usd": "0"
 	},
 	{
+		"id": "power-ledger",
+    "name": "PowerLedger",
+    "symbol": "POWR",
+    "logo": "/static/imgs/coins/power-ledger.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
 		"id": "rlc",
     "name": "iExec RLC",
     "symbol": "RLC",
