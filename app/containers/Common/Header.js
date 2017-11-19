@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+// Utils
 import { notEmpty } from '../../utils/utility';
 import { calcTotal } from '../../utils/math';
 
@@ -17,7 +18,6 @@ export function Header({ portfolio = [] }) {
       <h1><span className="plus">+</span>COINHOVER</h1>
       <h2>The cryptocurrency portfolio calculator.</h2>
       <em className="num">${ total }</em>
-      <div className="close-x"></div>
     </header>
   );
 }
@@ -27,6 +27,6 @@ export default connect(mapStateToProps, null)(HeaderContainer);
 
 Header.propTypes = {
   objectWithShape: PropTypes.shape({
-	    portfolio: PropTypes.array
+    portfolio: PropTypes.array
   })
 };

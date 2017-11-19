@@ -7,8 +7,8 @@ import chalk from 'chalk';
 
 const coinhover = path.resolve(__dirname, 'coinhover');
 const app = path.resolve(__dirname, 'app');
+/* eslint-disable no-console */
 const log = console.log;
-// https://gist.github.com/leongaban/dc92204454b3513e511645af98107775
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: `${__dirname}/app/index.html`,
@@ -51,29 +51,21 @@ const base = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
       },
       {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        test: /\.s?css/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-          publicPath: coinhover
-        })
-      }
-    ],
-    loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
-      {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?.*$|$)/,
-        loader: 'url-loader?limit=100000'
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)/,
+        loader: 'file-loader?name=[path][name].[ext]'
       }
     ]
   },

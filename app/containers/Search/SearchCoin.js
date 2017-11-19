@@ -1,7 +1,7 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { findCoins } from '../../services/coinFactory'
-import { addCoin, setSearch } from '../../actions'
+import React from 'react';
+import { connect } from 'react-redux';
+import { findCoins } from '../../services/coinFactory';
+import { addCoin, setSearch } from '../../actions';
 
 class SearchCoin extends React.Component {
   constructor(props) {
@@ -70,7 +70,7 @@ class SearchCoin extends React.Component {
           ref={(input) => { this.coinInput = input; }}
         />
         <div className="cancel-search">
-          <div className="close-x"></div>
+          <div className="close-x" />
           {/* <img src="static/imgs/x.svg"/> */}
         </div>
         <div className="coins-container">
@@ -80,7 +80,7 @@ class SearchCoin extends React.Component {
             </ul>
           </div>
         </div>
-        <div className="overlay" role="button" tabIndex={0} onClick={this.close}></div>
+        <div className="overlay" role="button" tabIndex={0} onClick={this.close} />
       </div>
     );
   }
