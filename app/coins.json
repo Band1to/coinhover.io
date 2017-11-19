@@ -480,6 +480,14 @@
     "price_usd": "0"
 	},
 	{
+		"id": "raiden-network-token",
+    "name": "Raiden Network",
+    "symbol": "RDN",
+    "logo": "/static/imgs/coins/raiden-network-token.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
 		"id": "rlc",
     "name": "iExec RLC",
     "symbol": "RLC",
