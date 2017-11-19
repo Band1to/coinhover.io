@@ -85,6 +85,9 @@ export class AssetRow extends React.Component {
         <li className="flex-item num">
           <div className="flex-border">{ percentage }%</div>
         </li>
+        <li>
+          <div className="close-x-smll" />
+        </li>
       </ul>
     );
   }
