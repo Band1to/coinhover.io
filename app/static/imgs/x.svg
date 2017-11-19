@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
-    <title>x to close</title>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>ArtBoard</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <g id="x-to-close" transform="translate(10.738330, 10.738330) rotate(45.000000) translate(-10.738330, -10.738330) translate(-2.261670, -2.761670)" stroke="#FFFFFF" stroke-width="1.8">
-            <path d="M13,0.408896637 L13,26.1693847" id="line"></path>
-            <path d="M0.4,13.2891407 L25.6,13.2891407" id="line"></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <rect id="Rectangle" fill="#FFCBCB" opacity="0" x="0" y="0" width="400" height="400"></rect>
+            <g id="Warning" transform="translate(10.000000, 12.001743)">
+                <polygon id="Stroke-1" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="20 17.3279211 0 17.3279211 10 0.413649623"></polygon>
+                <path d="M10,12.6140069 C10.5173333,12.6140069 10.9373333,12.1942064 10.9373333,11.6771187 L10.9373333,7.40781378 C10.9373333,6.89072612 10.5173333,6.47092557 10,6.47092557 C9.482,6.47092557 9.06266667,6.89072612 9.06266667,7.40781378 L9.06266667,11.6771187 C9.06266667,12.1942064 9.482,12.6140069 10,12.6140069" id="Fill-2" fill="#FFFFFF"></path>
+                <path d="M10,13.082451 C9.39733333,13.082451 8.906,13.573551 8.906,14.1759315 C8.906,14.7789783 9.39733333,15.2687456 10,15.2687456 C10.6026667,15.2687456 11.094,14.7789783 11.094,14.1759315 C11.094,13.573551 10.6026667,13.082451 10,13.082451" id="Fill-3" fill="#FFFFFF"></path>
+            </g>
+            <g id="x-to-close" transform="translate(59.738330, 20.738330) rotate(45.000000) translate(-59.738330, -20.738330) translate(46.738330, 7.238330)" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="square">
+                <path d="M13,0.408896637 L13,26.1693847" id="line"></path>
+                <path d="M0.4,13.2891407 L25.6,13.2891407" id="line"></path>
+            </g>
+            <g id="x-to-close" transform="translate(99.369165, 19.369165) rotate(45.000000) translate(-99.369165, -19.369165) translate(92.869165, 12.619165)" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="square">
+                <path d="M6.5,0.204448318 L6.5,13.0846924" id="line"></path>
+                <path d="M0.2,6.64457035 L12.8,6.64457035" id="line"></path>
+            </g>
         </g>
+        <g id="ArtBoard"></g>
     </g>
 </svg>

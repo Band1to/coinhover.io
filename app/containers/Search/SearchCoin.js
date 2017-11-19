@@ -70,7 +70,8 @@ class SearchCoin extends React.Component {
           ref={(input) => { this.coinInput = input; }}
         />
         <div className="cancel-search">
-          <img src="static/imgs/x.svg"/>
+          <div className="close-x"></div>
+          {/* <img src="static/imgs/x.svg"/> */}
         </div>
         <div className="coins-container">
           <div className="coin-select">
