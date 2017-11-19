@@ -10,6 +10,8 @@
 }
 
 .coin-search-input {
+	position: relative;
+	z-index: 10;
 	width: 173px;
 	color: black;
 	@include roundedAdv(4px, 4px, 0, 0);
@@ -19,10 +21,13 @@
 .cancel-search {
 	float: left;
 	margin: 10px 0 0 10px;
-	cursor: pointer;
 }
 
-.coins-container { flex-wrap: wrap; }
+.coins-container {
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 10;
+}
 
 .coin-select {
 	float: left;
@@ -53,4 +58,15 @@
 	span { position: relative; top: 1em; }
 
 	.coin-logo { top: 5px; }
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.25);
+	cursor: pointer;
 }

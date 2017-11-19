@@ -69,7 +69,7 @@ class SearchCoin extends React.Component {
           onChange={() => this.handleChange()}
           ref={(input) => { this.coinInput = input; }}
         />
-        <div className="cancel-search" role="button" tabIndex={0} onClick={this.close}>
+        <div className="cancel-search">
           <img src="static/imgs/x.svg"/>
         </div>
         <div className="coins-container">
@@ -79,6 +79,7 @@ class SearchCoin extends React.Component {
             </ul>
           </div>
         </div>
+        <div className="overlay" role="button" tabIndex={0} onClick={this.close}></div>
       </div>
     );
   }
