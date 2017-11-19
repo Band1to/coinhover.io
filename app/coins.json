@@ -16,10 +16,10 @@
     "price_usd": "0"
 	},
 	{
-		"id": "litecoin",
-    "name": "Litecoin",
-    "symbol": "LTC",
-    "logo": "/static/imgs/coins/litecoin.png",
+		"id": "bitcoin-cash",
+		"name": "Bitcoin Cash",
+		"symbol": "BCH",
+		"logo": "/static/imgs/coins/bitcoin-cash.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -32,10 +32,10 @@
     "price_usd": "0"
 	},
 	{
-		"id": "bitcoin-cash",
-		"name": "Bitcoin Cash",
-		"symbol": "BCH",
-		"logo": "/static/imgs/coins/bitcoin-cash.png",
+		"id": "litecoin",
+    "name": "Litecoin",
+    "symbol": "LTC",
+    "logo": "/static/imgs/coins/litecoin.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -48,14 +48,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "lisk",
-    "name": "Lisk",
-    "symbol": "LSK",
-    "logo": "/static/imgs/coins/lisk.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
     "id": "neo",
     "name": "NEO",
     "symbol": "NEO",
@@ -64,10 +56,106 @@
     "price_usd": "0"
   },
 	{
-		"id": "gas",
-		"name": "Gas",
-		"symbol": "GAS",
-		"logo": "/static/imgs/coins/gas.png",
+		"id": "iota",
+    "name": "IOTA",
+    "symbol": "MIOTA",
+    "logo": "/static/imgs/coins/iota.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "monero",
+    "name": "Monero",
+    "symbol": "XMR",
+    "logo": "/static/imgs/coins/monero.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "nem",
+    "name": "NEM",
+    "symbol": "XEM",
+    "logo": "/static/imgs/coins/nem.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "ethereum-classic",
+    "name": "Ethereum Classic",
+    "symbol": "ETC",
+    "logo": "/static/imgs/coins/ethereum-classic.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "lisk",
+    "name": "Lisk",
+    "symbol": "LSK",
+    "logo": "/static/imgs/coins/lisk.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "qtum",
+    "name": "Qtum",
+    "symbol": "QTUM",
+    "logo": "/static/imgs/coins/qtum.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "eos",
+    "name": "EOS",
+    "symbol": "EOS",
+    "logo": "/static/imgs/coins/eos.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "hshare",
+    "name": "Hshare",
+    "symbol": "HSR",
+    "logo": "/static/imgs/coins/hshare.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "omisego",
+		"name": "OmiseGo",
+		"symbol": "OMG",
+		"logo": "/static/imgs/coins/omisego.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "zcash",
+    "name": "Zcash",
+    "symbol": "ZEC",
+    "logo": "/static/imgs/coins/zcash.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "cardano",
+    "name": "Cardano",
+    "symbol": "ADA",
+    "logo": "/static/imgs/coins/cardano.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "tether",
+    "name": "Tether",
+    "symbol": "USDT",
+    "logo": "/static/imgs/coins/tether.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "stellar",
+    "name": "Stellar Lumens",
+    "symbol": "XLM",
+    "logo": "/static/imgs/coins/stellar.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -224,14 +312,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "ethereum-classic",
-    "name": "Ethereum Classic",
-    "symbol": "ETC",
-    "logo": "/static/imgs/coins/ethereum-classic.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "etheroll",
     "name": "Etheroll",
     "symbol": "DICE",
@@ -252,6 +332,14 @@
     "name": "GameCredits",
     "symbol": "GAME",
     "logo": "/static/imgs/coins/gamecredits.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
+		"id": "gas",
+		"name": "Gas",
+		"symbol": "GAS",
+		"logo": "/static/imgs/coins/gas.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -288,14 +376,6 @@
     "price_usd": "0"
 	},
 	{
-		"id": "iota",
-    "name": "IOTA",
-    "symbol": "MIOTA",
-    "logo": "/static/imgs/coins/iota.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "komodo",
     "name": "Komodo",
     "symbol": "KMD",
@@ -320,26 +400,10 @@
     "price_usd": "0"
 	},
 	{
-		"id": "monero",
-    "name": "Monero",
-    "symbol": "XMR",
-    "logo": "/static/imgs/coins/monero.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "mysterium",
     "name": "Mysterium",
     "symbol": "MYST",
     "logo": "/static/imgs/coins/mysterium.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "nem",
-    "name": "NEM",
-    "symbol": "XEM",
-    "logo": "/static/imgs/coins/nem.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -356,14 +420,6 @@
     "name": "Nxt",
     "symbol": "NXT",
     "logo": "/static/imgs/coins/nxt.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "omisego",
-		"name": "OmiseGo",
-		"symbol": "OMG",
-		"logo": "/static/imgs/coins/omisego.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -470,26 +526,10 @@
     "price_usd": "0"
 	},
 	{
-		"id": "stellar",
-    "name": "Stellar Lumens",
-    "symbol": "XLM",
-    "logo": "/static/imgs/coins/stellar.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
 		"id": "storjcoin-x",
     "name": "Storjcoin X",
     "symbol": "SJCX",
     "logo": "/static/imgs/coins/storjcoin-x.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "tether",
-    "name": "Tether",
-    "symbol": "USDT",
-    "logo": "/static/imgs/coins/tether.png",
     "balance": "0",
     "price_usd": "0"
 	},
@@ -538,14 +578,6 @@
     "name": "Wings",
     "symbol": "WINGS",
     "logo": "/static/imgs/coins/wings.png",
-    "balance": "0",
-    "price_usd": "0"
-	},
-	{
-		"id": "zcash",
-    "name": "Zcash",
-    "symbol": "ZEC",
-    "logo": "/static/imgs/coins/zcash.png",
     "balance": "0",
     "price_usd": "0"
 	},
