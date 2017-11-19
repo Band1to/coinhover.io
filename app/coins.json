@@ -240,6 +240,14 @@
     "price_usd": "0"
 	},
 	{
+		"id": "cobinhood",
+    "name": "Cobinhood",
+    "symbol": "COB",
+    "logo": "/static/imgs/coins/cobinhood.png",
+    "balance": "0",
+    "price_usd": "0"
+	},
+	{
 		"id": "counterparty",
     "name": "Counterparty",
     "symbol": "XCP",
