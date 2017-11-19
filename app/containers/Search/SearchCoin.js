@@ -17,6 +17,10 @@ class SearchCoin extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentDidMount() {
+    this.coinInput.focus();
+  }
+
   handleChange() {
     const text = document.getElementById('coin-search').value;
 

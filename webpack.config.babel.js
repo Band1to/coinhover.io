@@ -82,7 +82,7 @@ const base = {
 const developmentConfig = {
   devServer: {
     publicPath: '',
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'coinhover'),
     quiet: true,
     inline: true,
     compress: true,
