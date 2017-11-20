@@ -17,6 +17,7 @@ import { removeCoin, updateCoin } from '../../actions';
 export class AssetRow extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       asset: props.asset,
       balance: props.balance,
