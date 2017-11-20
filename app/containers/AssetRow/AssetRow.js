@@ -52,6 +52,7 @@ export class AssetRow extends React.Component {
     const logo = this.state.asset.logo;
 
     console.log('name', name);
+    // console.log('AssetRow this.props', this.props);
 
     // const {
     //   symbol,
@@ -117,6 +118,10 @@ export class AssetRow extends React.Component {
   }
 }
 
+const mapStateToProps = ({ coins }) => ({
+  coins
+});
+
 const mapDispatchToProps = dispatch => ({
   // dispatchUpdateCoin(coin) {
   //   dispatch(updateCoin(coin));
@@ -126,7 +131,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const AssetRowContainer = AssetRow;
-export default connect(null, mapDispatchToProps)(AssetRowContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AssetRowContainer);
 
 AssetRow.propTypes = {
   price_usd: PropTypes.string.isRequired,

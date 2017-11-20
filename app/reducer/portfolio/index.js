@@ -1,7 +1,5 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable no-param-reassign */
-import * as R from 'ramda';
-
 import {
   ADD_COIN_PORTFOLIO,
   UPDATE_COIN_BALANCE,
@@ -10,27 +8,20 @@ import {
 
 const initialState = [];
 
-const removeCoin = (coin, state) => R.find(R.not())(state);
-//   for (let i = 0; i < state.length; i++) {
-//     if (state[i].id !== coin.id) {
-//       return coin;
-//     }
-//   }
-//   return state;
-// };
+const removeCoin = (coin, state) => {
+  const filtered = state.filter(item => item.name !== coin);
+  return filtered;
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_COIN_PORTFOLIO:
-      console.log('ADD_COIN_PORTFOLIO');
       return [...state, action.portfolio];
 
     case REMOVE_COIN_PORTFOLIO:
-      console.log('REMOVE_COIN_PORTFOLIO');
-      return R.filter(removeCoin, state);
+      return removeCoin(action.coin, state);
 
     case UPDATE_COIN_BALANCE:
-      console.log('UPDATE_COIN_BALANCE');
       const values = state.map(coin => coin.value);
       const total = values.reduce((x, y) => x + y);
 

@@ -40,10 +40,10 @@
     "price_usd": "0"
 	},
 	{
-		"id": "dashcoin",
-    "name": "Dashcoin",
+		"id": "dash",
+    "name": "Dash",
     "symbol": "DSH",
-    "logo": "/static/imgs/coins/dashcoin.png",
+    "logo": "/static/imgs/coins/dash.png",
     "balance": "0",
     "price_usd": "0"
 	},

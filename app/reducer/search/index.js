@@ -1,23 +1,32 @@
-// import { ADD_COIN, REMOVE_COIN, UPDATE_VALUE } from './actions'
-import * as actionTypes from '../../actionTypes';
-import * as R from 'ramda';
+/* eslint-disable no-case-declarations */
+/* eslint-disable no-param-reassign */
+// import * as R from 'ramda';
+
+import {
+  // REMOVE_COIN_PORTFOLIO,
+  UPDATE_COIN_VALUE,
+  SET_COINS_SEARCH
+} from '../../actionTypes';
 
 const initialState = [];
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.SET_COINS_SEARCH:
+    case SET_COINS_SEARCH:
+      console.log('search: SET_COINS_SEARCH');
       return [...state, action.searchedCoins];
 
-    case actionTypes.REMOVE_COIN_PORTFOLIO:
-      return R.filter(removeCoin, state);
+    // case REMOVE_COIN_PORTFOLIO:
+    //   console.log('search: REMOVE_COIN_PORTFOLIO');
+    //   return R.filter(removeCoin, state);
 
-    case actionTypes.UPDATE_COIN_VALUE:
+    case UPDATE_COIN_VALUE:
+      console.log('search: UPDATE_COIN_VALUE');
       const values = state.map(coin => coin.value);
       const total = values.reduce((x, y) => x + y);
 
       return state.map((coin) => {
-        coin.percentage = (coin.value / total * 100);
+        coin.percentage = (coin.value / (total * 100));
         if (coin.id === action.coin.id) {
           coin.value = action.coin.value;
           return coin;

@@ -21,10 +21,11 @@ export class AssetsTable extends React.Component {
 
   render() {
     const assets = this.props.portfolio ? this.props.portfolio : [];
+    console.log('AssetsTable assets', assets);
 
     const handleClick = (e) => {
-	    e.preventDefault();
-	    this.setState({ search: true });
+      e.preventDefault();
+      this.setState({ search: true });
     };
 
     return (
