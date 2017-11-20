@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -21,7 +22,6 @@ export class AssetsTable extends React.Component {
 
   render() {
     const assets = this.props.portfolio ? this.props.portfolio : [];
-    console.log('AssetsTable assets', assets);
 
     const handleClick = (e) => {
       e.preventDefault();
@@ -44,7 +44,7 @@ export class AssetsTable extends React.Component {
           { this.state.search ? (
             <SearchCoin closeSearch={this.closeSearch} />
           ) : (
-            <div className="add-btn" onClick={handleClick}>
+            <div className="add-btn" role="button" tabIndex={0} onClick={handleClick}>
               + Add Asset
             </div>
           )}

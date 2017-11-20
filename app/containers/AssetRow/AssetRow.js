@@ -43,28 +43,9 @@ export class AssetRow extends React.Component {
   }
 
   render() {
-    const symbol = this.state.asset.symbol;
-    const name = this.state.asset.name;
-    const price = this.state.asset.price_usd;
+    const { symbol, name, logo, price, percentChange24h } = this.state.asset;
     const priceUsd = `USD price ${this.state.asset.price_usd}`;
-    const percentChange24h = this.state.asset.percent_change_24h;
     const percentage = formatPercentage(this.state.asset.percentage);
-    const logo = this.state.asset.logo;
-
-    console.log('name', name);
-    // console.log('AssetRow this.props', this.props);
-
-    // const {
-    //   symbol,
-    //   name,
-    //   price,
-    //   usdPrice,
-    //   percentChange24h,
-    //   percentage,
-    //   logo
-    // } = this.state.asset;
-    //
-    // const priceUsd = `USD price ${usdPrice}`;
 
     return (
       <ul className="flex-container">

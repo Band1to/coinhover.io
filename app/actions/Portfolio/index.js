@@ -8,13 +8,8 @@ import {
   REMOVE_COIN_PORTFOLIO
 } from '../../actionTypes';
 
-// export const ADD_COIN = 'ADD_COIN'
-// export const REMOVE_COIN = 'REMOVE_COIN'
-// export const UPDATE_COIN_VALUE = 'UPDATE_COIN_VALUE'
-
 // action creators /////////////////////////////////////////////////////////////
 export function add(portfolio) {
-  console.log('actions add', portfolio);
   return {
     type: ADD_COIN_PORTFOLIO,
     portfolio
@@ -22,7 +17,6 @@ export function add(portfolio) {
 }
 
 export function remove(coin) {
-  console.log('actions remove', coin);
   return {
     type: REMOVE_COIN_PORTFOLIO,
     coin
@@ -30,7 +24,6 @@ export function remove(coin) {
 }
 
 export function update(coin) {
-  console.log('actions update', coin);
   return {
     type: UPDATE_COIN_BALANCE,
     coin
